@@ -1,0 +1,6795 @@
+{
+  "id": "20260817-073447",
+  "startedAt": "2026-08-17T07:34:47.903Z",
+  "finishedAt": "2026-08-17T07:39:18.501Z",
+  "durationMs": 270598,
+  "status": "success",
+  "triggeredBy": "manual",
+  "dryRun": false,
+  "totals": {
+    "dsos": 174,
+    "gridAreas": 278,
+    "brpRelations": 1785
+  },
+  "changeCount": 2237,
+  "error": null,
+  "requestCount": 7,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 174,
+      "durationMs": 201
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 486,
+      "durationMs": 44965
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 44975
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 9933,
+      "durationMs": 45263
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 26555,
+      "durationMs": 45213
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 83653,
+      "durationMs": 45421
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 25368,
+      "durationMs": 44471
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "174 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "278 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1785 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "ingen tidigare körning att jämföra mot"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "ingen tidigare körning att jämföra mot"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "ingen tidigare körning att jämföra mot"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 174,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "gridAreas": {
+      "added": 278,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "brp": {
+      "newRetailers": 246,
+      "newRelations": 1539,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 0
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [
+      {
+        "entity": "dso",
+        "code": "10000",
+        "name": "Svenska kraftnät",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "10300",
+        "name": "Nässjö Affärsverk Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "10600",
+        "name": "Skellefteå Kraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "11100",
+        "name": "Nätkraft Borås Infra AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "11220",
+        "name": "Gotlands Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "11600",
+        "name": "Luleå Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "11800",
+        "name": "Sundsvall Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "11900",
+        "name": "Tekniska verken Linköping Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "12800",
+        "name": "Åskälen Vindkraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "13500",
+        "name": "Marhult Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "13800",
+        "name": "LKAB Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "14300",
+        "name": "Umeå Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "14500",
+        "name": "Blåsjön Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "14900",
+        "name": "Ellevio AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "15200",
+        "name": "Markbygden Net AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "15700",
+        "name": "Brännliden Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "15800",
+        "name": "Stensjön Kraft AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16000",
+        "name": "E.ON Energidistribution AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16400",
+        "name": "Vattenfall Eldistribution AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16405",
+        "name": "Vattenfall Kraftgården AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16600",
+        "name": "Ale El Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16700",
+        "name": "Alingsås Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16800",
+        "name": "Fågelås Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "16900",
+        "name": "Alvesta Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17000",
+        "name": "Arvika Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17300",
+        "name": "Bengtsfors Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17400",
+        "name": "Bergs tingslags elektriska AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17600",
+        "name": "Bjäre Kraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17700",
+        "name": "Bjärke Energi Ek. För.",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17800",
+        "name": "Upplands Energi",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "17900",
+        "name": "Bodens Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18100",
+        "name": "Boo Energi ek. för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18200",
+        "name": "Borgholm Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18300",
+        "name": "Boda Nät ekonomiska förening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18400",
+        "name": "Borlänge Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18700",
+        "name": "Brittedals Elnät ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18800",
+        "name": "Bromölla Energi & Vatten AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "18900",
+        "name": "Degerfors Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "19200",
+        "name": "Falu Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "19400",
+        "name": "Eksjö Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "19500",
+        "name": "Emmaboda Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "19800",
+        "name": "Eskilstuna Energi och Miljö Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "19900",
+        "name": "Gislaved Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "20300",
+        "name": "Grästorp Energi ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "20400",
+        "name": "Gävle Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "20500",
+        "name": "Göteborg Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "20600",
+        "name": "Götene Elförening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21100",
+        "name": "Hallstaviks Elverk ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21200",
+        "name": "Halmstads Energi och Miljö Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21400",
+        "name": "Hedemora Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21600",
+        "name": "Herrljunga Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21700",
+        "name": "Hjo Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "21800",
+        "name": "Hjärtums Elförening ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "22600",
+        "name": "Härnösand Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "22700",
+        "name": "Härryda Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "22900",
+        "name": "Höganäs Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "23300",
+        "name": "Jukkasjärvi Sockens Belysningsförening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "23600",
+        "name": "Jönköping Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "23800",
+        "name": "Kalmar Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "23900",
+        "name": "Karlsborgs Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24000",
+        "name": "Karlshamn Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24100",
+        "name": "Karlskoga Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24200",
+        "name": "Affärsverken Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24300",
+        "name": "Karlstads Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24700",
+        "name": "Kraftringen Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24800",
+        "name": "C4 Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "24900",
+        "name": "Kristinehamns Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "25200",
+        "name": "Kungälv Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "25500",
+        "name": "Kvänumbygdens Energi ek. för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "25600",
+        "name": "Landskrona Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "25800",
+        "name": "Dala Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "25900",
+        "name": "Lerum Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "26200",
+        "name": "Lidköping Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "26300",
+        "name": "Linde Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "26400",
+        "name": "Ljungby Energinät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "26500",
+        "name": "Ljusdal Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "27200",
+        "name": "LEVA Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "27300",
+        "name": "Malung-Sälens Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "27400",
+        "name": "VänerEnergi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "27600",
+        "name": "Mellersta Skånes Kraft, ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "27700",
+        "name": "Mjölby Kraftnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "28300",
+        "name": "Mölndal Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "28500",
+        "name": "Nacka Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "29000",
+        "name": "Norrtälje Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "29300",
+        "name": "Nossebroortens Energi Ekonomisk Förening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "29500",
+        "name": "Nybro Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "29800",
+        "name": "Näckåns Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "30200",
+        "name": "Olofströms Kraft Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "30300",
+        "name": "Olseröds Elektriska Distributionsförening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "30500",
+        "name": "Oskarshamn Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "30600",
+        "name": "Oxelö Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "30800",
+        "name": "Pite Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "31100",
+        "name": "Ronneby Miljöteknik Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "31500",
+        "name": "Rödeby Elverk ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "31600",
+        "name": "Sala-Heby Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "31800",
+        "name": "Sandhult-Sandareds Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "31900",
+        "name": "Sandviken Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32200",
+        "name": "Österlens Kraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32300",
+        "name": "Sjogerstads Elektriska Distributionsförening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32400",
+        "name": "Sjöbo Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32500",
+        "name": "Skara Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32800",
+        "name": "Skurups Elverk AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "32900",
+        "name": "Skyllberg Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "33000",
+        "name": "Skånska Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "33400",
+        "name": "Smedjebacken Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "33500",
+        "name": "Sollentuna Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "33800",
+        "name": "Staffanstorps Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "34400",
+        "name": "Njudung Sävsjö Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "34500",
+        "name": "Söderhamn Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "34600",
+        "name": "Södra Hallands Kraft ekonomisk förening",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "34700",
+        "name": "Sölvesborgs Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "34800",
+        "name": "Telge Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "35320",
+        "name": "Tranås Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "35400",
+        "name": "Trelleborg Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "35800",
+        "name": "Töre Energi ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36010",
+        "name": "Uddevalla Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36100",
+        "name": "Ulricehamn Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36400",
+        "name": "Vaggeryds Elverk",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36500",
+        "name": "Vallebygdens Energi ek för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36800",
+        "name": "Varberg Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "36900",
+        "name": "Varbergsortens Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "37700",
+        "name": "Njudung Vetlanda Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "37920",
+        "name": "Vimmerby Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "38600",
+        "name": "Värnamo Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "38700",
+        "name": "Västerbergslagens Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "38800",
+        "name": "Västerviks Kraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39100",
+        "name": "Västra Orusts Energitjänst ek. för.",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39200",
+        "name": "Växjö Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39300",
+        "name": "Mälarenergi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39600",
+        "name": "Falbygdens Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39700",
+        "name": "Falkenberg Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "39900",
+        "name": "Filipstad Energinät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "40100",
+        "name": "Mälarenergi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "40400",
+        "name": "Öresundskraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "40800",
+        "name": "Ystad Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "40900",
+        "name": "Fortum Sverige AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "41700",
+        "name": "SEVAB Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "41800",
+        "name": "Vara Energi ek.för",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "42300",
+        "name": "Skövde Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "42900",
+        "name": "Jämtkraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "43600",
+        "name": "Härjeåns Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "44300",
+        "name": "Billerud Skog & Industri AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "44600",
+        "name": "Ovako Sweden AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "44900",
+        "name": "Ålem Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "45500",
+        "name": "Östra Kinds Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "45700",
+        "name": "Övik Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "45800",
+        "name": "Carlfors Bruk AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "46300",
+        "name": "Habo Energi Kraft AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "46600",
+        "name": "Årsunda Kraft-o Belysningsförening Upa",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "47000",
+        "name": "Sturefors Eldistribution AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "47400",
+        "name": "Karskruv Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "50800",
+        "name": "Trollhättan Energi Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51400",
+        "name": "Sörbylunds Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51500",
+        "name": "Partille Energi Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51600",
+        "name": "Tibro Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51700",
+        "name": "Bliekevare Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51800",
+        "name": "Arise Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "51900",
+        "name": "Tekniska verken i Katrineholm Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52000",
+        "name": "Havsnäs Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52100",
+        "name": "Dragaliden Net AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52200",
+        "name": "Gabrielsberget Net AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52300",
+        "name": "Sjisjka Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52700",
+        "name": "Övertorneå Energi AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52800",
+        "name": "Sidensjö Vindkraft Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "52900",
+        "name": "Markbygden Net Väst AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "64920",
+        "name": "Holmen Energi Elnät",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "65800",
+        "name": "Vindpark Vänern Drift AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "65900",
+        "name": "Kvarnforsen Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "65930",
+        "name": "Brobacken Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "66200",
+        "name": "Tidaholms Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "66340",
+        "name": "Swedavia AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "71500",
+        "name": "Åsele Elnät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "71730",
+        "name": "Lehtirova Nät AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "dso",
+        "code": "82990",
+        "name": "Kraftnät Åland (SE)",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ABB",
+        "name": "Älvsbybygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AHB",
+        "name": "Ängelholmsbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AJB",
+        "name": "Arvidsjaurbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AKB",
+        "name": "Åkersberga",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ALL",
+        "name": "Ådalen Lokal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ALM",
+        "name": "Ålem",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ALS",
+        "name": "Alingsås",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ALV",
+        "name": "Alvesta Köping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AML",
+        "name": "Åmål",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AMS",
+        "name": "Almnäs",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ANE",
+        "name": "Ånge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ANG",
+        "name": "Årjäng",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ARD",
+        "name": "Ardala",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ARS",
+        "name": "Årsunda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ARV",
+        "name": "Arvika",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ASL",
+        "name": "Åsele",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AVD",
+        "name": "Älvdalen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "AVE",
+        "name": "Avesta",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BDL",
+        "name": "Brittedal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BDN",
+        "name": "Boden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BEF",
+        "name": "Bengtsfors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BGO",
+        "name": "Bergslagen Östra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BHM",
+        "name": "Borgholm",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BJK",
+        "name": "Björnekulla",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BJL",
+        "name": "Björklinge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BJR",
+        "name": "Bjäre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BKE",
+        "name": "Bjärke",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BLE",
+        "name": "Blekinge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BMA",
+        "name": "Bromölla",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BOO",
+        "name": "Boo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BRG",
+        "name": "Berg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BRL",
+        "name": "Borlänge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BRS",
+        "name": "Borås",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "BYG",
+        "name": "Bygdeå-Robertsfors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "CBR",
+        "name": "Carlfors Bruk",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DAD",
+        "name": "Dalsland med omnejd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DAN",
+        "name": "Danderyd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DAP",
+        "name": "Dalstorp",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DFS",
+        "name": "Degerfors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DOF",
+        "name": "Domsjö Fabriksområde",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "DRV",
+        "name": "Drefviken",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "EBA",
+        "name": "Emmaboda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "EBN",
+        "name": "Edsbyn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "EKG",
+        "name": "Enköping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "EKO",
+        "name": "Ekeröarna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ESJ",
+        "name": "Eksjö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ESK",
+        "name": "Eskilstuna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FBG",
+        "name": "Falkenberg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FBN",
+        "name": "Falbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FGA",
+        "name": "Fagersta",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FLE",
+        "name": "Flen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FLN",
+        "name": "Falun",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FLO",
+        "name": "Falun nordost",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FMD",
+        "name": "Främmestad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FOB",
+        "name": "Forsbacka",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FPD",
+        "name": "Filipstad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "FSB",
+        "name": "Finspångsbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GAB",
+        "name": "Garpenberg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GAM",
+        "name": "Gammelstilla",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GBG",
+        "name": "Göteborg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GBN",
+        "name": "Gullspångsbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GDB",
+        "name": "Gideåbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GIV",
+        "name": "Gislaved",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GNF",
+        "name": "Gagnef",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GTA",
+        "name": "Göta",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GTL",
+        "name": "Gotland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GTP",
+        "name": "Grästorp",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "GVL",
+        "name": "Gävle",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HAL",
+        "name": "Hälsingland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HAM",
+        "name": "Hammarstrand",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HBG",
+        "name": "Helsingborg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HBO",
+        "name": "Habo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HBT",
+        "name": "Hästberget",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HBY",
+        "name": "Heby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HDG",
+        "name": "Huddinge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HDL",
+        "name": "Horndal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HDS",
+        "name": "Hedesunda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HDV",
+        "name": "Hudiksvall",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HJM",
+        "name": "Hjärtum",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HJN",
+        "name": "Härjeån",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HJO",
+        "name": "Hjo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HLB",
+        "name": "Hallabro",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HLD",
+        "name": "Halland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HLJ",
+        "name": "Herrljunga",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HMD",
+        "name": "Halmstad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HMH",
+        "name": "Hedemorahyttorna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HMM",
+        "name": "Hammarö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HMR",
+        "name": "Hamra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HOF",
+        "name": "Hofors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HOG",
+        "name": "Höganäs",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HOR",
+        "name": "Höör",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HRA",
+        "name": "Härryda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HSD",
+        "name": "Härnösand",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HUV",
+        "name": "Huvudsta",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "HVI",
+        "name": "Hallstavik",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ING",
+        "name": "Ingarö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "JML",
+        "name": "Jämtlandsbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "JNK",
+        "name": "Jönköping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "JRA",
+        "name": "Järla",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "JUJ",
+        "name": "Jukkasjärvi",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KAB",
+        "name": "Kalixbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KBA",
+        "name": "Kungsbacka",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KBG",
+        "name": "Karlsborg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KHB",
+        "name": "Katrineholmsbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KHN",
+        "name": "Karlshamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KKA",
+        "name": "Karlskrona",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KKB",
+        "name": "Kinnekullebygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KLK",
+        "name": "Kiruna LKAB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KMR",
+        "name": "Kalmar",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KND",
+        "name": "Kind",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KNP",
+        "name": "Knäpplan",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KOB",
+        "name": "Kopparbergsbyggden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KPN",
+        "name": "Klippan",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KRF",
+        "name": "Kramfors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KRH",
+        "name": "Kristinehamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KRS",
+        "name": "Kristianstad-Åhus",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KSA",
+        "name": "Karlskoga",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KST",
+        "name": "Karlstad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KUV",
+        "name": "Kungälv",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KVI",
+        "name": "Kviinge",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "KVM",
+        "name": "Kvänum",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LAO",
+        "name": "Luleälven Övre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LBY",
+        "name": "Ljungby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LDB",
+        "name": "Lindesberg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LDG",
+        "name": "Lidingö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LDK",
+        "name": "Lidköping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LED",
+        "name": "Lilla Edet-Ale",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LER",
+        "name": "Leksand-Rättvik",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LHM",
+        "name": "Laholm",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LJD",
+        "name": "Ljusdal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LKA",
+        "name": "Landskrona",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LMA",
+        "name": "Lomma",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LNK",
+        "name": "Linköping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LRM",
+        "name": "Lerum",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LUL",
+        "name": "Luleå",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LUN",
+        "name": "Lund",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LYS",
+        "name": "Lysekil",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "LYX",
+        "name": "Lyckselebygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MAF",
+        "name": "Malmfälten",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MAI",
+        "name": "Mariestad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MBT",
+        "name": "Malmberget LKAB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MBY",
+        "name": "Mjölby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MDL",
+        "name": "Mölndal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MEL",
+        "name": "Medelpad Lokal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MLG",
+        "name": "Malung",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MMO",
+        "name": "Malmö-Burlöv",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MOR",
+        "name": "Mora-Orsa",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MRP",
+        "name": "Mörarp",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MSD",
+        "name": "Marstrand",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "MYN",
+        "name": "Myråsen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NBL",
+        "name": "Bohuslän Norra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NBR",
+        "name": "Nybro",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NHA",
+        "name": "Halland Norra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NHN",
+        "name": "Nynäshamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NKL",
+        "name": "Närkes Kil",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NOB",
+        "name": "Norberg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NRL",
+        "name": "Nerike Lokal",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NSB",
+        "name": "Nossebro",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NSF",
+        "name": "Nissafors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NSO",
+        "name": "Nässjö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NTE",
+        "name": "Norrtälje",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NVS",
+        "name": "Nordvästra Skåne",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NYD",
+        "name": "Nyköping Landsbygd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "NYK",
+        "name": "Nyköping",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OBO",
+        "name": "Ockelbo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OCK",
+        "name": "Öckerö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OFB",
+        "name": "Österfärnebo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OGO",
+        "name": "Östra Götaland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OHM",
+        "name": "Östhammar",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OHN",
+        "name": "Oskarshamn tätort",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OLD",
+        "name": "Öland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OLN",
+        "name": "Österlen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OLS",
+        "name": "Olofström",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ORT",
+        "name": "Orust-Tjörn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ORV",
+        "name": "Orust Västra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OSD",
+        "name": "Olseröd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OVK",
+        "name": "Örnsköldsvik",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "OXD",
+        "name": "Oxelösund",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "PIB",
+        "name": "Pitebygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "PTE",
+        "name": "Partille",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "RBY",
+        "name": "Ronneby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "ROY",
+        "name": "Rödeby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "RSJ",
+        "name": "Ringsjö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "RSK",
+        "name": "Roslagskusten",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SAH",
+        "name": "Sala-Hyttan",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SBG",
+        "name": "Sölvesborg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SBK",
+        "name": "Sysslebäck",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SBR",
+        "name": "Skyllbergs Bruk",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SBV",
+        "name": "Svalboviken",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SDT",
+        "name": "Södertälje",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SDV",
+        "name": "Sandviken",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SFE",
+        "name": "Säffle",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SFP",
+        "name": "Staffanstorp",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SGD",
+        "name": "Stenungsund",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SGS",
+        "name": "Strängnäs Tätort",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SHD",
+        "name": "Sjuhärad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SHN",
+        "name": "Söderhamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SHT",
+        "name": "Sandhult-Sandared",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SIG",
+        "name": "Sigtuna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SIH",
+        "name": "Simrishamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SJB",
+        "name": "Sjöbo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SJO",
+        "name": "Sjogerstad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKA",
+        "name": "Skara",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKD",
+        "name": "Skövde",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKL",
+        "name": "Skåne Landsbygd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKN",
+        "name": "Skånska",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKP",
+        "name": "Skurup",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKR",
+        "name": "Skillingaryd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKT",
+        "name": "Skellefteå",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SKV",
+        "name": "Skåne Västra Lokalnät",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SLD",
+        "name": "Skövde Landsbygd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SMB",
+        "name": "Smedjebacken",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SMN",
+        "name": "Småland Norra lokalnät",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SMS",
+        "name": "Småland Södra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SNM",
+        "name": "Skåne Mellersta",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SOT",
+        "name": "Sollentuna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SRF",
+        "name": "Sturefors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SSJ",
+        "name": "Sävsjö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "STH",
+        "name": "Stockholm",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "STR",
+        "name": "Säter",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SUV",
+        "name": "Sundsvall tätort",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "SYM",
+        "name": "Sydmälaren",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TBA",
+        "name": "Töreboda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TBG",
+        "name": "Trelleborg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TBY",
+        "name": "Täby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TDN",
+        "name": "Tornedalen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TDO",
+        "name": "Tornedalen Övre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "THM",
+        "name": "Tidaholm",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TIB",
+        "name": "Tibro",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TLB",
+        "name": "Tillberga",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TNN",
+        "name": "Tornedalen Nedre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TNS",
+        "name": "Tranås",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TOR",
+        "name": "Torsåker",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TOS",
+        "name": "Torsås",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TRE",
+        "name": "Töre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TRH",
+        "name": "Trollhättan",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TUM",
+        "name": "Tumba",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TYR",
+        "name": "Tyresö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "TYS",
+        "name": "Tyngsjö-Finnmarken",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UHN",
+        "name": "Ulricehamn",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UMA",
+        "name": "Umeå",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UMD",
+        "name": "Umeälven Nedre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UMO",
+        "name": "Umeälven Övre",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UPN",
+        "name": "Uppland Norra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UPO",
+        "name": "Uppland Östra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UPP",
+        "name": "Uppsala",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UPS",
+        "name": "Uppland Södra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UPV",
+        "name": "Uppland Västra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "URM",
+        "name": "Upprämmen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "UVA",
+        "name": "Uddevalla",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAB",
+        "name": "Vallebygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAD",
+        "name": "Västanhede",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAG",
+        "name": "Vagnhärad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAL",
+        "name": "Värmland",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAN",
+        "name": "Vätterbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAR",
+        "name": "Vara",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VAT",
+        "name": "Vallentuna",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBG",
+        "name": "Varberg",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBK",
+        "name": "Västerbykil",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBL",
+        "name": "Västerbergslagen",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBN",
+        "name": "Varbergsorten Norra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBS",
+        "name": "Varbergsorten Södra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VBY",
+        "name": "Vimmerby",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VDM",
+        "name": "Vedum",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VDN",
+        "name": "Vindeln",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VGD",
+        "name": "Vaggeryd",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VGF",
+        "name": "Viggafors",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VIG",
+        "name": "Vingåkersbygden",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VLB",
+        "name": "Vålberg-Segerstad",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VLS",
+        "name": "Västmanland Södra",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VMA",
+        "name": "Vilhelmina",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VMD",
+        "name": "Värmdö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VMO",
+        "name": "Värnamo",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VNB",
+        "name": "Vansbro",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VTL",
+        "name": "Vetlanda",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VVI",
+        "name": "Västervik",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "VXO",
+        "name": "Växjö",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "grid_area",
+        "code": "YST",
+        "name": "Ystad",
+        "action": "added",
+        "fields": []
+      }
+    ],
+    "brp": [
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "1K5 EL AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "1K5 EL AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "7H Kraft Energiförmedling AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "7H Kraft Energiförmedling AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "A/S Global Risk Management Ltd. Holding",
+        "direction": "consumption",
+        "toBrp": "A/S Global Risk Management Ltd. Holding"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "AB Borlänge Energi",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "AB Borlänge Energi",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Aarhus Trading A/S",
+        "direction": "consumption",
+        "toBrp": "Aarhus Trading A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Affärsverken Energi i Karlskrona AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Affärsverken Energi i Karlskrona AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ale El Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ale El Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Alingsås Energi Elhandel och Elproduktion AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Alingsås Energi Elhandel och Elproduktion AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Alpiq AG",
+        "direction": "consumption",
+        "toBrp": "Alpiq AG"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Alpiq AG",
+        "direction": "production",
+        "toBrp": "Alpiq AG"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Aneo AS",
+        "direction": "consumption",
+        "toBrp": "Aneo AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Aneo AS",
+        "direction": "production",
+        "toBrp": "Aneo AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Arvika Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Arvika Kraft AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Atlas Energy DAC",
+        "direction": "consumption",
+        "toBrp": "Atlas Energy DAC"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Atria Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Atria Sverige AB",
+        "direction": "production",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Axpo Nordic AS (SE)",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Axpo Nordic AS (SE)",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Axpo Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Axpo Sverige AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "BD Energy A/S",
+        "direction": "consumption",
+        "toBrp": "BD Energy A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "BP Gas Marketing Ltd",
+        "direction": "consumption",
+        "toBrp": "BP Gas Marketing Ltd"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Bengtsfors Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Bengtsfors Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Bergen Synergy AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Bergen Synergy AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "BestEl AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "BestEl AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Billinge Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Billinge Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Bixia AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Bixia AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Bjäre Kraft Energi AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Bjäre Kraft Energi AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Bodens Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Bodens Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Boo Energi Försäljnings AB",
+        "direction": "consumption",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Boo Energi Försäljnings AB",
+        "direction": "production",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Borås Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Borås Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Brittedals Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Brittedals Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "C A Commodities A/S",
+        "direction": "consumption",
+        "toBrp": "C A Commodities A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "C4 Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "C4 Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Centrica Energy A/S (SE)",
+        "direction": "consumption",
+        "toBrp": "Centrica Energy A/S (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Centrica Energy A/S (SE)",
+        "direction": "production",
+        "toBrp": "Centrica Energy A/S (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ChargeBuddy Energy AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "ChargeBuddy Energy AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Cheap Energy AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Cheap Energy AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Copenhagen Energy Trading A/S",
+        "direction": "consumption",
+        "toBrp": "Copenhagen Energy Trading A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Dalakraft AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Dalakraft AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Danske Commodities A/S",
+        "direction": "consumption",
+        "toBrp": "Danske Commodities A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Danske Commodities A/S",
+        "direction": "production",
+        "toBrp": "Danske Commodities A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "E.ON Energilösningar AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "E.ON Energilösningar AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "E.ON Sverige AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "E.ON Sverige AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ECC Luxembourg Sarl",
+        "direction": "consumption",
+        "toBrp": "ECC Luxembourg Sarl"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ENA Energi AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "ENA Energi AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ENZEE Commodities A/S",
+        "direction": "consumption",
+        "toBrp": "ENZEE Commodities A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ES FOR IN SE",
+        "direction": "consumption",
+        "toBrp": "ES FOR IN SE"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "ETC Elhandel i Stockholm AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "ETC Elhandel i Stockholm AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "EVLTA AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "EVLTA AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Eksjö Energi ELIT AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Eksjö Energi ELIT AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elery Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elery Elhandel AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elexia Elpartner AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elexia Elpartner AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elklart AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elklart AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elkraft Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Elkraft Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elkraft Sverige AB",
+        "direction": "production",
+        "toBrp": "Elkraft Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elmera Energy AS",
+        "direction": "consumption",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elmera Energy AS",
+        "direction": "production",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elnor Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elnor Elhandel AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Elvy AB",
+        "direction": "consumption",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Elvy AB",
+        "direction": "production",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Emaldo AB",
+        "direction": "consumption",
+        "toBrp": "Emaldo AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Energetick ApS",
+        "direction": "consumption",
+        "toBrp": "Energetick ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Energi2 Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Energi2 Elhandel AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Energigrossisten i Norden Filial",
+        "direction": "consumption",
+        "toBrp": "Energigrossisten i Norden Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Energigrossisten i Norden Filial",
+        "direction": "production",
+        "toBrp": "Energigrossisten i Norden Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Energy Group ApS",
+        "direction": "consumption",
+        "toBrp": "Energy Group ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Engelhart CTP Renewables GmbH",
+        "direction": "consumption",
+        "toBrp": "Engelhart CTP Renewables GmbH"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Engelhart CTP Renewables GmbH",
+        "direction": "production",
+        "toBrp": "Engelhart CTP Renewables GmbH"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Enkel Energi ApS",
+        "direction": "consumption",
+        "toBrp": "Enkel Energi ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Enkla Elbolaget i Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Enkla Elbolaget i Sverige AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Entelios AB",
+        "direction": "consumption",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Entelios AB",
+        "direction": "production",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Epiq Energy ApS",
+        "direction": "consumption",
+        "toBrp": "Epiq Energy ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Eskilstuna Energi och Miljö Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Eskilstuna Energi och Miljö Försäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Etha Energy Trading Oy",
+        "direction": "consumption",
+        "toBrp": "Etha Energy Trading Oy"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Falkenberg Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Falkenberg Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Falu Energi & Vatten AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Falu Energi & Vatten AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Finspång Tekniska Verk AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Finspång Tekniska Verk AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fjordkraft Företag AB",
+        "direction": "consumption",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fjordkraft Företag AB",
+        "direction": "production",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fjordkraft Konsument AB",
+        "direction": "consumption",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fjordkraft Konsument AB",
+        "direction": "production",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Flower Electricity Retail AB",
+        "direction": "consumption",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Flower Electricity Retail AB",
+        "direction": "production",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Flower Electricity Trading AB",
+        "direction": "consumption",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Flower Electricity Trading AB",
+        "direction": "production",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fortum Markets AB",
+        "direction": "consumption",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fortum Markets AB",
+        "direction": "production",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fortum Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fortum Sverige AB",
+        "direction": "production",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Forward Energy AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Forward Energy AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fyrfasen Energi AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fyrfasen Energi AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Föreningsel Elhandel Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Föreningsel Elhandel Sverige AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "GITO Heavy Charging Solutions AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "GITO Heavy Charging Solutions AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Gasum Oyj (SE)",
+        "direction": "consumption",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Gislaved Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Gislaved Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "GodEl i Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "GodEl i Sverige AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Gotlands Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Gotlands Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Green Voltis Sweden AB",
+        "direction": "consumption",
+        "toBrp": "Green Voltis Sweden AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Green.ai ApS",
+        "direction": "consumption",
+        "toBrp": "Green.ai ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Greenely Premium AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Greenely Premium AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Grästorp Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Grästorp Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Gävle Energisystem AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Gävle Energisystem AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Göteborg Energi Din El AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Göteborg Energi Din El AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "HEMAB Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "HEMAB Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Habo Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Habo Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hafslund Kraft AS",
+        "direction": "consumption",
+        "toBrp": "Hafslund Kraft AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hallstaviks Elverk AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Hallstaviks Elverk AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Halmstads Energi och Miljö AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Halmstads Energi och Miljö AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hedemora Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Hedemora Elhandel AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Herrljunga Kraft Energiförmedling AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Herrljunga Kraft Energiförmedling AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hjo Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Hjo Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hybrid Greentech Energy Trading ApS",
+        "direction": "consumption",
+        "toBrp": "Hybrid Greentech Energy Trading ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Hydro Energi AS",
+        "direction": "consumption",
+        "toBrp": "Hydro Energi AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Hydro Energi AS",
+        "direction": "production",
+        "toBrp": "Hydro Energi AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Härryda Energi Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Härryda Energi Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Höganäs Energi Handel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Höganäs Energi Handel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "In Commodities A/S",
+        "direction": "consumption",
+        "toBrp": "In Commodities A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Inductive Energy",
+        "direction": "consumption",
+        "toBrp": "Inductive Energy"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ingrid Capacity AB",
+        "direction": "consumption",
+        "toBrp": "Ingrid Capacity AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ingrid Capacity AB",
+        "direction": "production",
+        "toBrp": "Ingrid Capacity AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Joulx ApS",
+        "direction": "consumption",
+        "toBrp": "Joulx ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Jukkasjärvi Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Jukkasjärvi Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Jämtkraft AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Jämtkraft AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Jönköping Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Jönköping Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kalmar Energi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kalmar Energi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Karlsborgs Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Karlsborgs Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Karlshamn Energi Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Karlshamn Energi Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Karlskoga Energi & Miljö AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Karlskoga Energi & Miljö AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Karlstads Energi AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Karlstads Energi AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kinect Energy Sweden AB",
+        "direction": "consumption",
+        "toBrp": "Kinect Energy Sweden AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kinect Energy Sweden AB",
+        "direction": "production",
+        "toBrp": "Kinect Energy Sweden AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kinnekulle Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kinnekulle Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kraftringen Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kraftringen Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kristinehamns Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kristinehamns Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kungälv Närenergi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kungälv Närenergi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kvasir Technologies Ltd",
+        "direction": "consumption",
+        "toBrp": "Kvasir Technologies Ltd"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kvänum Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kvänum Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Kärnfull Future AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Kärnfull Future AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "LRF Samköp",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "LRF Samköp",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Landskrona Energi Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Landskrona Energi Kraft AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Lerum Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Lerum Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Linde Energi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Linde Energi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ljungby Energi AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ljungby Energi AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ljusdal Energi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ljusdal Energi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Lovel AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Lovel AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Luleå Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Luleå Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Lysekils Energi Vind AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Lysekils Energi Vind AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "MFT Energy A/S",
+        "direction": "consumption",
+        "toBrp": "MFT Energy A/S"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mellanskånes Kraft AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mellanskånes Kraft AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mer Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mer Sverige AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mind Energy AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mind Energy AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Modity Energy Trading AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Modity Energy Trading AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Monsson Energy AB",
+        "direction": "consumption",
+        "toBrp": "Monsson Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Motala Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Motala Energi AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mountain Energy AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mountain Energy AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mälarenergi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mälarenergi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mälarenergi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mälarenergi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Mölndal Energi AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Mölndal Energi AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "NW RE",
+        "direction": "consumption",
+        "toBrp": "NW RE"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "NW RE",
+        "direction": "production",
+        "toBrp": "NW RE"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nidaros Energy ApS",
+        "direction": "consumption",
+        "toBrp": "Nidaros Energy ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nidhog ApS",
+        "direction": "consumption",
+        "toBrp": "Nidhog ApS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Nidhog ApS",
+        "direction": "production",
+        "toBrp": "Nidhog ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Njudung Energi Vetlanda AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Njudung Energi Vetlanda AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nord Energy Oy",
+        "direction": "consumption",
+        "toBrp": "Nord Energy Oy"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nordic Energy House ApS",
+        "direction": "consumption",
+        "toBrp": "Nordic Energy House ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Norrtälje Energi Försäljnings AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Norrtälje Energi Försäljnings AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Northpool B.V.",
+        "direction": "consumption",
+        "toBrp": "Northpool B.V."
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nossebro Energi Försäljnings AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Nossebro Energi Försäljnings AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ntricity Market Services AB",
+        "direction": "consumption",
+        "toBrp": "Ntricity Market Services AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nybro Energi AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Nybro Energi AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nyköping Vattenkraft AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Nyköping Vattenkraft AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Näckåns Energi AB",
+        "direction": "consumption",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Näckåns Energi AB",
+        "direction": "production",
+        "toBrp": "Fortum Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Olseröd Energi",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Olseröd Energi",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Oppy Balancing Services AB",
+        "direction": "consumption",
+        "toBrp": "Oppy Balancing Services AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Oppy Balancing Services AB",
+        "direction": "production",
+        "toBrp": "Oppy Balancing Services AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Optimax Energy GmbH",
+        "direction": "consumption",
+        "toBrp": "Optimax Energy GmbH"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Oskarshamn Energi AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Oskarshamn Energi AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Partille Energi AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Partille Energi AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "PiteEnergi Handel AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "PiteEnergi Handel AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Produktionsbalans PBA AB",
+        "direction": "consumption",
+        "toBrp": "Produktionsbalans PBA AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Produktionsbalans PBA AB",
+        "direction": "production",
+        "toBrp": "Produktionsbalans PBA AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "RWE Supply & Trading GmbH",
+        "direction": "consumption",
+        "toBrp": "RWE Supply & Trading GmbH"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Rebel Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Rebel Elhandel AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Rebel Flex AB",
+        "direction": "consumption",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Rebel Flex AB",
+        "direction": "production",
+        "toBrp": "Flower Infrastructure Technologies AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Respect Energy S.A.",
+        "direction": "consumption",
+        "toBrp": "Respect Energy S.A."
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Rödeby Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Rödeby Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "SEVAB Energiförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "SEVAB Energiförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "SVEA Solar Park Energy AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "SVEA Solar Park Energy AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sala-Heby Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sala-Heby Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sandhult-Sandareds Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sandhult-Sandareds Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sandviken Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sandviken Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Scalar Energy AS",
+        "direction": "consumption",
+        "toBrp": "Scalar Energy AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Scandinavia Energy System AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Scandinavia Energy System AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Scandinavian Energy Hub AB",
+        "direction": "consumption",
+        "toBrp": "Energigrossisten i Norden Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Scandinavian Energy Hub AB",
+        "direction": "production",
+        "toBrp": "Energigrossisten i Norden Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Second Foundation Trading AG",
+        "direction": "consumption",
+        "toBrp": "Second Foundation Trading AG"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sjogerstads Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sjogerstads Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Skellefteå Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Skellefteå Kraft AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sky Quant sp. z o.o.",
+        "direction": "consumption",
+        "toBrp": "Sky Quant sp. z o.o."
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Skyllberg Energi AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Skyllberg Energi AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Skånska Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Skånska Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Smart el i Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Smart el i Sverige AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Solfolket AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Solfolket AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sollentuna Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sollentuna Elhandel AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Statkraft Energi AS",
+        "direction": "consumption",
+        "toBrp": "Statkraft Energi AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Statkraft Energi AS",
+        "direction": "production",
+        "toBrp": "Statkraft Energi AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Stockholm Exergi AB",
+        "direction": "consumption",
+        "toBrp": "Stockholm Exergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Stockholm Exergi AB",
+        "direction": "production",
+        "toBrp": "Stockholm Exergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Stockholms Elbolag AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Stockholms Elbolag AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Storuman Energi AB",
+        "direction": "consumption",
+        "toBrp": "Storuman Energi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Storuman Energi AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sturefors Godsförvaltning AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sturefors Godsförvaltning AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sundsvall Energi AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sundsvall Energi AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svealands Elbolag AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svealands Elbolag AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svekraft AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svekraft AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svensk Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svensk Kraft AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svensk Kärnkraft AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svensk Kärnkraft AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svenska Elverket AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svenska Elverket AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Svenska kraftnät",
+        "direction": "consumption",
+        "toBrp": "Svenska kraftnät"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Svenska kraftnät",
+        "direction": "production",
+        "toBrp": "Svenska kraftnät"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Switch Nordic Green AB",
+        "direction": "consumption",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Switch Nordic Green AB",
+        "direction": "production",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Södra Hallands Kraft Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Södra Hallands Kraft Försäljning AB",
+        "direction": "production",
+        "toBrp": "E.ON Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Södra Medlemsel AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Södra Medlemsel AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Sölvesborg Energi AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Sölvesborg Energi AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "THN Capital AG",
+        "direction": "consumption",
+        "toBrp": "THN Capital AG"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Telinet Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Telinet Energi AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Tibber AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Tibber AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Tibro Energi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Tibro Energi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Tidaholms Energi AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Tidaholms Energi AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Trafikverket",
+        "direction": "consumption",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Trafikverket",
+        "direction": "production",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Tranås Energi AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Tranås Energi AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Trelleborgs Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Trelleborgs Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Trollhättan Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Trollhättan Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Twig Energy ApS",
+        "direction": "consumption",
+        "toBrp": "Twig Energy ApS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Twig Energy ApS",
+        "direction": "production",
+        "toBrp": "Twig Energy ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Töre Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Töre Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "UAB Vėjomaina",
+        "direction": "consumption",
+        "toBrp": "UAB Vėjomaina"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Uddevalla Energi AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Uddevalla Energi AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Umeå Energi Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Umeå Energi Elhandel AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Umeå kommun",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Uniper Global Commodities SE (SE)",
+        "direction": "consumption",
+        "toBrp": "Uniper Global Commodities SE (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Uniper Global Commodities SE (SE)",
+        "direction": "production",
+        "toBrp": "Uniper Global Commodities SE (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Upplands Energi AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Upplands Energi AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "VIM Energy Systems AB",
+        "direction": "consumption",
+        "toBrp": "VIM Energy Systems AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "VIM Energy Systems AB",
+        "direction": "production",
+        "toBrp": "VIM Energy Systems AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Vaggeryds Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Vaggeryds Energi AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Vallebygdens Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Vallebygdens Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Valmet AB",
+        "direction": "consumption",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Valmet AB",
+        "direction": "production",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Varberg Energimarknad AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Varberg Energimarknad AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Varbergsortens Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Varbergsortens Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Vattenfall AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Vattenfall AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Via Energi AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Via Energi AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Vimmerby Energiförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Vimmerby Energiförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Volta Energy DAC",
+        "direction": "consumption",
+        "toBrp": "Volta Energy DAC"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Volue Energy Market Services Sverige Filial",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Volue Energy Market Services Sverige Filial",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "VänerEl AB",
+        "direction": "consumption",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "VänerEl AB",
+        "direction": "production",
+        "toBrp": "Mälarenergi AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Värnamo Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Värnamo Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Västerbergslagens Elförsäljning AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Västerbergslagens Elförsäljning AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Västerbergslagens Kraft AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Västervik Miljö & Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Västervik Miljö & Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "X Commodities ApS",
+        "direction": "consumption",
+        "toBrp": "X Commodities ApS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ystad Energihandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ystad Energihandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "katshing Energy AB",
+        "direction": "consumption",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "katshing Energy AB",
+        "direction": "production",
+        "toBrp": "Volue Energy Market Services Sverige Filial"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "pure.energy GmbH",
+        "direction": "consumption",
+        "toBrp": "pure.energy GmbH"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "pure.energy GmbH",
+        "direction": "production",
+        "toBrp": "pure.energy GmbH"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Å Energi Vannkraft AS",
+        "direction": "consumption",
+        "toBrp": "Å Energi Vannkraft AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Å Energi Vannkraft AS",
+        "direction": "production",
+        "toBrp": "Å Energi Vannkraft AS"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Ålem Energi Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Ålem Energi Kraft AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Årsunda Eldistribution AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Årsunda Eldistribution AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Åsele Kraft",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Åsele Kraft",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Öresundskraft Marknad AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Öresundskraft Marknad AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Österlens Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Österlens Kraft AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Östra Kinds Elkraft AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Östra Kinds Elkraft AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Övertorneå Energi Försäljning AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Övertorneå Energi Försäljning AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Övik Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Övik Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "1K5 EL AB",
+        "direction": "consumption",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "1K5 EL AB",
+        "direction": "production",
+        "toBrp": "Varberg Energimarknad AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "7H Kraft Energiförmedling AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "7H Kraft Energiförmedling AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "A/S Global Risk Management Ltd. Holding",
+        "direction": "consumption",
+        "toBrp": "A/S Global Risk Management Ltd. Holding"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "AB Borlänge Energi",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "AB Borlänge Energi",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Aarhus Trading A/S",
+        "direction": "consumption",
+        "toBrp": "Aarhus Trading A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Affärsverken Energi i Karlskrona AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Affärsverken Energi i Karlskrona AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Ale El Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Ale El Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Alingsås Energi Elhandel och Elproduktion AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Alingsås Energi Elhandel och Elproduktion AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Alpiq AG",
+        "direction": "consumption",
+        "toBrp": "Alpiq AG"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Alpiq AG",
+        "direction": "production",
+        "toBrp": "Alpiq AG"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Aneo AS",
+        "direction": "consumption",
+        "toBrp": "Aneo AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Aneo AS",
+        "direction": "production",
+        "toBrp": "Aneo AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Arvika Kraft AB",
+        "direction": "consumption",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Arvika Kraft AB",
+        "direction": "production",
+        "toBrp": "Jämtkraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Atlas Energy DAC",
+        "direction": "consumption",
+        "toBrp": "Atlas Energy DAC"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Atria Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Atria Sverige AB",
+        "direction": "production",
+        "toBrp": "Gasum Oyj"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Axpo Nordic AS (SE)",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Axpo Nordic AS (SE)",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Axpo Sverige AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Axpo Sverige AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "BD Energy A/S",
+        "direction": "consumption",
+        "toBrp": "BD Energy A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "BP Gas Marketing Ltd",
+        "direction": "consumption",
+        "toBrp": "BP Gas Marketing Ltd"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "BP Gas Marketing Ltd",
+        "direction": "production",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bengtsfors Energi AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bengtsfors Energi AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bergen Synergy AB",
+        "direction": "consumption",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bergen Synergy AB",
+        "direction": "production",
+        "toBrp": "Mind Energy AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "BestEl AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "BestEl AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Billinge Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Billinge Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bixia AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bixia AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bjäre Kraft Energi AB",
+        "direction": "consumption",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bjäre Kraft Energi AB",
+        "direction": "production",
+        "toBrp": "Skellefteå Kraft AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bodens Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Bodens Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Boo Energi Försäljnings AB",
+        "direction": "consumption",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Boo Energi Försäljnings AB",
+        "direction": "production",
+        "toBrp": "Entelios AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Borås Elhandel AB",
+        "direction": "consumption",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Borås Elhandel AB",
+        "direction": "production",
+        "toBrp": "Vattenfall AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Brittedals Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Brittedals Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "C A Commodities A/S",
+        "direction": "consumption",
+        "toBrp": "C A Commodities A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "C4 Energi AB",
+        "direction": "consumption",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "C4 Energi AB",
+        "direction": "production",
+        "toBrp": "Modity Energy Trading AB (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Centrica Energy A/S (SE)",
+        "direction": "consumption",
+        "toBrp": "Centrica Energy A/S (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Centrica Energy A/S (SE)",
+        "direction": "production",
+        "toBrp": "Centrica Energy A/S (SE)"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "ChargeBuddy Energy AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      }
+    ]
+  },
+  "changesTruncated": true
+}

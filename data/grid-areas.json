@@ -1,0 +1,2232 @@
+{
+  "fetchedAt": "2026-08-17T07:34:47.903Z",
+  "runId": "20260817-073447",
+  "source": "/EXP03/MeteringGridAreas",
+  "count": 278,
+  "rows": [
+    {
+      "mgaCode": "ABB",
+      "name": "Älvsbybygden",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AHB",
+      "name": "Ängelholmsbygden",
+      "biddingZone": "SE4",
+      "dsoName": "Öresundskraft Elnät AB",
+      "dsoCode": "40400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AJB",
+      "name": "Arvidsjaurbygden",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AKB",
+      "name": "Åkersberga",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ALL",
+      "name": "Ådalen Lokal",
+      "biddingZone": "SE2",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ALM",
+      "name": "Ålem",
+      "biddingZone": "SE4",
+      "dsoName": "Ålem Energi Elnät AB",
+      "dsoCode": "44900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ALS",
+      "name": "Alingsås",
+      "biddingZone": "SE3",
+      "dsoName": "Alingsås Energi Elnät AB",
+      "dsoCode": "16700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ALV",
+      "name": "Alvesta Köping",
+      "biddingZone": "SE4",
+      "dsoName": "Alvesta Elnät AB",
+      "dsoCode": "16900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AML",
+      "name": "Åmål",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AMS",
+      "name": "Almnäs",
+      "biddingZone": "SE3",
+      "dsoName": "Fågelås Elnät AB",
+      "dsoCode": "16800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ANE",
+      "name": "Ånge",
+      "biddingZone": "SE2",
+      "dsoName": "Härjeåns Nät AB",
+      "dsoCode": "43600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ANG",
+      "name": "Årjäng",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ARD",
+      "name": "Ardala",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ARS",
+      "name": "Årsunda",
+      "biddingZone": "SE3",
+      "dsoName": "Årsunda Kraft-o Belysningsförening Upa",
+      "dsoCode": "46600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ARV",
+      "name": "Arvika",
+      "biddingZone": "SE3",
+      "dsoName": "Arvika Elnät AB",
+      "dsoCode": "17000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ASL",
+      "name": "Åsele",
+      "biddingZone": "SE2",
+      "dsoName": "Åsele Elnät AB",
+      "dsoCode": "71500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AVD",
+      "name": "Älvdalen",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "AVE",
+      "name": "Avesta",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BDL",
+      "name": "Brittedal",
+      "biddingZone": "SE4",
+      "dsoName": "Brittedals Elnät ek för",
+      "dsoCode": "18700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BDN",
+      "name": "Boden",
+      "biddingZone": "SE1",
+      "dsoName": "Bodens Energi Nät AB",
+      "dsoCode": "17900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BEF",
+      "name": "Bengtsfors",
+      "biddingZone": "SE3",
+      "dsoName": "Bengtsfors Energi Nät AB",
+      "dsoCode": "17300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BGO",
+      "name": "Bergslagen Östra",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BHM",
+      "name": "Borgholm",
+      "biddingZone": "SE4",
+      "dsoName": "Borgholm Energi Elnät AB",
+      "dsoCode": "18200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BJK",
+      "name": "Björnekulla",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BJL",
+      "name": "Björklinge",
+      "biddingZone": "SE3",
+      "dsoName": "Upplands Energi",
+      "dsoCode": "17800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BJR",
+      "name": "Bjäre",
+      "biddingZone": "SE4",
+      "dsoName": "Bjäre Kraft Elnät AB",
+      "dsoCode": "17600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BKE",
+      "name": "Bjärke",
+      "biddingZone": "SE3",
+      "dsoName": "Bjärke Energi Ek. För.",
+      "dsoCode": "17700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BLE",
+      "name": "Blekinge",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BMA",
+      "name": "Bromölla",
+      "biddingZone": "SE4",
+      "dsoName": "Bromölla Energi & Vatten AB",
+      "dsoCode": "18800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BOO",
+      "name": "Boo",
+      "biddingZone": "SE3",
+      "dsoName": "Boo Energi ek. för",
+      "dsoCode": "18100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BRG",
+      "name": "Berg",
+      "biddingZone": "SE2",
+      "dsoName": "Bergs tingslags elektriska AB",
+      "dsoCode": "17400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BRL",
+      "name": "Borlänge",
+      "biddingZone": "SE3",
+      "dsoName": "Borlänge Energi Elnät AB",
+      "dsoCode": "18400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BRS",
+      "name": "Borås",
+      "biddingZone": "SE3",
+      "dsoName": "Nätkraft Borås Infra AB",
+      "dsoCode": "11100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "BYG",
+      "name": "Bygdeå-Robertsfors",
+      "biddingZone": "SE2",
+      "dsoName": "Skellefteå Kraft Elnät AB",
+      "dsoCode": "10600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "CBR",
+      "name": "Carlfors Bruk",
+      "biddingZone": "SE3",
+      "dsoName": "Carlfors Bruk AB",
+      "dsoCode": "45800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DAD",
+      "name": "Dalsland med omnejd",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DAN",
+      "name": "Danderyd",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DAP",
+      "name": "Dalstorp",
+      "biddingZone": "SE3",
+      "dsoName": "Östra Kinds Elnät AB",
+      "dsoCode": "45500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DFS",
+      "name": "Degerfors",
+      "biddingZone": "SE3",
+      "dsoName": "Degerfors Elnät AB",
+      "dsoCode": "18900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DOF",
+      "name": "Domsjö Fabriksområde",
+      "biddingZone": "SE2",
+      "dsoName": "Övik Energi Nät AB",
+      "dsoCode": "45700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "DRV",
+      "name": "Drefviken",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "EBA",
+      "name": "Emmaboda",
+      "biddingZone": "SE4",
+      "dsoName": "Emmaboda Elnät AB",
+      "dsoCode": "19500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "EBN",
+      "name": "Edsbyn",
+      "biddingZone": "SE2",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "EKG",
+      "name": "Enköping",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "EKO",
+      "name": "Ekeröarna",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ESJ",
+      "name": "Eksjö",
+      "biddingZone": "SE3",
+      "dsoName": "Eksjö Elnät AB",
+      "dsoCode": "19400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ESK",
+      "name": "Eskilstuna",
+      "biddingZone": "SE3",
+      "dsoName": "Eskilstuna Energi och Miljö Elnät AB",
+      "dsoCode": "19800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FBG",
+      "name": "Falkenberg",
+      "biddingZone": "SE4",
+      "dsoName": "Falkenberg Energi Elnät AB",
+      "dsoCode": "39700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FBN",
+      "name": "Falbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Falbygdens Energi Nät AB",
+      "dsoCode": "39600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FGA",
+      "name": "Fagersta",
+      "biddingZone": "SE3",
+      "dsoName": "Västerbergslagens Elnät AB",
+      "dsoCode": "38700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FLE",
+      "name": "Flen",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FLN",
+      "name": "Falun",
+      "biddingZone": "SE3",
+      "dsoName": "Falu Elnät AB",
+      "dsoCode": "19200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FLO",
+      "name": "Falun nordost",
+      "biddingZone": "SE3",
+      "dsoName": "Falu Elnät AB",
+      "dsoCode": "19200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FMD",
+      "name": "Främmestad",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FOB",
+      "name": "Forsbacka",
+      "biddingZone": "SE3",
+      "dsoName": "Gävle Energi Elnät AB",
+      "dsoCode": "20400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FPD",
+      "name": "Filipstad",
+      "biddingZone": "SE3",
+      "dsoName": "Filipstad Energinät AB",
+      "dsoCode": "39900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "FSB",
+      "name": "Finspångsbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GAB",
+      "name": "Garpenberg",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GAM",
+      "name": "Gammelstilla",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GBG",
+      "name": "Göteborg",
+      "biddingZone": "SE3",
+      "dsoName": "Göteborg Energi Nät AB",
+      "dsoCode": "20500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GBN",
+      "name": "Gullspångsbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GDB",
+      "name": "Gideåbygden",
+      "biddingZone": "SE2",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GIV",
+      "name": "Gislaved",
+      "biddingZone": "SE3",
+      "dsoName": "Gislaved Energi Elnät AB",
+      "dsoCode": "19900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GNF",
+      "name": "Gagnef",
+      "biddingZone": "SE3",
+      "dsoName": "Dala Energi Elnät AB",
+      "dsoCode": "25800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GTA",
+      "name": "Göta",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GTL",
+      "name": "Gotland",
+      "biddingZone": "SE3",
+      "dsoName": "Gotlands Elnät AB",
+      "dsoCode": "11220",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GTP",
+      "name": "Grästorp",
+      "biddingZone": "SE3",
+      "dsoName": "Grästorp Energi ek för",
+      "dsoCode": "20300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "GVL",
+      "name": "Gävle",
+      "biddingZone": "SE3",
+      "dsoName": "Gävle Energi Elnät AB",
+      "dsoCode": "20400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HAL",
+      "name": "Hälsingland",
+      "biddingZone": "SE2",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HAM",
+      "name": "Hammarstrand",
+      "biddingZone": "SE2",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HBG",
+      "name": "Helsingborg",
+      "biddingZone": "SE4",
+      "dsoName": "Öresundskraft Elnät AB",
+      "dsoCode": "40400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HBO",
+      "name": "Habo",
+      "biddingZone": "SE3",
+      "dsoName": "Habo Energi Kraft AB",
+      "dsoCode": "46300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HBT",
+      "name": "Hästberget",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HBY",
+      "name": "Heby",
+      "biddingZone": "SE3",
+      "dsoName": "Sala-Heby Energi Elnät AB",
+      "dsoCode": "31600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HDG",
+      "name": "Huddinge",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HDL",
+      "name": "Horndal",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HDS",
+      "name": "Hedesunda",
+      "biddingZone": "SE3",
+      "dsoName": "Gävle Energi Elnät AB",
+      "dsoCode": "20400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HDV",
+      "name": "Hudiksvall",
+      "biddingZone": "SE2",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HJM",
+      "name": "Hjärtum",
+      "biddingZone": "SE3",
+      "dsoName": "Hjärtums Elförening ek för",
+      "dsoCode": "21800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HJN",
+      "name": "Härjeån",
+      "biddingZone": "SE2",
+      "dsoName": "Härjeåns Nät AB",
+      "dsoCode": "43600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HJO",
+      "name": "Hjo",
+      "biddingZone": "SE3",
+      "dsoName": "Hjo Elnät AB",
+      "dsoCode": "21700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HLB",
+      "name": "Hallabro",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HLD",
+      "name": "Halland",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HLJ",
+      "name": "Herrljunga",
+      "biddingZone": "SE3",
+      "dsoName": "Herrljunga Elnät AB",
+      "dsoCode": "21600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HMD",
+      "name": "Halmstad",
+      "biddingZone": "SE4",
+      "dsoName": "Halmstads Energi och Miljö Nät AB",
+      "dsoCode": "21200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HMH",
+      "name": "Hedemorahyttorna",
+      "biddingZone": "SE3",
+      "dsoName": "Hedemora Energi AB",
+      "dsoCode": "21400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HMM",
+      "name": "Hammarö",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HMR",
+      "name": "Hamra",
+      "biddingZone": "SE2",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HOF",
+      "name": "Hofors",
+      "biddingZone": "SE3",
+      "dsoName": "Gävle Energi Elnät AB",
+      "dsoCode": "20400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HOG",
+      "name": "Höganäs",
+      "biddingZone": "SE4",
+      "dsoName": "Höganäs Energi Elnät AB",
+      "dsoCode": "22900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HOR",
+      "name": "Höör",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HRA",
+      "name": "Härryda",
+      "biddingZone": "SE3",
+      "dsoName": "Härryda Energi AB",
+      "dsoCode": "22700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HSD",
+      "name": "Härnösand",
+      "biddingZone": "SE2",
+      "dsoName": "Härnösand Elnät AB",
+      "dsoCode": "22600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HUV",
+      "name": "Huvudsta",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "HVI",
+      "name": "Hallstavik",
+      "biddingZone": "SE3",
+      "dsoName": "Hallstaviks Elverk ek för",
+      "dsoCode": "21100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ING",
+      "name": "Ingarö",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "JML",
+      "name": "Jämtlandsbygden",
+      "biddingZone": "SE2",
+      "dsoName": "Jämtkraft Elnät AB",
+      "dsoCode": "42900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "JNK",
+      "name": "Jönköping",
+      "biddingZone": "SE3",
+      "dsoName": "Jönköping Energi Nät AB",
+      "dsoCode": "23600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "JRA",
+      "name": "Järla",
+      "biddingZone": "SE3",
+      "dsoName": "Nacka Energi AB",
+      "dsoCode": "28500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "JUJ",
+      "name": "Jukkasjärvi",
+      "biddingZone": "SE1",
+      "dsoName": "Jukkasjärvi Sockens Belysningsförening",
+      "dsoCode": "23300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KAB",
+      "name": "Kalixbygden",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KBA",
+      "name": "Kungsbacka",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KBG",
+      "name": "Karlsborg",
+      "biddingZone": "SE3",
+      "dsoName": "Karlsborgs Elnät AB",
+      "dsoCode": "23900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KHB",
+      "name": "Katrineholmsbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Tekniska verken i Katrineholm Nät AB",
+      "dsoCode": "51900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KHN",
+      "name": "Karlshamn",
+      "biddingZone": "SE4",
+      "dsoName": "Karlshamn Elnät AB",
+      "dsoCode": "24000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KKA",
+      "name": "Karlskrona",
+      "biddingZone": "SE4",
+      "dsoName": "Affärsverken Elnät AB",
+      "dsoCode": "24200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KKB",
+      "name": "Kinnekullebygden",
+      "biddingZone": "SE3",
+      "dsoName": "Götene Elförening",
+      "dsoCode": "20600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KLK",
+      "name": "Kiruna LKAB",
+      "biddingZone": "SE1",
+      "dsoName": "LKAB Nät AB",
+      "dsoCode": "13800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KMR",
+      "name": "Kalmar",
+      "biddingZone": "SE4",
+      "dsoName": "Kalmar Energi Elnät AB",
+      "dsoCode": "23800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KND",
+      "name": "Kind",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KNP",
+      "name": "Knäpplan",
+      "biddingZone": "SE3",
+      "dsoName": "Boda Nät ekonomiska förening",
+      "dsoCode": "18300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KOB",
+      "name": "Kopparbergsbyggden",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KPN",
+      "name": "Klippan",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KRF",
+      "name": "Kramfors",
+      "biddingZone": "SE2",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KRH",
+      "name": "Kristinehamn",
+      "biddingZone": "SE3",
+      "dsoName": "Kristinehamns Elnät AB",
+      "dsoCode": "24900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KRS",
+      "name": "Kristianstad-Åhus",
+      "biddingZone": "SE4",
+      "dsoName": "C4 Elnät AB",
+      "dsoCode": "24800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KSA",
+      "name": "Karlskoga",
+      "biddingZone": "SE3",
+      "dsoName": "Karlskoga Elnät AB",
+      "dsoCode": "24100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KST",
+      "name": "Karlstad",
+      "biddingZone": "SE3",
+      "dsoName": "Karlstads Elnät AB",
+      "dsoCode": "24300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KUV",
+      "name": "Kungälv",
+      "biddingZone": "SE3",
+      "dsoName": "Kungälv Energi AB",
+      "dsoCode": "25200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KVI",
+      "name": "Kviinge",
+      "biddingZone": "SE4",
+      "dsoName": "Brittedals Elnät ek för",
+      "dsoCode": "18700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "KVM",
+      "name": "Kvänum",
+      "biddingZone": "SE3",
+      "dsoName": "Kvänumbygdens Energi ek. för",
+      "dsoCode": "25500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LAO",
+      "name": "Luleälven Övre",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LBY",
+      "name": "Ljungby",
+      "biddingZone": "SE4",
+      "dsoName": "Ljungby Energinät AB",
+      "dsoCode": "26400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LDB",
+      "name": "Lindesberg",
+      "biddingZone": "SE3",
+      "dsoName": "Linde Energi Elnät AB",
+      "dsoCode": "26300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LDG",
+      "name": "Lidingö",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LDK",
+      "name": "Lidköping",
+      "biddingZone": "SE3",
+      "dsoName": "Lidköping Elnät AB",
+      "dsoCode": "26200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LED",
+      "name": "Lilla Edet-Ale",
+      "biddingZone": "SE3",
+      "dsoName": "Ale El Elnät AB",
+      "dsoCode": "16600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LER",
+      "name": "Leksand-Rättvik",
+      "biddingZone": "SE3",
+      "dsoName": "Dala Energi Elnät AB",
+      "dsoCode": "25800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LHM",
+      "name": "Laholm",
+      "biddingZone": "SE4",
+      "dsoName": "Södra Hallands Kraft ekonomisk förening",
+      "dsoCode": "34600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LJD",
+      "name": "Ljusdal",
+      "biddingZone": "SE2",
+      "dsoName": "Ljusdal Elnät AB",
+      "dsoCode": "26500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LKA",
+      "name": "Landskrona",
+      "biddingZone": "SE4",
+      "dsoName": "Landskrona Energi AB",
+      "dsoCode": "25600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LMA",
+      "name": "Lomma",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LNK",
+      "name": "Linköping",
+      "biddingZone": "SE3",
+      "dsoName": "Tekniska verken Linköping Nät AB",
+      "dsoCode": "11900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LRM",
+      "name": "Lerum",
+      "biddingZone": "SE3",
+      "dsoName": "Lerum Nät AB",
+      "dsoCode": "25900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LUL",
+      "name": "Luleå",
+      "biddingZone": "SE1",
+      "dsoName": "Luleå Energi Elnät AB",
+      "dsoCode": "11600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LUN",
+      "name": "Lund",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LYS",
+      "name": "Lysekil",
+      "biddingZone": "SE3",
+      "dsoName": "LEVA Nät AB",
+      "dsoCode": "27200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "LYX",
+      "name": "Lyckselebygden",
+      "biddingZone": "SE2",
+      "dsoName": "Skellefteå Kraft Elnät AB",
+      "dsoCode": "10600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MAF",
+      "name": "Malmfälten",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MAI",
+      "name": "Mariestad",
+      "biddingZone": "SE3",
+      "dsoName": "VänerEnergi AB",
+      "dsoCode": "27400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MBT",
+      "name": "Malmberget LKAB",
+      "biddingZone": "SE1",
+      "dsoName": "LKAB Nät AB",
+      "dsoCode": "13800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MBY",
+      "name": "Mjölby",
+      "biddingZone": "SE3",
+      "dsoName": "Mjölby Kraftnät AB",
+      "dsoCode": "27700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MDL",
+      "name": "Mölndal",
+      "biddingZone": "SE3",
+      "dsoName": "Mölndal Energi Nät AB",
+      "dsoCode": "28300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MEL",
+      "name": "Medelpad Lokal",
+      "biddingZone": "SE2",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MLG",
+      "name": "Malung",
+      "biddingZone": "SE3",
+      "dsoName": "Malung-Sälens Elnät AB",
+      "dsoCode": "27300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MMO",
+      "name": "Malmö-Burlöv",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MOR",
+      "name": "Mora-Orsa",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MRP",
+      "name": "Mörarp",
+      "biddingZone": "SE4",
+      "dsoName": "Öresundskraft Elnät AB",
+      "dsoCode": "40400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MSD",
+      "name": "Marstrand",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "MYN",
+      "name": "Myråsen",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NBL",
+      "name": "Bohuslän Norra",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NBR",
+      "name": "Nybro",
+      "biddingZone": "SE4",
+      "dsoName": "Nybro Elnät AB",
+      "dsoCode": "29500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NHA",
+      "name": "Halland Norra",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NHN",
+      "name": "Nynäshamn",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NKL",
+      "name": "Närkes Kil",
+      "biddingZone": "SE3",
+      "dsoName": "Linde Energi Elnät AB",
+      "dsoCode": "26300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NOB",
+      "name": "Norberg",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NRL",
+      "name": "Nerike Lokal",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NSB",
+      "name": "Nossebro",
+      "biddingZone": "SE3",
+      "dsoName": "Nossebroortens Energi Ekonomisk Förening",
+      "dsoCode": "29300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NSF",
+      "name": "Nissafors",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NSO",
+      "name": "Nässjö",
+      "biddingZone": "SE3",
+      "dsoName": "Nässjö Affärsverk Elnät AB",
+      "dsoCode": "10300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NTE",
+      "name": "Norrtälje",
+      "biddingZone": "SE3",
+      "dsoName": "Norrtälje Energi AB",
+      "dsoCode": "29000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NVS",
+      "name": "Nordvästra Skåne",
+      "biddingZone": "SE4",
+      "dsoName": "Öresundskraft Elnät AB",
+      "dsoCode": "40400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NYD",
+      "name": "Nyköping Landsbygd",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "NYK",
+      "name": "Nyköping",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OBO",
+      "name": "Ockelbo",
+      "biddingZone": "SE2",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OCK",
+      "name": "Öckerö",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OFB",
+      "name": "Österfärnebo",
+      "biddingZone": "SE3",
+      "dsoName": "Sandviken Energi Elnät AB",
+      "dsoCode": "31900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OGO",
+      "name": "Östra Götaland",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OHM",
+      "name": "Östhammar",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OHN",
+      "name": "Oskarshamn tätort",
+      "biddingZone": "SE4",
+      "dsoName": "Oskarshamn Energi Nät AB",
+      "dsoCode": "30500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OLD",
+      "name": "Öland",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OLN",
+      "name": "Österlen",
+      "biddingZone": "SE4",
+      "dsoName": "Österlens Kraft Elnät AB",
+      "dsoCode": "32200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OLS",
+      "name": "Olofström",
+      "biddingZone": "SE4",
+      "dsoName": "Olofströms Kraft Nät AB",
+      "dsoCode": "30200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ORT",
+      "name": "Orust-Tjörn",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ORV",
+      "name": "Orust Västra",
+      "biddingZone": "SE3",
+      "dsoName": "Västra Orusts Energitjänst ek. för.",
+      "dsoCode": "39100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OSD",
+      "name": "Olseröd",
+      "biddingZone": "SE4",
+      "dsoName": "Olseröds Elektriska Distributionsförening",
+      "dsoCode": "30300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OVK",
+      "name": "Örnsköldsvik",
+      "biddingZone": "SE2",
+      "dsoName": "Övik Energi Nät AB",
+      "dsoCode": "45700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "OXD",
+      "name": "Oxelösund",
+      "biddingZone": "SE3",
+      "dsoName": "Oxelö Energi Nät AB",
+      "dsoCode": "30600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "PIB",
+      "name": "Pitebygden",
+      "biddingZone": "SE1",
+      "dsoName": "Pite Energi Elnät AB",
+      "dsoCode": "30800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "PTE",
+      "name": "Partille",
+      "biddingZone": "SE3",
+      "dsoName": "Partille Energi Nät AB",
+      "dsoCode": "51500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "RBY",
+      "name": "Ronneby",
+      "biddingZone": "SE4",
+      "dsoName": "Ronneby Miljöteknik Elnät AB",
+      "dsoCode": "31100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "ROY",
+      "name": "Rödeby",
+      "biddingZone": "SE4",
+      "dsoName": "Rödeby Elverk ek för",
+      "dsoCode": "31500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "RSJ",
+      "name": "Ringsjö",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "RSK",
+      "name": "Roslagskusten",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SAH",
+      "name": "Sala-Hyttan",
+      "biddingZone": "SE3",
+      "dsoName": "Sala-Heby Energi Elnät AB",
+      "dsoCode": "31600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SBG",
+      "name": "Sölvesborg",
+      "biddingZone": "SE4",
+      "dsoName": "Sölvesborgs Elnät AB",
+      "dsoCode": "34700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SBK",
+      "name": "Sysslebäck",
+      "biddingZone": "SE3",
+      "dsoName": "Näckåns Elnät AB",
+      "dsoCode": "29800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SBR",
+      "name": "Skyllbergs Bruk",
+      "biddingZone": "SE3",
+      "dsoName": "Skyllberg Elnät AB",
+      "dsoCode": "32900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SBV",
+      "name": "Svalboviken",
+      "biddingZone": "SE3",
+      "dsoName": "Eskilstuna Energi och Miljö Elnät AB",
+      "dsoCode": "19800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SDT",
+      "name": "Södertälje",
+      "biddingZone": "SE3",
+      "dsoName": "Telge Elnät AB",
+      "dsoCode": "34800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SDV",
+      "name": "Sandviken",
+      "biddingZone": "SE3",
+      "dsoName": "Sandviken Energi Elnät AB",
+      "dsoCode": "31900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SFE",
+      "name": "Säffle",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SFP",
+      "name": "Staffanstorp",
+      "biddingZone": "SE4",
+      "dsoName": "Staffanstorps Energi AB",
+      "dsoCode": "33800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SGD",
+      "name": "Stenungsund",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SGS",
+      "name": "Strängnäs Tätort",
+      "biddingZone": "SE3",
+      "dsoName": "SEVAB Nät AB",
+      "dsoCode": "41700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SHD",
+      "name": "Sjuhärad",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SHN",
+      "name": "Söderhamn",
+      "biddingZone": "SE2",
+      "dsoName": "Söderhamn Elnät AB",
+      "dsoCode": "34500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SHT",
+      "name": "Sandhult-Sandared",
+      "biddingZone": "SE3",
+      "dsoName": "Sandhult-Sandareds Elnät AB",
+      "dsoCode": "31800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SIG",
+      "name": "Sigtuna",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SIH",
+      "name": "Simrishamn",
+      "biddingZone": "SE4",
+      "dsoName": "Österlens Kraft Elnät AB",
+      "dsoCode": "32200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SJB",
+      "name": "Sjöbo",
+      "biddingZone": "SE4",
+      "dsoName": "Sjöbo Elnät AB",
+      "dsoCode": "32400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SJO",
+      "name": "Sjogerstad",
+      "biddingZone": "SE3",
+      "dsoName": "Sjogerstads Elektriska Distributionsförening",
+      "dsoCode": "32300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKA",
+      "name": "Skara",
+      "biddingZone": "SE3",
+      "dsoName": "Skara Elnät AB",
+      "dsoCode": "32500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKD",
+      "name": "Skövde",
+      "biddingZone": "SE3",
+      "dsoName": "Skövde Energi Elnät AB",
+      "dsoCode": "42300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKL",
+      "name": "Skåne Landsbygd",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKN",
+      "name": "Skånska",
+      "biddingZone": "SE4",
+      "dsoName": "Skånska Energi Nät AB",
+      "dsoCode": "33000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKP",
+      "name": "Skurup",
+      "biddingZone": "SE4",
+      "dsoName": "Skurups Elverk AB",
+      "dsoCode": "32800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKR",
+      "name": "Skillingaryd",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKT",
+      "name": "Skellefteå",
+      "biddingZone": "SE1",
+      "dsoName": "Skellefteå Kraft Elnät AB",
+      "dsoCode": "10600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SKV",
+      "name": "Skåne Västra Lokalnät",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SLD",
+      "name": "Skövde Landsbygd",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SMB",
+      "name": "Smedjebacken",
+      "biddingZone": "SE3",
+      "dsoName": "Smedjebacken Energi Nät AB",
+      "dsoCode": "33400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SMN",
+      "name": "Småland Norra lokalnät",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SMS",
+      "name": "Småland Södra",
+      "biddingZone": "SE4",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SNM",
+      "name": "Skåne Mellersta",
+      "biddingZone": "SE4",
+      "dsoName": "Mellersta Skånes Kraft, ek för",
+      "dsoCode": "27600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SOT",
+      "name": "Sollentuna",
+      "biddingZone": "SE3",
+      "dsoName": "Sollentuna Elnät AB",
+      "dsoCode": "33500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SRF",
+      "name": "Sturefors",
+      "biddingZone": "SE3",
+      "dsoName": "Sturefors Eldistribution AB",
+      "dsoCode": "47000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SSJ",
+      "name": "Sävsjö",
+      "biddingZone": "SE3",
+      "dsoName": "Njudung Sävsjö Elnät AB",
+      "dsoCode": "34400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "STH",
+      "name": "Stockholm",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "STR",
+      "name": "Säter",
+      "biddingZone": "SE3",
+      "dsoName": "Dala Energi Elnät AB",
+      "dsoCode": "25800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SUV",
+      "name": "Sundsvall tätort",
+      "biddingZone": "SE2",
+      "dsoName": "Sundsvall Elnät AB",
+      "dsoCode": "11800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "SYM",
+      "name": "Sydmälaren",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TBA",
+      "name": "Töreboda",
+      "biddingZone": "SE3",
+      "dsoName": "VänerEnergi AB",
+      "dsoCode": "27400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TBG",
+      "name": "Trelleborg",
+      "biddingZone": "SE4",
+      "dsoName": "Trelleborg Elnät AB",
+      "dsoCode": "35400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TBY",
+      "name": "Täby",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TDN",
+      "name": "Tornedalen",
+      "biddingZone": "SE1",
+      "dsoName": "Övertorneå Energi AB",
+      "dsoCode": "52700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TDO",
+      "name": "Tornedalen Övre",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "THM",
+      "name": "Tidaholm",
+      "biddingZone": "SE3",
+      "dsoName": "Tidaholms Elnät AB",
+      "dsoCode": "66200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TIB",
+      "name": "Tibro",
+      "biddingZone": "SE3",
+      "dsoName": "Tibro Energi AB",
+      "dsoCode": "51600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TLB",
+      "name": "Tillberga",
+      "biddingZone": "SE3",
+      "dsoName": "Mälarenergi Elnät AB",
+      "dsoCode": "39300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TNN",
+      "name": "Tornedalen Nedre",
+      "biddingZone": "SE1",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TNS",
+      "name": "Tranås",
+      "biddingZone": "SE3",
+      "dsoName": "Tranås Energi Elnät AB",
+      "dsoCode": "35320",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TOR",
+      "name": "Torsåker",
+      "biddingZone": "SE3",
+      "dsoName": "Gävle Energi Elnät AB",
+      "dsoCode": "20400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TOS",
+      "name": "Torsås",
+      "biddingZone": "SE4",
+      "dsoName": "Kraftringen Nät AB",
+      "dsoCode": "24700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TRE",
+      "name": "Töre",
+      "biddingZone": "SE1",
+      "dsoName": "Töre Energi ek för",
+      "dsoCode": "35800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TRH",
+      "name": "Trollhättan",
+      "biddingZone": "SE3",
+      "dsoName": "Trollhättan Energi Elnät AB",
+      "dsoCode": "50800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TUM",
+      "name": "Tumba",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TYR",
+      "name": "Tyresö",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "TYS",
+      "name": "Tyngsjö-Finnmarken",
+      "biddingZone": "SE3",
+      "dsoName": "Malung-Sälens Elnät AB",
+      "dsoCode": "27300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UHN",
+      "name": "Ulricehamn",
+      "biddingZone": "SE3",
+      "dsoName": "Ulricehamn Energi Elnät AB",
+      "dsoCode": "36100",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UMA",
+      "name": "Umeå",
+      "biddingZone": "SE2",
+      "dsoName": "Umeå Energi Elnät AB",
+      "dsoCode": "14300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UMD",
+      "name": "Umeälven Nedre",
+      "biddingZone": "SE2",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UMO",
+      "name": "Umeälven Övre",
+      "biddingZone": "SE2",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UPN",
+      "name": "Uppland Norra",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UPO",
+      "name": "Uppland Östra",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UPP",
+      "name": "Uppsala",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UPS",
+      "name": "Uppland Södra",
+      "biddingZone": "SE3",
+      "dsoName": "E.ON Energidistribution AB",
+      "dsoCode": "16000",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UPV",
+      "name": "Uppland Västra",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "URM",
+      "name": "Upprämmen",
+      "biddingZone": "SE3",
+      "dsoName": "Malung-Sälens Elnät AB",
+      "dsoCode": "27300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "UVA",
+      "name": "Uddevalla",
+      "biddingZone": "SE3",
+      "dsoName": "Uddevalla Energi Elnät AB",
+      "dsoCode": "36010",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAB",
+      "name": "Vallebygden",
+      "biddingZone": "SE3",
+      "dsoName": "Vallebygdens Energi ek för",
+      "dsoCode": "36500",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAD",
+      "name": "Västanhede",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAG",
+      "name": "Vagnhärad",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAL",
+      "name": "Värmland",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAN",
+      "name": "Vätterbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAR",
+      "name": "Vara",
+      "biddingZone": "SE3",
+      "dsoName": "Vara Energi ek.för",
+      "dsoCode": "41800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VAT",
+      "name": "Vallentuna",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBG",
+      "name": "Varberg",
+      "biddingZone": "SE3",
+      "dsoName": "Varberg Energi Elnät AB",
+      "dsoCode": "36800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBK",
+      "name": "Västerbykil",
+      "biddingZone": "SE3",
+      "dsoName": "Sala-Heby Energi Elnät AB",
+      "dsoCode": "31600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBL",
+      "name": "Västerbergslagen",
+      "biddingZone": "SE3",
+      "dsoName": "Västerbergslagens Elnät AB",
+      "dsoCode": "38700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBN",
+      "name": "Varbergsorten Norra",
+      "biddingZone": "SE3",
+      "dsoName": "Varbergsortens Elnät AB",
+      "dsoCode": "36900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBS",
+      "name": "Varbergsorten Södra",
+      "biddingZone": "SE3",
+      "dsoName": "Varbergsortens Elnät AB",
+      "dsoCode": "36900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VBY",
+      "name": "Vimmerby",
+      "biddingZone": "SE3",
+      "dsoName": "Vimmerby Energi Nät AB",
+      "dsoCode": "37920",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VDM",
+      "name": "Vedum",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VDN",
+      "name": "Vindeln",
+      "biddingZone": "SE2",
+      "dsoName": "Skellefteå Kraft Elnät AB",
+      "dsoCode": "10600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VGD",
+      "name": "Vaggeryd",
+      "biddingZone": "SE3",
+      "dsoName": "Vaggeryds Elverk",
+      "dsoCode": "36400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VGF",
+      "name": "Viggafors",
+      "biddingZone": "SE3",
+      "dsoName": "Näckåns Elnät AB",
+      "dsoCode": "29800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VIG",
+      "name": "Vingåkersbygden",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VLB",
+      "name": "Vålberg-Segerstad",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VLS",
+      "name": "Västmanland Södra",
+      "biddingZone": "SE3",
+      "dsoName": "Mälarenergi Elnät AB",
+      "dsoCode": "39300",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VMA",
+      "name": "Vilhelmina",
+      "biddingZone": "SE2",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VMD",
+      "name": "Värmdö",
+      "biddingZone": "SE3",
+      "dsoName": "Vattenfall Eldistribution AB",
+      "dsoCode": "16400",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VMO",
+      "name": "Värnamo",
+      "biddingZone": "SE4",
+      "dsoName": "Värnamo Elnät AB",
+      "dsoCode": "38600",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VNB",
+      "name": "Vansbro",
+      "biddingZone": "SE3",
+      "dsoName": "Ellevio AB",
+      "dsoCode": "14900",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VTL",
+      "name": "Vetlanda",
+      "biddingZone": "SE3",
+      "dsoName": "Njudung Vetlanda Elnät AB",
+      "dsoCode": "37700",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VVI",
+      "name": "Västervik",
+      "biddingZone": "SE3",
+      "dsoName": "Västerviks Kraft Elnät AB",
+      "dsoCode": "38800",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "VXO",
+      "name": "Växjö",
+      "biddingZone": "SE4",
+      "dsoName": "Växjö Energi Elnät AB",
+      "dsoCode": "39200",
+      "dsoNameAmbiguous": false
+    },
+    {
+      "mgaCode": "YST",
+      "name": "Ystad",
+      "biddingZone": "SE4",
+      "dsoName": "Ystad Elnät AB",
+      "dsoCode": "40800",
+      "dsoNameAmbiguous": false
+    }
+  ]
+}

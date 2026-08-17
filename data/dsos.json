@@ -1,0 +1,1052 @@
+{
+  "fetchedAt": "2026-08-17T07:34:47.903Z",
+  "runId": "20260817-073447",
+  "source": "/EXP01/DistributionSystemOperators",
+  "count": 174,
+  "rows": [
+    {
+      "dsoCode": "10000",
+      "name": "Svenska kraftnät",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "10300",
+      "name": "Nässjö Affärsverk Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "10600",
+      "name": "Skellefteå Kraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "11100",
+      "name": "Nätkraft Borås Infra AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "11220",
+      "name": "Gotlands Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "11600",
+      "name": "Luleå Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "11800",
+      "name": "Sundsvall Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "11900",
+      "name": "Tekniska verken Linköping Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "12800",
+      "name": "Åskälen Vindkraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "13500",
+      "name": "Marhult Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "13800",
+      "name": "LKAB Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "14300",
+      "name": "Umeå Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "14500",
+      "name": "Blåsjön Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "14900",
+      "name": "Ellevio AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "15200",
+      "name": "Markbygden Net AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "15700",
+      "name": "Brännliden Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "15800",
+      "name": "Stensjön Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16000",
+      "name": "E.ON Energidistribution AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16400",
+      "name": "Vattenfall Eldistribution AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16405",
+      "name": "Vattenfall Kraftgården AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16600",
+      "name": "Ale El Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16700",
+      "name": "Alingsås Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16800",
+      "name": "Fågelås Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "16900",
+      "name": "Alvesta Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17000",
+      "name": "Arvika Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17300",
+      "name": "Bengtsfors Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17400",
+      "name": "Bergs tingslags elektriska AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17600",
+      "name": "Bjäre Kraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17700",
+      "name": "Bjärke Energi Ek. För.",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17800",
+      "name": "Upplands Energi",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "17900",
+      "name": "Bodens Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18100",
+      "name": "Boo Energi ek. för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18200",
+      "name": "Borgholm Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18300",
+      "name": "Boda Nät ekonomiska förening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18400",
+      "name": "Borlänge Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18700",
+      "name": "Brittedals Elnät ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18800",
+      "name": "Bromölla Energi & Vatten AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "18900",
+      "name": "Degerfors Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "19200",
+      "name": "Falu Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "19400",
+      "name": "Eksjö Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "19500",
+      "name": "Emmaboda Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "19800",
+      "name": "Eskilstuna Energi och Miljö Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "19900",
+      "name": "Gislaved Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "20300",
+      "name": "Grästorp Energi ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "20400",
+      "name": "Gävle Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "20500",
+      "name": "Göteborg Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "20600",
+      "name": "Götene Elförening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21100",
+      "name": "Hallstaviks Elverk ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21200",
+      "name": "Halmstads Energi och Miljö Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21400",
+      "name": "Hedemora Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21600",
+      "name": "Herrljunga Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21700",
+      "name": "Hjo Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "21800",
+      "name": "Hjärtums Elförening ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "22600",
+      "name": "Härnösand Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "22700",
+      "name": "Härryda Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "22900",
+      "name": "Höganäs Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "23300",
+      "name": "Jukkasjärvi Sockens Belysningsförening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "23600",
+      "name": "Jönköping Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "23800",
+      "name": "Kalmar Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "23900",
+      "name": "Karlsborgs Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24000",
+      "name": "Karlshamn Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24100",
+      "name": "Karlskoga Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24200",
+      "name": "Affärsverken Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24300",
+      "name": "Karlstads Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24700",
+      "name": "Kraftringen Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24800",
+      "name": "C4 Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "24900",
+      "name": "Kristinehamns Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "25200",
+      "name": "Kungälv Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "25500",
+      "name": "Kvänumbygdens Energi ek. för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "25600",
+      "name": "Landskrona Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "25800",
+      "name": "Dala Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "25900",
+      "name": "Lerum Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "26200",
+      "name": "Lidköping Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "26300",
+      "name": "Linde Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "26400",
+      "name": "Ljungby Energinät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "26500",
+      "name": "Ljusdal Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "27200",
+      "name": "LEVA Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "27300",
+      "name": "Malung-Sälens Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "27400",
+      "name": "VänerEnergi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "27600",
+      "name": "Mellersta Skånes Kraft, ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "27700",
+      "name": "Mjölby Kraftnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "28300",
+      "name": "Mölndal Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "28500",
+      "name": "Nacka Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "29000",
+      "name": "Norrtälje Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "29300",
+      "name": "Nossebroortens Energi Ekonomisk Förening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "29500",
+      "name": "Nybro Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "29800",
+      "name": "Näckåns Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "30200",
+      "name": "Olofströms Kraft Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "30300",
+      "name": "Olseröds Elektriska Distributionsförening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "30500",
+      "name": "Oskarshamn Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "30600",
+      "name": "Oxelö Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "30800",
+      "name": "Pite Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "31100",
+      "name": "Ronneby Miljöteknik Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "31500",
+      "name": "Rödeby Elverk ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "31600",
+      "name": "Sala-Heby Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "31800",
+      "name": "Sandhult-Sandareds Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "31900",
+      "name": "Sandviken Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32200",
+      "name": "Österlens Kraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32300",
+      "name": "Sjogerstads Elektriska Distributionsförening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32400",
+      "name": "Sjöbo Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32500",
+      "name": "Skara Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32800",
+      "name": "Skurups Elverk AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "32900",
+      "name": "Skyllberg Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "33000",
+      "name": "Skånska Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "33400",
+      "name": "Smedjebacken Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "33500",
+      "name": "Sollentuna Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "33800",
+      "name": "Staffanstorps Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "34400",
+      "name": "Njudung Sävsjö Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "34500",
+      "name": "Söderhamn Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "34600",
+      "name": "Södra Hallands Kraft ekonomisk förening",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "34700",
+      "name": "Sölvesborgs Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "34800",
+      "name": "Telge Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "35320",
+      "name": "Tranås Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "35400",
+      "name": "Trelleborg Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "35800",
+      "name": "Töre Energi ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36010",
+      "name": "Uddevalla Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36100",
+      "name": "Ulricehamn Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36400",
+      "name": "Vaggeryds Elverk",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36500",
+      "name": "Vallebygdens Energi ek för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36800",
+      "name": "Varberg Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "36900",
+      "name": "Varbergsortens Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "37700",
+      "name": "Njudung Vetlanda Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "37920",
+      "name": "Vimmerby Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "38600",
+      "name": "Värnamo Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "38700",
+      "name": "Västerbergslagens Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "38800",
+      "name": "Västerviks Kraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39100",
+      "name": "Västra Orusts Energitjänst ek. för.",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39200",
+      "name": "Växjö Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39300",
+      "name": "Mälarenergi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39600",
+      "name": "Falbygdens Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39700",
+      "name": "Falkenberg Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "39900",
+      "name": "Filipstad Energinät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "40100",
+      "name": "Mälarenergi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "40400",
+      "name": "Öresundskraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "40800",
+      "name": "Ystad Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "40900",
+      "name": "Fortum Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "41700",
+      "name": "SEVAB Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "41800",
+      "name": "Vara Energi ek.för",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "42300",
+      "name": "Skövde Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "42900",
+      "name": "Jämtkraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "43600",
+      "name": "Härjeåns Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "44300",
+      "name": "Billerud Skog & Industri AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "44600",
+      "name": "Ovako Sweden AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "44900",
+      "name": "Ålem Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "45500",
+      "name": "Östra Kinds Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "45700",
+      "name": "Övik Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "45800",
+      "name": "Carlfors Bruk AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "46300",
+      "name": "Habo Energi Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "46600",
+      "name": "Årsunda Kraft-o Belysningsförening Upa",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "47000",
+      "name": "Sturefors Eldistribution AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "47400",
+      "name": "Karskruv Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "50800",
+      "name": "Trollhättan Energi Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51400",
+      "name": "Sörbylunds Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51500",
+      "name": "Partille Energi Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51600",
+      "name": "Tibro Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51700",
+      "name": "Bliekevare Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51800",
+      "name": "Arise Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "51900",
+      "name": "Tekniska verken i Katrineholm Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52000",
+      "name": "Havsnäs Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52100",
+      "name": "Dragaliden Net AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52200",
+      "name": "Gabrielsberget Net AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52300",
+      "name": "Sjisjka Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52700",
+      "name": "Övertorneå Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52800",
+      "name": "Sidensjö Vindkraft Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "52900",
+      "name": "Markbygden Net Väst AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "64920",
+      "name": "Holmen Energi Elnät",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "65800",
+      "name": "Vindpark Vänern Drift AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "65900",
+      "name": "Kvarnforsen Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "65930",
+      "name": "Brobacken Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "66200",
+      "name": "Tidaholms Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "66340",
+      "name": "Swedavia AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "71500",
+      "name": "Åsele Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "71730",
+      "name": "Lehtirova Nät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "82990",
+      "name": "Kraftnät Åland (SE)",
+      "codingScheme": "NSE",
+      "country": "SE"
+    }
+  ]
+}
