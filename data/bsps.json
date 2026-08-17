@@ -1,0 +1,239 @@
+{
+  "fetchedAt": "2026-08-17T08:38:55.216Z",
+  "runId": "20260817-083855",
+  "source": "/EXP01/BalanceServiceProviders",
+  "count": 33,
+  "rows": [
+    {
+      "bspCode": "11000",
+      "bspName": "Vattenfall AB",
+      "businessId": "556036-2138",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "11400",
+      "bspName": "Jämtkraft AB",
+      "businessId": "556001-6064",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "11XDANSKECOM---P",
+      "bspName": "Danske Commodities A/S",
+      "businessId": "28113951",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "bspCode": "12300",
+      "bspName": "Entelios AB",
+      "businessId": "556478-6555",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "13200",
+      "bspName": "Skellefteå Kraft AB",
+      "businessId": "​556016-2561",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "13250",
+      "bspName": "Oppy Balancing Services AB",
+      "businessId": "559410-5693",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "14600",
+      "bspName": "Axpo Sverige AB",
+      "businessId": "556121-3199",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "17150",
+      "bspName": "VIM Energy Systems AB",
+      "businessId": "556760-0175",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "21450",
+      "bspName": "Thoryr AB",
+      "businessId": "5595428227",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "36810",
+      "bspName": "Varberg Energimarknad AB",
+      "businessId": "556524-3010",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "40100",
+      "bspName": "Mälarenergi AB",
+      "businessId": "556448-9150",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "40900",
+      "bspName": "Fortum Sverige AB",
+      "businessId": "556006-8230",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "42500",
+      "bspName": "Volue Energy Market Services Sverige Filial",
+      "businessId": "516404-8950",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "42800",
+      "bspName": "Modity Energy Trading AB (SE)",
+      "businessId": "556643-4410",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "45X000000000112H",
+      "bspName": "Flower Infrastructure Technologies AB",
+      "businessId": "559257-5558",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "bspCode": "46X000000000365A",
+      "bspName": "Ingrid Capacity AB",
+      "businessId": "559369-0802",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "bspCode": "46X000000000429A",
+      "bspName": "Ntricity Market Services AB",
+      "businessId": "559475-5711",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "bspCode": "48700",
+      "bspName": "Elkraft Sverige AB",
+      "businessId": "556559-9668",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "48800",
+      "bspName": "Bixia AB",
+      "businessId": "556544-2638",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "49500",
+      "bspName": "Uniper Global Commodities SE (SE)",
+      "businessId": "HRB 61123",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "62000",
+      "bspName": "Stockholm Exergi AB",
+      "businessId": "556016-9095",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "62350",
+      "bspName": "Centrica Energy A/S (SE)",
+      "businessId": "502067-7505",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "63000",
+      "bspName": "Produktionsbalans PBA AB",
+      "businessId": "556425-8134",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "6430076200037",
+      "bspName": "Gasum Oyj",
+      "businessId": "0969819-3",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "64700",
+      "bspName": "Mind Energy AB",
+      "businessId": "556713-8549",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080003837530",
+      "bspName": "Tibber Norge AS",
+      "businessId": "917245975",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080005050999",
+      "bspName": "Statkraft Energi AS",
+      "businessId": "987059729",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080005051286",
+      "bspName": "Å Energi Vannkraft AS",
+      "businessId": "882973972",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080010006509",
+      "bspName": "Alpiq AG",
+      "businessId": "CHE-105.974.401",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080010010124",
+      "bspName": "Engelhart CTP Renewables GmbH",
+      "businessId": "HRB206999/928483819",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080010011091",
+      "bspName": "Aneo AS",
+      "businessId": "828987712",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080010014337",
+      "bspName": "Twig Energy ApS",
+      "businessId": "42377449 / 931009729",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7300009035250",
+      "bspName": "E.ON Sverige AB",
+      "businessId": "556006-8420",
+      "codingScheme": "GS1",
+      "country": "SE"
+    }
+  ]
+}

@@ -1,0 +1,1544 @@
+{
+  "fetchedAt": "2026-08-17T08:38:55.216Z",
+  "runId": "20260817-083855",
+  "source": "/EXP01/Retailers",
+  "count": 256,
+  "rows": [
+    {
+      "reCode": "10000",
+      "reName": "Svenska kraftnät",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10550",
+      "reName": "BP Gas Marketing Ltd",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10710",
+      "reName": "Svensk Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10720",
+      "reName": "Elvy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10730",
+      "reName": "Berry Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10740",
+      "reName": "Elexia Elpartner AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10810",
+      "reName": "Nätkraft Borås AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10900",
+      "reName": "E.ON Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10901",
+      "reName": "E.ON Energilösningar AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "11000",
+      "reName": "Vattenfall AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "11210",
+      "reName": "Gotlands Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "11400",
+      "reName": "Jämtkraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "11610",
+      "reName": "Luleå Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "11X0-0000-0613-3",
+      "reName": "pure.energy GmbH",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "11XESFORIN-----H",
+      "reName": "ES FOR IN SE",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "11XOME-HANDEL--G",
+      "reName": "Optimax Energy GmbH",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "12110",
+      "reName": "Umeå Energi Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "12300",
+      "reName": "Entelios AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13120",
+      "reName": "Mer Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13160",
+      "reName": "Trygg Sverige Holding AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13200",
+      "reName": "Skellefteå Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13210",
+      "reName": "Smart el i Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13220",
+      "reName": "GITO Heavy Charging Solutions AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13250",
+      "reName": "Oppy Balancing Services AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13260",
+      "reName": "Elery Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13400",
+      "reName": "Dalakraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "13610",
+      "reName": "Kalmar Energi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "14310",
+      "reName": "Umeå kommun",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "14600",
+      "reName": "Axpo Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "14610",
+      "reName": "Enkla Elbolaget i Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "16610",
+      "reName": "Ale El Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "16710",
+      "reName": "Alingsås Energi Elhandel och Elproduktion AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "16810",
+      "reName": "Fågelås Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17010",
+      "reName": "Arvika Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17060",
+      "reName": "Forward Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17070",
+      "reName": "katshing Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17090",
+      "reName": "Svensk Kärnkraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17150",
+      "reName": "VIM Energy Systems AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17240",
+      "reName": "Övertorneå Energi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17310",
+      "reName": "Bengtsfors Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17320",
+      "reName": "Elklart AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17380",
+      "reName": "Scandinavia Energy System AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17410",
+      "reName": "Flower Electricity Retail AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17450",
+      "reName": "Föreningsel Elhandel Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17520",
+      "reName": "Energi2 Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17560",
+      "reName": "Cheap Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17610",
+      "reName": "Bjäre Kraft Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17630",
+      "reName": "Solfolket AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17640",
+      "reName": "1K5 EL AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17810",
+      "reName": "Upplands Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "17910",
+      "reName": "Bodens Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18110",
+      "reName": "Boo Energi Försäljnings AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18420",
+      "reName": "AB Borlänge Energi",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18440",
+      "reName": "Bergen Synergy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18450",
+      "reName": "Green Voltis Sweden AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18460",
+      "reName": "Via Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18480",
+      "reName": "Elnor Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18510",
+      "reName": "EVLTA AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18600",
+      "reName": "Axpo Nordic AS (SE)",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "18710",
+      "reName": "Brittedals Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "19210",
+      "reName": "Falu Energi & Vatten AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "19410",
+      "reName": "Eksjö Energi ELIT AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "19810",
+      "reName": "Eskilstuna Energi och Miljö Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "19910",
+      "reName": "Gislaved Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "19XSKYQUANT1910A",
+      "reName": "Sky Quant sp. z o.o.",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "19XTRMEWOBROT--I",
+      "reName": "Respect Energy S.A.",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "20310",
+      "reName": "Grästorp Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "20620",
+      "reName": "Kinnekulle Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21110",
+      "reName": "Hallstaviks Elverk AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21210",
+      "reName": "Halmstads Energi och Miljö AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21330",
+      "reName": "Nordic Best Energy",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21340",
+      "reName": "Svenska Elverket AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21360",
+      "reName": "Lovel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21370",
+      "reName": "Mountain Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21410",
+      "reName": "Hedemora Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21440",
+      "reName": "Kärnfull Future AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21470",
+      "reName": "Motala Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21610",
+      "reName": "Herrljunga Kraft Energiförmedling AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21660",
+      "reName": "Gridex EL AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21710",
+      "reName": "Hjo Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "22610",
+      "reName": "HEMAB Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "22710",
+      "reName": "Härryda Energi Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "22810",
+      "reName": "Rebel Flex AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "22850",
+      "reName": "SR Vindparker AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "22910",
+      "reName": "Höganäs Energi Handel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "23310",
+      "reName": "Jukkasjärvi Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "23610",
+      "reName": "Jönköping Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "23910",
+      "reName": "Karlsborgs Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24010",
+      "reName": "Karlshamn Energi Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24110",
+      "reName": "Karlskoga Energi & Miljö AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24210",
+      "reName": "Affärsverken Energi i Karlskrona AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24310",
+      "reName": "Karlstads Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24430",
+      "reName": "Rebel Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24710",
+      "reName": "Kraftringen Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "24810",
+      "reName": "C4 Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "25210",
+      "reName": "Kungälv Närenergi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "25510",
+      "reName": "Kvänum Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "25610",
+      "reName": "Landskrona Energi Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "25920",
+      "reName": "Lerum Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "26310",
+      "reName": "Linde Energi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "26510",
+      "reName": "Ljusdal Energi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "27210",
+      "reName": "Lysekils Energi Vind AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "27610",
+      "reName": "Mellanskånes Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "27830",
+      "reName": "SVEA Solar Park Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "27870",
+      "reName": "Svealands Elbolag AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "27890",
+      "reName": "ChargeBuddy Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "28350",
+      "reName": "Borr Holding Aktiebolag",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "28710",
+      "reName": "Fjordkraft Konsument AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "28720",
+      "reName": "Snackis AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "29010",
+      "reName": "Norrtälje Energi Försäljnings AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "29310",
+      "reName": "Nossebro Energi Försäljnings AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "29510",
+      "reName": "Nybro Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "29810",
+      "reName": "Näckåns Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "30310",
+      "reName": "Olseröd Energi",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "30510",
+      "reName": "Oskarshamn Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "30810",
+      "reName": "PiteEnergi Handel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "31510",
+      "reName": "Rödeby Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "31601",
+      "reName": "Sala-Heby Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "31810",
+      "reName": "Sandhult-Sandareds Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "31910",
+      "reName": "Sandviken Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "32310",
+      "reName": "Sjogerstads Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "32920",
+      "reName": "Skyllberg Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "33010",
+      "reName": "Skånska Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "33510",
+      "reName": "Sollentuna Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "34100",
+      "reName": "Göteborg Energi Din El AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "34610",
+      "reName": "Södra Hallands Kraft Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "34710",
+      "reName": "Sölvesborg Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "34910",
+      "reName": "Tibro Energi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "35300",
+      "reName": "Tranås Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "35410",
+      "reName": "Trelleborgs Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "35500",
+      "reName": "Trollhättan Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "35810",
+      "reName": "Töre Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "36000",
+      "reName": "Uddevalla Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "36410",
+      "reName": "Vaggeryds Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "36510",
+      "reName": "Vallebygdens Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "36810",
+      "reName": "Varberg Energimarknad AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "36910",
+      "reName": "Varbergsortens Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "37710",
+      "reName": "Njudung Energi Vetlanda AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "37910",
+      "reName": "Vimmerby Energiförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "38400",
+      "reName": "Mölndal Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "38610",
+      "reName": "Värnamo Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "38710",
+      "reName": "Västerbergslagens Elförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "39710",
+      "reName": "Falkenberg Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "40100",
+      "reName": "Mälarenergi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "40810",
+      "reName": "Ystad Energihandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "40900",
+      "reName": "Fortum Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "40910",
+      "reName": "Fortum Markets AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "41710",
+      "reName": "SEVAB Energiförsäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "41900",
+      "reName": "Öresundskraft Marknad AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "41X6VEJOMAINA141",
+      "reName": "UAB Vėjomaina",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "42500",
+      "reName": "Volue Energy Market Services Sverige Filial",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "42800",
+      "reName": "Modity Energy Trading AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "44810",
+      "reName": "Åsele Kraft",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "44910",
+      "reName": "Ålem Energi Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "44X-00000000260U",
+      "reName": "Etha Energy Trading Oy",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "44X-00000000283I",
+      "reName": "Flower Electricity Trading AB",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45310",
+      "reName": "Österlens Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "45510",
+      "reName": "Östra Kinds Elkraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "45710",
+      "reName": "Övik Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X0000000000561",
+      "reName": "A/S Global Risk Management Ltd. Holding",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X000000000088P",
+      "reName": "Inductive Energy",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X000000000203E",
+      "reName": "Odigo Energy ApS",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X0000000002424",
+      "reName": "Epiq Energy ApS",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X000000000278K",
+      "reName": "X Commodities ApS",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "45X000000000279I",
+      "reName": "Nidaros Energy ApS",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "46310",
+      "reName": "Habo Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "46610",
+      "reName": "Årsunda Eldistribution AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "46900",
+      "reName": "Switch Nordic Green AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "46X000000000365A",
+      "reName": "Ingrid Capacity AB",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "46X000000000418F",
+      "reName": "Monsson Energy AB",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "46X000000000429A",
+      "reName": "Ntricity Market Services AB",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "47010",
+      "reName": "Sturefors Godsförvaltning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "47340",
+      "reName": "Qurrent AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "47700",
+      "reName": "Billinge Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "48400",
+      "reName": "Danske Commodities A/S",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "48500",
+      "reName": "Kinect Energy Sweden AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "48700",
+      "reName": "Elkraft Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "48800",
+      "reName": "Bixia AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "48X000000000361P",
+      "reName": "Kvasir Technologies Ltd",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "49100",
+      "reName": "Storuman Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "49500",
+      "reName": "Uniper Global Commodities SE (SE)",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "50000",
+      "reName": "Västerbergslagens Kraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "50100",
+      "reName": "ENA Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "51510",
+      "reName": "Partille Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "5790002415494",
+      "reName": "In Commodities A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "5790002649851",
+      "reName": "Hybrid Greentech Energy Trading ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "5790002829383",
+      "reName": "Enkel Energi ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "5790002834028",
+      "reName": "In Commodities Asset Management A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "60100",
+      "reName": "Mälarenergi Försäljning AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "60200",
+      "reName": "VänerEl AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "60600",
+      "reName": "Fyrfasen Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "60900",
+      "reName": "7H Kraft Energiförmedling AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "61900",
+      "reName": "BestEl AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62000",
+      "reName": "Stockholm Exergi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62110",
+      "reName": "Atria Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62350",
+      "reName": "Centrica Energy A/S (SE)",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62500",
+      "reName": "Borås Elhandel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62570",
+      "reName": "Ljungby Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62730",
+      "reName": "Fjordkraft Företag AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "62800",
+      "reName": "Gävle Energisystem AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "63000",
+      "reName": "Produktionsbalans PBA AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "63500",
+      "reName": "GodEl i Sverige AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "6429830186717",
+      "reName": "NW RE",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "64500",
+      "reName": "Sundsvall Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "64600",
+      "reName": "Trafikverket",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "64700",
+      "reName": "Mind Energy AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "65400",
+      "reName": "Svekraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "65500",
+      "reName": "Södra Medlemsel AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66210",
+      "reName": "Tidaholms Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66310",
+      "reName": "Nyköping Vattenkraft AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66460",
+      "reName": "Valmet AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66500",
+      "reName": "ETC Elhandel i Stockholm AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66590",
+      "reName": "LRF Samköp",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66700",
+      "reName": "Telinet Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66840",
+      "reName": "Greenely Premium AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66880",
+      "reName": "Finspång Tekniska Verk AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66930",
+      "reName": "Tibber AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66940",
+      "reName": "Kristinehamns Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "66970",
+      "reName": "Västervik Miljö & Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080004359376",
+      "reName": "BD Energy A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080004362444",
+      "reName": "Northpool B.V.",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080005050869",
+      "reName": "Hydro Energi AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080005050999",
+      "reName": "Statkraft Energi AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080005051286",
+      "reName": "Å Energi Vannkraft AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080005051392",
+      "reName": "Hafslund Kraft AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010006363",
+      "reName": "RWE Supply & Trading GmbH",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010006509",
+      "reName": "Alpiq AG",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010007049",
+      "reName": "PowerMart ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010008411",
+      "reName": "MFT Energy A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010010124",
+      "reName": "Engelhart CTP Renewables GmbH",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010011091",
+      "reName": "Aneo AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010011411",
+      "reName": "C A Commodities A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010011961",
+      "reName": "Energetick ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010013248",
+      "reName": "Nidhog ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010014023",
+      "reName": "Nordic Energy House ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010014337",
+      "reName": "Twig Energy ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010014443",
+      "reName": "Green.ai ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010014788",
+      "reName": "Scalar Energy AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010018243",
+      "reName": "Elmera Energy AS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010018397",
+      "reName": "Copenhagen Energy Trading A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010020222",
+      "reName": "Aarhus Trading A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010023865",
+      "reName": "Nord Energy Oy",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010024619",
+      "reName": "Atlas Energy DAC",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080011062955",
+      "reName": "ENZEE Commodities A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080011109551",
+      "reName": "Volta Energy DAC",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080011127302",
+      "reName": "Energy Group ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080011149069",
+      "reName": "Joulx ApS",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080011183377",
+      "reName": "THN Capital AG",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "71900",
+      "reName": "Stockholms Elbolag AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "7609999384202",
+      "reName": "Second Foundation Trading AG",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "82150",
+      "reName": "Gasum Oyj (SE)",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "82510",
+      "reName": "Allwinds AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "82520",
+      "reName": "Ålands Elandelslag",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "82540",
+      "reName": "Mariehamns Energi Ab",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "82550",
+      "reName": "Kinect Energy Åland",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "82560",
+      "reName": "Vind AX Ab",
+      "codingScheme": "NSE",
+      "country": "SE"
+    }
+  ]
+}

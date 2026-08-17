@@ -1,0 +1,178 @@
+{
+  "fetchedAt": "2026-08-17T08:38:55.216Z",
+  "runId": "20260817-083855",
+  "source": "/EXP06/Banks",
+  "count": 34,
+  "rows": [
+    {
+      "bic": "BNPANOKKXXX",
+      "name": "BNP Paribas S.A. Norway Branch",
+      "country": "NO"
+    },
+    {
+      "bic": "DABADKKK",
+      "name": "Danske Bank A/S",
+      "country": "DK"
+    },
+    {
+      "bic": "DABAFIHH",
+      "name": "Danske Bank A/S, Finland Branch",
+      "country": "FI"
+    },
+    {
+      "bic": "DABANO22",
+      "name": "Danske Bank, Norwegian Branch",
+      "country": "NO"
+    },
+    {
+      "bic": "DABASESX",
+      "name": "Danske Bank A/S, Danmark, Sverige filial",
+      "country": "SE"
+    },
+    {
+      "bic": "DEUTDEFF",
+      "name": "Deutsche Bank AG",
+      "country": "DE"
+    },
+    {
+      "bic": "DNBADKKX",
+      "name": "DNB Bank ASA, filial Denmark",
+      "country": "DK"
+    },
+    {
+      "bic": "DNBAFIHX",
+      "name": "DNB Bank ASA, filial Finland",
+      "country": "FI"
+    },
+    {
+      "bic": "DNBANOKK",
+      "name": "DNB Bank ASA",
+      "country": "NO"
+    },
+    {
+      "bic": "DNBASESX",
+      "name": "DNB Bank ASA, filial Sverige",
+      "country": "SE"
+    },
+    {
+      "bic": "ESSEFIHX",
+      "name": "SEB (AB) (publ) Helsinki Branch",
+      "country": "FI"
+    },
+    {
+      "bic": "FTSBDKKKXXX",
+      "name": "BNP Paribas S.A. Denmark, Filial af BNP Paribas S.A. Frankrig",
+      "country": "DK"
+    },
+    {
+      "bic": "FTSBSESSXXX",
+      "name": "BNP Paribas SA, Bankfilial SVERIGE",
+      "country": "SE"
+    },
+    {
+      "bic": "HANDFIHH",
+      "name": "Handelsbanken Suomi",
+      "country": "FI"
+    },
+    {
+      "bic": "HANDNOKK",
+      "name": "Handelsbanken i Norge",
+      "country": "NO"
+    },
+    {
+      "bic": "HANDSESS",
+      "name": "Svenska Handelsbanken",
+      "country": "SE"
+    },
+    {
+      "bic": "HSHNDEHH",
+      "name": "Hamburg Commercial Bank AG",
+      "country": "DE"
+    },
+    {
+      "bic": "JYBADKKK",
+      "name": "Jyske Bank A/S",
+      "country": "DK"
+    },
+    {
+      "bic": "NDEADKKK",
+      "name": "Nordea Danmark, filial af Nordea Bank Abp",
+      "country": "DK"
+    },
+    {
+      "bic": "NDEAFIHH",
+      "name": "Nordea Bank Finland Plc",
+      "country": "FI"
+    },
+    {
+      "bic": "NDEANOKK",
+      "name": "Nordea Bank Norge ASA",
+      "country": "NO"
+    },
+    {
+      "bic": "NDEASESS",
+      "name": "Nordea Bank AB (publ)",
+      "country": "SE"
+    },
+    {
+      "bic": "NYKBDKKK",
+      "name": "Nykredit Bank A/S",
+      "country": "DK"
+    },
+    {
+      "bic": "OEKOATWW",
+      "name": "Oesterreichische Kontrollbank AG",
+      "country": "AT"
+    },
+    {
+      "bic": "OKOYFIHH",
+      "name": "OP Corporate Bank Plc",
+      "country": "FI"
+    },
+    {
+      "bic": "RINGDK22",
+      "name": "Ringkjøbing Landbobank A/S",
+      "country": "DK"
+    },
+    {
+      "bic": "SOFJNO22",
+      "name": "Sparebanken Sogn og Fjordane",
+      "country": "NO"
+    },
+    {
+      "bic": "SPARNO22",
+      "name": "SpareBank Møre",
+      "country": "NO"
+    },
+    {
+      "bic": "SPAVNOBB",
+      "name": "Sparebanken Vest",
+      "country": "NO"
+    },
+    {
+      "bic": "SPRONO22XXX",
+      "name": "SpareBank 1 Sør-Norge ASA",
+      "country": "NO"
+    },
+    {
+      "bic": "SPTRNO22",
+      "name": "Sparebank 1 SMN",
+      "country": "NO"
+    },
+    {
+      "bic": "SWEDNOKKXXX",
+      "name": "Swedbank Norge",
+      "country": "NO"
+    },
+    {
+      "bic": "SWEDSESS",
+      "name": "Swedbank AB",
+      "country": "SE"
+    },
+    {
+      "bic": "SYBKDK22",
+      "name": "AL Sydbank A/S",
+      "country": "DK"
+    }
+  ]
+}

@@ -1,0 +1,755 @@
+{
+  "fetchedAt": "2026-08-17T08:38:55.216Z",
+  "runId": "20260817-083855",
+  "source": "/EXP01/BalanceResponsibleParties",
+  "count": 83,
+  "rows": [
+    {
+      "brpCode": "10000",
+      "brpName": "Svenska kraftnät",
+      "businessId": "202100-4284",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11000",
+      "brpName": "Vattenfall AB",
+      "businessId": "556036-2138",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11400",
+      "brpName": "Jämtkraft AB",
+      "businessId": "556001-6064",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11X0-0000-0613-3",
+      "brpName": "pure.energy GmbH",
+      "businessId": "HRB 84577",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-03-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11XDANSKECOM---P",
+      "brpName": "Danske Commodities A/S",
+      "businessId": "28113951",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11XESFORIN-----H",
+      "brpName": "ES FOR IN SE",
+      "businessId": "HRB 25724",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2024-10-30T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "11XOME-HANDEL--G",
+      "brpName": "Optimax Energy GmbH",
+      "businessId": "HRB29307",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2024-09-08T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "12300",
+      "brpName": "Entelios AB",
+      "businessId": "556478-6555",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "13200",
+      "brpName": "Skellefteå Kraft AB",
+      "businessId": "​556016-2561",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "13250",
+      "brpName": "Oppy Balancing Services AB",
+      "businessId": "559410-5693",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2024-11-30T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "14600",
+      "brpName": "Axpo Sverige AB",
+      "businessId": "556121-3199",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "17150",
+      "brpName": "VIM Energy Systems AB",
+      "businessId": "556760-0175",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2024-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "18450",
+      "brpName": "Green Voltis Sweden AB",
+      "businessId": "559070-0786",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2025-07-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "19XSKYQUANT1910A",
+      "brpName": "Sky Quant sp. z o.o.",
+      "businessId": "0000631153",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2025-01-04T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "19XTRMEWOBROT--I",
+      "brpName": "Respect Energy S.A.",
+      "businessId": "341470612",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2020-09-29T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "21450",
+      "brpName": "Thoryr AB",
+      "businessId": "5595428227",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2026-06-29T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "28350",
+      "brpName": "Borr Holding Aktiebolag",
+      "businessId": "559210-7329",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2026-07-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "36810",
+      "brpName": "Varberg Energimarknad AB",
+      "businessId": "556524-3010",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2024-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "40100",
+      "brpName": "Mälarenergi AB",
+      "businessId": "556448-9150",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "40900",
+      "brpName": "Fortum Sverige AB",
+      "businessId": "556006-8230",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "41X6VEJOMAINA141",
+      "brpName": "UAB Vėjomaina",
+      "businessId": "305289501",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-07-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "42500",
+      "brpName": "Volue Energy Market Services Sverige Filial",
+      "businessId": "516404-8950",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "42800",
+      "brpName": "Modity Energy Trading AB (SE)",
+      "businessId": "556643-4410",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "44X-00000000260U",
+      "brpName": "Etha Energy Trading Oy",
+      "businessId": "3095275-8",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2024-04-13T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X0000000000561",
+      "brpName": "A/S Global Risk Management Ltd. Holding",
+      "businessId": "79332216",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2022-06-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X000000000088P",
+      "brpName": "Inductive Energy",
+      "businessId": "42192287",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2021-05-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X000000000112H",
+      "brpName": "Flower Infrastructure Technologies AB",
+      "businessId": "559257-5558",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2022-11-06T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X000000000203E",
+      "brpName": "Odigo Energy ApS",
+      "businessId": "44811960",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2024-08-18T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X0000000002424",
+      "brpName": "Epiq Energy ApS",
+      "businessId": "45308170",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2025-07-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X000000000278K",
+      "brpName": "X Commodities ApS",
+      "businessId": "46144910",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-03-05T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "45X000000000279I",
+      "brpName": "Nidaros Energy ApS",
+      "businessId": "46192656",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-03-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "46X000000000365A",
+      "brpName": "Ingrid Capacity AB",
+      "businessId": "559369-0802",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2025-06-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "46X000000000418F",
+      "brpName": "Monsson Energy AB",
+      "businessId": "559068-1200",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-06-29T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "46X000000000429A",
+      "brpName": "Ntricity Market Services AB",
+      "businessId": "559475-5711",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-06-29T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "48500",
+      "brpName": "Kinect Energy Sweden AB",
+      "businessId": "556531-0736",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "48700",
+      "brpName": "Elkraft Sverige AB",
+      "businessId": "556559-9668",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "48800",
+      "brpName": "Bixia AB",
+      "businessId": "556544-2638",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "48X000000000361P",
+      "brpName": "Kvasir Technologies Ltd",
+      "businessId": "44996731",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2024-11-30T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "49100",
+      "brpName": "Storuman Energi AB",
+      "businessId": "556801-1729",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "49500",
+      "brpName": "Uniper Global Commodities SE (SE)",
+      "businessId": "HRB 61123",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5055069600062",
+      "brpName": "BP Gas Marketing Ltd",
+      "businessId": "908982",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-04-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5790002415494",
+      "brpName": "In Commodities A/S",
+      "businessId": "38381954",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5790002649851",
+      "brpName": "Hybrid Greentech Energy Trading ApS",
+      "businessId": "43102303",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-07-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5790002829383",
+      "brpName": "Enkel Energi ApS",
+      "businessId": "44925702",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-08-03T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5790002834028",
+      "brpName": "In Commodities Asset Management A/S",
+      "businessId": "45136132",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-04-05T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "62000",
+      "brpName": "Stockholm Exergi AB",
+      "businessId": "556016-9095",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2024-08-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "62350",
+      "brpName": "Centrica Energy A/S (SE)",
+      "businessId": "502067-7505",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "63000",
+      "brpName": "Produktionsbalans PBA AB",
+      "businessId": "556425-8134",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "6429830186717",
+      "brpName": "NW RE",
+      "businessId": "899433502",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2023-12-12T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "6430076200037",
+      "brpName": "Gasum Oyj",
+      "businessId": "0969819-3",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-03-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "64700",
+      "brpName": "Mind Energy AB",
+      "businessId": "556713-8549",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080003837530",
+      "brpName": "Tibber Norge AS",
+      "businessId": "917245975",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2018-02-28T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080004359376",
+      "brpName": "BD Energy A/S",
+      "businessId": "43343122 / 930700770",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2023-01-22T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080004362444",
+      "brpName": "Northpool B.V.",
+      "businessId": "852127777/931143093",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-05-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080005050869",
+      "brpName": "Hydro Energi AS",
+      "businessId": "930187240",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080005050999",
+      "brpName": "Statkraft Energi AS",
+      "businessId": "987059729",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080005051286",
+      "brpName": "Å Energi Vannkraft AS",
+      "businessId": "882973972",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080005051392",
+      "brpName": "Hafslund Kraft AS",
+      "businessId": "976894677",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010006363",
+      "brpName": "RWE Supply & Trading GmbH",
+      "businessId": "HRB 14327/991934995",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2019-09-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010006509",
+      "brpName": "Alpiq AG",
+      "businessId": "CHE-105.974.401",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-01-04T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010007049",
+      "brpName": "PowerMart ApS",
+      "businessId": "36201770 / 925279641",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2017-09-13T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010008411",
+      "brpName": "MFT Energy A/S",
+      "businessId": "38175130/927756315",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010010124",
+      "brpName": "Engelhart CTP Renewables GmbH",
+      "businessId": "HRB206999/928483819",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010011091",
+      "brpName": "Aneo AS",
+      "businessId": "828987712",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-10-29T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010011411",
+      "brpName": "C A Commodities A/S",
+      "businessId": "41338741/929263006",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-10-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010011961",
+      "brpName": "Energetick ApS",
+      "businessId": "42643785 / 929135776",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-01-09T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010013248",
+      "brpName": "Nidhog ApS",
+      "businessId": "40450238 / 926198246",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-01-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010014023",
+      "brpName": "Nordic Energy House ApS",
+      "businessId": "39533685/931157507",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-08-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010014337",
+      "brpName": "Twig Energy ApS",
+      "businessId": "42377449 / 931009729",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-08-28T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010014443",
+      "brpName": "Green.ai ApS",
+      "businessId": "42547557 / 931033239",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2022-06-15T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010014788",
+      "brpName": "Scalar Energy AS",
+      "businessId": "931666703",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2023-09-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010018243",
+      "brpName": "Elmera Energy AS",
+      "businessId": "933312232",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-04-26T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010018397",
+      "brpName": "Copenhagen Energy Trading A/S",
+      "businessId": "933859045 / 42526991",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2021-12-07T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010020222",
+      "brpName": "Aarhus Trading A/S",
+      "businessId": "45258777 / 934669959",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-02-02T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010023865",
+      "brpName": "Nord Energy Oy",
+      "businessId": "3236120-6/936587240",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-08-13T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080010024619",
+      "brpName": "Atlas Energy DAC",
+      "businessId": "754439/936049400",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-05-11T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080011062955",
+      "brpName": "ENZEE Commodities A/S",
+      "businessId": "933820114 / 42676330",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2023-06-13T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080011109551",
+      "brpName": "Volta Energy DAC",
+      "businessId": "934292081 / 746154",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2024-08-25T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080011127302",
+      "brpName": "Energy Group ApS",
+      "businessId": "44351218 / 835875512",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2024-02-11T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080011149069",
+      "brpName": "Joulx ApS",
+      "businessId": "45484548/936107923",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-08-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7080011183377",
+      "brpName": "THN Capital AG",
+      "businessId": "CHE-493.122.153",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2023-03-30T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7300009035250",
+      "brpName": "E.ON Sverige AB",
+      "businessId": "556006-8420",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7609999384202",
+      "brpName": "Second Foundation Trading AG",
+      "businessId": "CHE-154.481.776",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-05-04T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    }
+  ]
+}
