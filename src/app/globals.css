@@ -480,9 +480,11 @@ button:hover {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 28px 32px;
   width: 100%;
-  max-width: 380px;
+  /* Bred nog att rubriken "Fia — Förändringar i avräkningsstrukturen" ryms
+     på en rad vid 19px; på smala skärmar radbryts den naturligt. */
+  max-width: 500px;
   box-shadow: 0 8px 30px rgba(0, 25, 50, 0.35);
 }
 
