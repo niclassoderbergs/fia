@@ -14,10 +14,9 @@ export default async function LoginPage({
   return (
     <div className="login-shell">
       <div className="login-card">
-        <h1>Fia</h1>
+        <h1>Fia — Förändringar i avräkningsstrukturen</h1>
         <p className="muted" style={{ margin: 0 }}>
-          Förändringar i avräkningsstrukturen — aktörer, nätområden och balansansvar från eSett
-          open data.
+          Aktörer, nätområden och balansansvar från eSett open data.
         </p>
 
         <form method="post" action="/api/login">
