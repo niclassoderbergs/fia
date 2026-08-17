@@ -1,0 +1,43 @@
+services:
+  # Dygnskörningen. Startas av scripts/daily-import.sh via cron.
+  #   docker compose run --rm importer              → skarp körning
+  #   docker compose run --rm importer --dry-run    → hämta och jämför, skriv inget
+  #   docker compose run --rm importer --manual     → skarp körning utan slumpfördröjning
+  importer:
+    build: ./docker
+    image: fia-importer
+    working_dir: /app
+    # Samma uid som ägaren av repot — annars blir filerna importern skriver
+    # ägda av root och git på hosten kan inte längre röra dem.
+    user: "${FIA_UID:-1000}:${FIA_GID:-1000}"
+    env_file:
+      - .env
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+    volumes:
+      - .:/app
+      # SSH-nyckeln för push till GitHub. Skrivskyddad — containern ska kunna
+      # läsa nyckeln, inte ändra den. ~/.ssh/config här dirigerar github.com
+      # till ssh.github.com:443 eftersom servern blockerar utgående port 22.
+      - ${HOME}/.ssh:/tmp/.ssh:ro
+    network_mode: bridge
+
+  # Lokal förhandsgranskning av webbvyn på http://localhost:3200.
+  # Vercel bygger och kör produktionsversionen — den här är bara för utveckling.
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    user: "${FIA_UID:-1000}:${FIA_GID:-1000}"
+    env_file:
+      - .env
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+    command: sh -c "npm install --no-audit --no-fund && npx next dev -p 3200 -H 0.0.0.0"
+    ports:
+      - "3200:3200"
+    volumes:
+      - .:/app
+    profiles:
+      - dev
