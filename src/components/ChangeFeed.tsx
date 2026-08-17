@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { BrpChangeRow, RecordChangeRow } from '@/components/ChangeRows';
+import { BrpChangeTable, RecordChangeTable } from '@/components/ChangeRows';
 import { DATASETS, RBR } from '@/lib/datasets';
 import { formatDateTime, formatDuration, plural } from '@/lib/format';
 import type { FeedEntry, RecordChange, RunScope } from '@/lib/types';
@@ -148,21 +148,14 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
               ) : null}
 
               {/* Grupperna följer eSetts meny — samma ordning och rubriker som
-                  på deras open data-sida, med EXP-taggen bredvid. */}
+                  på deras open data-sida. */}
               {DATASETS.map((dataset) => {
                 if (dataset.slug === 'rbr') {
                   if (entry.changes.brp.length === 0) return null;
                   return (
                     <div key={dataset.slug}>
-                      <div className="change-group">
-                        {RBR.title} <span className="exp-tag">{RBR.exp}</span>
-                      </div>
-                      {entry.changes.brp.map((change, i) => (
-                        <BrpChangeRow
-                          key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}
-                          change={change}
-                        />
-                      ))}
+                      <div className="change-group">{RBR.title}</div>
+                      <BrpChangeTable changes={entry.changes.brp} />
                     </div>
                   );
                 }
@@ -171,15 +164,8 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                 if (!records || records.length === 0) return null;
                 return (
                   <div key={dataset.slug}>
-                    <div className="change-group">
-                      {dataset.title} <span className="exp-tag">{dataset.exp}</span>
-                    </div>
-                    {records.map((change, i) => (
-                      <RecordChangeRow
-                        key={`${change.entity}-${change.code}-${i}`}
-                        change={change}
-                      />
-                    ))}
+                    <div className="change-group">{dataset.title}</div>
+                    <RecordChangeTable changes={records} />
                   </div>
                 );
               })}

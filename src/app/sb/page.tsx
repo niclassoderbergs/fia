@@ -5,7 +5,7 @@ import { sortSv } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Settlement Banks — fia' };
+export const metadata = { title: 'Settlement Banks — Fia' };
 
 export default function SbPage() {
   const dataset = getBanks();

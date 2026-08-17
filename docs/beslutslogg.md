@@ -12,8 +12,9 @@ täcker alla sju dataseten utan att ljuga.
 
 **Beslut:**
 
-- Formellt namn: *fia — Förändringar i avräkningsstrukturen*. Sentence case i
-  löptext; initialerna f-i-a bär förkortningen.
+- Formellt namn: *Fia — Förändringar i avräkningsstrukturen*. Skrivregel
+  (tillagd samma dag): **Fia med stort F** i all löptext och UI; repo- och
+  paketnamnet förblir tekniskt gemener.
 - Bortvalda kandidater: *Förändringar i aktörslandskapet* (nätområden och
   banker är inte aktörer), *Fånga, Indexera, Avisera* (säger inget om domänen),
   *Förändringar i aktörsregistret* (singular är fel — sju dataset).

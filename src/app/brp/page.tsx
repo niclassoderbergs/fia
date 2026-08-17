@@ -5,7 +5,7 @@ import { formatDate } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Balance Responsible Parties — fia' };
+export const metadata = { title: 'Balance Responsible Parties — Fia' };
 
 export default function BrpPage() {
   const dataset = getBrpParties();

@@ -6,8 +6,7 @@ import { usePathname } from 'next/navigation';
 import { DATASETS } from '@/lib/datasets';
 
 /**
- * Sidomenyn — samma platta lista och ordning som eSetts egen drawer, med
- * EXP-taggen synlig så varje vy går att slå upp mot sin exportgrupp.
+ * Sidomenyn — samma platta lista och ordning som eSetts egen drawer.
  * Klientkomponent enbart för aria-current; sidorna förblir statiska.
  */
 export default function SideNav() {
@@ -24,7 +23,6 @@ export default function SideNav() {
       {DATASETS.map((d) => (
         <Link key={d.slug} href={`/${d.slug}`} aria-current={current(`/${d.slug}`)}>
           {d.title}
-          <span className="exp-tag">{d.exp}</span>
         </Link>
       ))}
       <div className="sidenav-group">System</div>

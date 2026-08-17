@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Logga in — fia' };
+export const metadata: Metadata = { title: 'Logga in — Fia' };
 
 export const dynamic = 'force-static';
 
@@ -14,7 +14,7 @@ export default async function LoginPage({
   return (
     <div className="login-shell">
       <div className="login-card">
-        <h1>fia</h1>
+        <h1>Fia</h1>
         <p className="muted" style={{ margin: 0 }}>
           Förändringar i avräkningsstrukturen — aktörer, nätområden och balansansvar från eSett
           open data.

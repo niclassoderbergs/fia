@@ -24,14 +24,12 @@ export default function DatasetHeader({
 
   return (
     <>
-      <h1>
-        {dataset.title} <span className="badge badge-exp">{dataset.exp}</span>
-      </h1>
+      <h1>{dataset.title}</h1>
       <div className="dataset-head-row">
         <p className="endpoint-line">
           <span className="method">GET</span> {dataset.endpoint}
         </p>
-        <DatasetChangesOverlay title={dataset.title} exp={dataset.exp} entries={history} />
+        <DatasetChangesOverlay title={dataset.title} entries={history} />
       </div>
       <p className="lede">
         {lede} Innehållet ändrades senast {formatDateTime(fetchedAt)}

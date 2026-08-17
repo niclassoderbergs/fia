@@ -171,12 +171,6 @@ a:hover {
   font-weight: 550;
 }
 
-.sidenav .exp-tag {
-  font-size: 10.5px;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
-
 main {
   padding: 26px 28px 72px;
   min-width: 0;
@@ -214,9 +208,6 @@ footer.pagefoot {
   }
   .sidenav a[aria-current='page'] {
     border-bottom-color: var(--esett-blue);
-  }
-  .sidenav .exp-tag {
-    display: none;
   }
   footer.pagefoot {
     grid-column: 1;
@@ -287,14 +278,6 @@ h3 {
   font-weight: 500;
   white-space: nowrap;
   border: 1px solid transparent;
-}
-
-.badge-exp {
-  background: var(--esett-navy);
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  vertical-align: 3px;
 }
 
 .badge-ok {
@@ -628,14 +611,10 @@ button:hover {
 
 /* Grupprubrik per eSett-dataset inne i en utfälld dag. */
 .change-group {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin: 14px 0 4px;
+  margin: 14px 0 6px;
   font-size: 13px;
   font-weight: 650;
   color: var(--esett-navy);
-  text-transform: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -644,44 +623,23 @@ button:hover {
   }
 }
 
-.change-group .exp-tag {
-  font-size: 10.5px;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
+/* Förändringstabeller (flödet, overlayn, körningsdetaljen). Rubrikraden ska
+   inte fastna mitt på sidan — sticky gäller bara de stora register-tabellerna. */
+.change-table {
+  margin: 4px 0 12px;
 }
 
-.change-row {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  padding: 5px 0;
-  font-size: 14px;
-  flex-wrap: wrap;
+.change-table table {
+  font-size: 13.5px;
 }
 
-.change-row + .change-row {
-  border-top: 1px solid var(--border);
+.change-table thead th {
+  position: static;
+  padding: 7px 12px;
 }
 
-.change-main {
-  font-weight: 500;
-}
-
-.change-meta {
-  color: var(--text-muted);
-  font-size: 13px;
-}
-
-.change-brp {
-  margin-left: auto;
-  text-align: right;
-}
-
-.change-field {
-  display: block;
-  color: var(--text-muted);
-  font-size: 13px;
+.change-table tbody td {
+  padding: 6px 12px;
 }
 
 .change-foot {

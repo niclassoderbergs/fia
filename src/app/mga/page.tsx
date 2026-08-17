@@ -4,7 +4,7 @@ import { getGridAreas } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Metering Grid Areas — fia' };
+export const metadata = { title: 'Metering Grid Areas — Fia' };
 
 export default function MgaPage() {
   const dataset = getGridAreas();

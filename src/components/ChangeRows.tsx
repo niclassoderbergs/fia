@@ -1,63 +1,118 @@
-// Radrenderare för förändringar — delade mellan förändringsflödet på
-// startsidan och per-datasetens overlay, så en förändring ser likadan ut var
-// den än visas. Rena komponenter utan hooks: fungerar i både server- och
+// Tabellrenderare för förändringar — delade mellan startsidans flöde,
+// dataset-overlayerna och körningsdetaljsidan, så en förändring ser likadan
+// ut var den än visas och kolumnerna alltid bär sina rubriker. Utan rubriker
+// blev vyn tvetydig: en elhandlare som är sin egen BRP visar samma namn i
+// båda kolumnerna. Rena komponenter utan hooks: fungerar i både server- och
 // klientkontext.
 
-import { BRP_ACTION_LABEL, RECORD_ACTION_LABEL } from '@/lib/format';
+import {
+  BRP_ACTION_LABEL,
+  DIRECTION_LABEL,
+  ENTITY_LABEL,
+  RECORD_ACTION_LABEL,
+} from '@/lib/format';
 import type { BrpChange, RecordChange } from '@/lib/types';
 
-/** Kort riktningsetikett — raderna är täta, "Förbrukning" tar för mycket plats. */
-export const DIRECTION_SHORT: Record<string, string> = {
-  consumption: 'kons',
-  production: 'prod',
-};
-
-export const BRP_BADGE_CLASS: Record<string, string> = {
+const BRP_BADGE_CLASS: Record<string, string> = {
   new_retailer: 'badge-ok',
   new_relation: 'badge-neutral',
   brp_switch: 'badge-warn',
   ended: 'badge-danger',
 };
 
-export const RECORD_BADGE_CLASS: Record<string, string> = {
+const RECORD_BADGE_CLASS: Record<string, string> = {
   added: 'badge-ok',
   changed: 'badge-warn',
   removed: 'badge-danger',
 };
 
-export function RecordChangeRow({ change }: { change: RecordChange }) {
+/** Balansansvarsförändringar (RBR) med kolumnrubriker. */
+export function BrpChangeTable({ changes }: { changes: BrpChange[] }) {
+  if (changes.length === 0) return null;
   return (
-    <div className="change-row">
-      <span className={`badge ${RECORD_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
-        {RECORD_ACTION_LABEL[change.action] ?? change.action}
-      </span>
-      <span className="change-main">{change.name}</span>
-      <span className="change-meta mono">{change.code}</span>
-      <span className="change-brp">
-        {change.fields.map((f) => (
-          <span key={f.field} className="change-field">
-            {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
-          </span>
-        ))}
-      </span>
+    <div className="table-wrap change-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Händelse</th>
+            <th>Elhandlare</th>
+            <th>Prisområde</th>
+            <th>Riktning</th>
+            <th>Balansansvarig</th>
+          </tr>
+        </thead>
+        <tbody>
+          {changes.map((change, i) => (
+            <tr key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}>
+              <td>
+                <span className={`badge ${BRP_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
+                  {BRP_ACTION_LABEL[change.action] ?? change.action}
+                </span>
+              </td>
+              <td>{change.retailer}</td>
+              <td>{change.biddingZone}</td>
+              <td className="muted">{DIRECTION_LABEL[change.direction] ?? change.direction}</td>
+              <td>
+                {change.fromBrp ? <span>{change.fromBrp}</span> : null}
+                {change.fromBrp && change.toBrp ? <span className="arrow">→</span> : null}
+                {change.toBrp ? <strong>{change.toBrp}</strong> : null}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
 
-export function BrpChangeRow({ change }: { change: BrpChange }) {
+/** Registerförändringar (nätägare, nätområden, elhandlare …) med kolumnrubriker. */
+export function RecordChangeTable({
+  changes,
+  showEntity = false,
+}: {
+  changes: RecordChange[];
+  /** Visa typ-kolumn — behövs bara där flera dataset blandas (körningsdetaljen). */
+  showEntity?: boolean;
+}) {
+  if (changes.length === 0) return null;
   return (
-    <div className="change-row">
-      <span className={`badge ${BRP_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
-        {BRP_ACTION_LABEL[change.action] ?? change.action}
-      </span>
-      <span className="change-main">{change.retailer}</span>
-      <span className="change-meta">{change.biddingZone}</span>
-      <span className="change-meta">{DIRECTION_SHORT[change.direction] ?? change.direction}</span>
-      <span className="change-brp">
-        {change.fromBrp ? <span>{change.fromBrp}</span> : null}
-        {change.fromBrp && change.toBrp ? <span className="arrow">→</span> : null}
-        {change.toBrp ? <strong>{change.toBrp}</strong> : null}
-      </span>
+    <div className="table-wrap change-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Händelse</th>
+            {showEntity ? <th>Typ</th> : null}
+            <th>Namn</th>
+            <th>Kod</th>
+            <th>Ändrade fält</th>
+          </tr>
+        </thead>
+        <tbody>
+          {changes.map((change, i) => (
+            <tr key={`${change.entity}-${change.code}-${i}`}>
+              <td>
+                <span className={`badge ${RECORD_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
+                  {RECORD_ACTION_LABEL[change.action] ?? change.action}
+                </span>
+              </td>
+              {showEntity ? (
+                <td className="muted">{ENTITY_LABEL[change.entity] ?? change.entity}</td>
+              ) : null}
+              <td>{change.name}</td>
+              <td className="mono">{change.code}</td>
+              <td className="muted">
+                {change.fields.length === 0
+                  ? '—'
+                  : change.fields.map((f) => (
+                      <div key={f.field}>
+                        {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
+                      </div>
+                    ))}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

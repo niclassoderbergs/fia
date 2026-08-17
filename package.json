@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "fia — Förändringar i avräkningsstrukturen. Daglig eSett-import till filer + läsvy.",
+  "description": "Fia — Förändringar i avräkningsstrukturen. Daglig eSett-import till filer + läsvy.",
   "engines": {
     "node": ">=22"
   },

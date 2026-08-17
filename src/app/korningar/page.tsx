@@ -6,7 +6,7 @@ import { TRIGGER_LABEL, formatDateTime, formatDuration, formatNumber } from '@/l
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Körningar — fia' };
+export const metadata = { title: 'Körningar — Fia' };
 
 export default function RunsPage() {
   const { runs } = getRunIndex();

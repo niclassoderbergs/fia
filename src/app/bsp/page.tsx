@@ -4,7 +4,7 @@ import { getBsps } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Balancing Service Providers — fia' };
+export const metadata = { title: 'Balancing Service Providers — Fia' };
 
 export default function BspPage() {
   const dataset = getBsps();

@@ -5,7 +5,7 @@ import { DIRECTION_LABEL, formatNumber, sortSv } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Retailer Balance Responsibilities — fia' };
+export const metadata = { title: 'Retailer Balance Responsibilities — Fia' };
 
 export default function RbrPage() {
   const dataset = getBrpRelations();

@@ -4,7 +4,7 @@ import { getRetailers } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Retailers — fia' };
+export const metadata = { title: 'Retailers — Fia' };
 
 export default function RetailersPage() {
   const dataset = getRetailers();

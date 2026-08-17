@@ -5,7 +5,7 @@ import { formatNumber } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Distribution System Operators — fia' };
+export const metadata = { title: 'Distribution System Operators — Fia' };
 
 export default function DsoPage() {
   const dataset = getDsos();

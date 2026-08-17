@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 
-import { BrpChangeRow, RecordChangeRow } from '@/components/ChangeRows';
+import { BrpChangeTable, RecordChangeTable } from '@/components/ChangeRows';
 import type { DatasetChangeEntry } from '@/lib/data';
 import { formatDateTime, plural } from '@/lib/format';
 
@@ -16,11 +16,9 @@ import { formatDateTime, plural } from '@/lib/format';
  */
 export default function DatasetChangesOverlay({
   title,
-  exp,
   entries,
 }: {
   title: string;
-  exp: string;
   entries: DatasetChangeEntry[];
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -42,9 +40,7 @@ export default function DatasetChangesOverlay({
         }}
       >
         <div className="dialog-head">
-          <span className="dialog-title">
-            Förändringar — {title} <span className="exp-tag">{exp}</span>
-          </span>
+          <span className="dialog-title">Förändringar — {title}</span>
           <button
             type="button"
             className="dialog-close"
@@ -73,15 +69,8 @@ export default function DatasetChangesOverlay({
                     körningen →
                   </a>
                 </div>
-                {entry.brp.map((change, i) => (
-                  <BrpChangeRow
-                    key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}
-                    change={change}
-                  />
-                ))}
-                {entry.records.map((change, i) => (
-                  <RecordChangeRow key={`${change.code}-${i}`} change={change} />
-                ))}
+                <BrpChangeTable changes={entry.brp} />
+                <RecordChangeTable changes={entry.records} />
                 {entry.changesTruncated ? (
                   <p className="muted change-foot">
                     Körningens ändringslista är kapad till 500 rader — hela förändringen finns i

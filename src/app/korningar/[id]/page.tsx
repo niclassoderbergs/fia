@@ -1,18 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { BrpChangeTable, RecordChangeTable } from '@/components/ChangeRows';
 import StatusBadge from '@/components/StatusBadge';
 import { getRun, getRunIndex } from '@/lib/data';
-import {
-  BRP_ACTION_LABEL,
-  DIRECTION_LABEL,
-  ENTITY_LABEL,
-  RECORD_ACTION_LABEL,
-  TRIGGER_LABEL,
-  formatDateTime,
-  formatDuration,
-  formatNumber,
-} from '@/lib/format';
+import { TRIGGER_LABEL, formatDateTime, formatDuration, formatNumber } from '@/lib/format';
 import type { RunScope } from '@/lib/types';
 
 /** Läsbara namn för seedade dataset. */
@@ -218,96 +210,14 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
       {run.changes.brp.length > 0 ? (
         <>
           <h3>Balansansvar</h3>
-          <div className="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Händelse</th>
-                  <th>Prisområde</th>
-                  <th>Elhandlare</th>
-                  <th>Riktning</th>
-                  <th>Balansansvarig</th>
-                </tr>
-              </thead>
-              <tbody>
-                {run.changes.brp.map((change, i) => (
-                  <tr key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}>
-                    <td>
-                      <span
-                        className={`badge ${
-                          change.action === 'ended'
-                            ? 'badge-warn'
-                            : change.action === 'brp_switch'
-                              ? 'badge-neutral'
-                              : 'badge-ok'
-                        }`}
-                      >
-                        {BRP_ACTION_LABEL[change.action] ?? change.action}
-                      </span>
-                    </td>
-                    <td>{change.biddingZone}</td>
-                    <td>{change.retailer}</td>
-                    <td className="muted">{DIRECTION_LABEL[change.direction] ?? change.direction}</td>
-                    <td>
-                      {change.fromBrp ? <span>{change.fromBrp}</span> : null}
-                      {change.fromBrp && change.toBrp ? <span className="arrow">→</span> : null}
-                      {change.toBrp ? <strong>{change.toBrp}</strong> : null}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <BrpChangeTable changes={run.changes.brp} />
         </>
       ) : null}
 
       {run.changes.records.length > 0 ? (
         <>
-          <h3>Nätområden och nätägare</h3>
-          <div className="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Händelse</th>
-                  <th>Typ</th>
-                  <th>Kod</th>
-                  <th>Namn</th>
-                  <th>Ändrade fält</th>
-                </tr>
-              </thead>
-              <tbody>
-                {run.changes.records.map((change, i) => (
-                  <tr key={`${change.entity}-${change.code}-${i}`}>
-                    <td>
-                      <span
-                        className={`badge ${
-                          change.action === 'removed'
-                            ? 'badge-warn'
-                            : change.action === 'changed'
-                              ? 'badge-neutral'
-                              : 'badge-ok'
-                        }`}
-                      >
-                        {RECORD_ACTION_LABEL[change.action] ?? change.action}
-                      </span>
-                    </td>
-                    <td className="muted">{ENTITY_LABEL[change.entity] ?? change.entity}</td>
-                    <td className="mono">{change.code}</td>
-                    <td>{change.name}</td>
-                    <td className="muted">
-                      {change.fields.length === 0
-                        ? '—'
-                        : change.fields.map((f) => (
-                            <div key={f.field}>
-                              {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
-                            </div>
-                          ))}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h3>Register</h3>
+          <RecordChangeTable changes={run.changes.records} showEntity />
         </>
       ) : null}
 
