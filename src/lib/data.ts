@@ -48,6 +48,18 @@ export function getRunIndex(): RunIndex {
   return readJson<RunIndex>('runs', 'index.json') ?? { updatedAt: '', runs: [] };
 }
 
+/**
+ * Senaste körningen som faktiskt skrev igenom.
+ *
+ * Behövs för att kunna säga "senast kontrollerad" separat från datasetets
+ * `fetchedAt`. Datafiler skrivs bara när något ändrats, så `fetchedAt` är
+ * tidpunkten då innehållet senast *ändrades* — inte när det senast
+ * bekräftades mot eSett. Utan den skillnaden ser färsk data ut som gammal.
+ */
+export function getLastSuccessfulRun(): RunIndex['runs'][number] | null {
+  return getRunIndex().runs.find((r) => r.status === 'success' && !r.dryRun) ?? null;
+}
+
 export function getRun(id: string): RunReport | null {
   // id kommer från URL:en — tillåt bara det format importern skapar.
   if (!/^\d{8}-\d{6}$/.test(id)) return null;

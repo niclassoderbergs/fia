@@ -1,5 +1,5 @@
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getDsos, getGridAreas } from '@/lib/data';
+import { getDsos, getGridAreas, getLastSuccessfulRun } from '@/lib/data';
 import { formatDateTime, formatNumber } from '@/lib/format';
 
 export const dynamic = 'force-static';
@@ -9,6 +9,7 @@ export const metadata = { title: 'Nätägare — fia' };
 export default function DsosPage() {
   const dataset = getDsos();
   const gridAreas = getGridAreas().rows;
+  const checked = getLastSuccessfulRun();
 
   const areasByDso = new Map<string, number>();
   for (const area of gridAreas) {
@@ -30,9 +31,10 @@ export default function DsosPage() {
     <>
       <h1>Nätägare</h1>
       <p className="lede">
-        Svenska nätägare (DSO) enligt eSett. Koden är den femsiffriga NSE-koden som också används
-        som Ediel-id. Hämtat {formatDateTime(dataset.fetchedAt)} från{' '}
-        <span className="mono">{dataset.source}</span>.
+        Svenska nätägare (DSO) enligt eSett, från <span className="mono">{dataset.source}</span>.
+        Koden är den femsiffriga NSE-koden som också används som Ediel-id. Innehållet ändrades
+        senast {formatDateTime(dataset.fetchedAt)}
+        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}.
       </p>
 
       <FilterableTable

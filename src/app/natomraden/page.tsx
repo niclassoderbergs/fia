@@ -1,5 +1,5 @@
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getGridAreas } from '@/lib/data';
+import { getGridAreas, getLastSuccessfulRun } from '@/lib/data';
 import { formatDateTime } from '@/lib/format';
 
 export const dynamic = 'force-static';
@@ -8,6 +8,7 @@ export const metadata = { title: 'Nätområden — fia' };
 
 export default function GridAreasPage() {
   const dataset = getGridAreas();
+  const checked = getLastSuccessfulRun();
 
   const rows: Row[] = dataset.rows.map((area) => ({
     id: area.mgaCode,
@@ -29,8 +30,10 @@ export default function GridAreasPage() {
     <>
       <h1>Nätområden</h1>
       <p className="lede">
-        Svenska nätområden (MGA) av typen DISTRIBUTION, med prisområde och nätägare.
-        Hämtat {formatDateTime(dataset.fetchedAt)} från <span className="mono">{dataset.source}</span>.
+        Svenska nätområden (MGA) av typen DISTRIBUTION, med prisområde och nätägare, från{' '}
+        <span className="mono">{dataset.source}</span>. Innehållet ändrades senast{' '}
+        {formatDateTime(dataset.fetchedAt)}
+        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}.
       </p>
 
       {unlinked > 0 || ambiguous > 0 ? (

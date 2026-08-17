@@ -1,5 +1,5 @@
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getBrpRelations } from '@/lib/data';
+import { getBrpRelations, getLastSuccessfulRun } from '@/lib/data';
 import { DIRECTION_LABEL, formatDateTime, formatNumber, sortSv } from '@/lib/format';
 
 export const dynamic = 'force-static';
@@ -8,6 +8,7 @@ export const metadata = { title: 'Balansansvar — fia' };
 
 export default function BrpPage() {
   const dataset = getBrpRelations();
+  const checked = getLastSuccessfulRun();
 
   const rows: Row[] = dataset.rows.map((rel) => ({
     id: `${rel.biddingZone}|${rel.retailerName}|${rel.direction}`,
@@ -32,9 +33,11 @@ export default function BrpPage() {
     <>
       <h1>Balansansvar</h1>
       <p className="lede">
-        Vilken balansansvarig (BRP) varje elhandlare har, per prisområde och riktning. Hämtat{' '}
-        {formatDateTime(dataset.fetchedAt)} från <span className="mono">{dataset.source}</span>.
-        Sök på ett nätområdesnamn för att se relationerna som gäller där.
+        Vilken balansansvarig (BRP) varje elhandlare har, per prisområde och riktning, från{' '}
+        <span className="mono">{dataset.source}</span>. Innehållet ändrades senast{' '}
+        {formatDateTime(dataset.fetchedAt)}
+        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}. Sök
+        på ett nätområdesnamn för att se relationerna som gäller där.
       </p>
 
       <p className="notice">
