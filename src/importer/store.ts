@@ -28,6 +28,14 @@ export function runReportPath(runId: string): string {
   return join('runs', `${runId}.json`);
 }
 
+/**
+ * Körnings-id: YYYYMMDD-HHMMSS i UTC. Sorterbart som sträng, vilket är hela
+ * poängen — indexet och filnamnen sorteras med samma jämförelse som allt annat.
+ */
+export function runIdFromDate(date: Date): string {
+  return date.toISOString().replace(/[-:]/g, '').replace('T', '-').slice(0, 15);
+}
+
 /** Serialisering som allt i data/ går igenom. 2 mellanslag + avslutande radbrytning. */
 export function serialize(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
@@ -92,6 +100,10 @@ export class DataStore {
       totals: report.totals,
       changeCount: report.changeCount,
       error: report.error,
+      // Villkorad spread: med exactOptionalPropertyTypes får ett valfritt fält
+      // inte tilldelas undefined, och våra egna körningar ska sakna fälten helt.
+      ...(report.origin ? { origin: report.origin } : {}),
+      ...(report.scope ? { scope: report.scope } : {}),
     };
 
     const runs = [summary, ...index.runs.filter((r) => r.id !== report.id)]

@@ -1,0 +1,68 @@
+{
+  "id": "20260810-020000",
+  "startedAt": "2026-08-10T02:00:00.276Z",
+  "finishedAt": "2026-08-10T02:00:00.708Z",
+  "durationMs": 432,
+  "status": "success",
+  "triggeredBy": "unknown",
+  "dryRun": false,
+  "origin": "energi",
+  "scope": [
+    "dsos",
+    "gridAreas"
+  ],
+  "totals": {
+    "dsos": 174,
+    "gridAreas": 278,
+    "brpRelations": 0
+  },
+  "changeCount": 0,
+  "error": null,
+  "requestCount": 0,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 174,
+      "durationMs": null
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 278,
+      "durationMs": null
+    }
+  ],
+  "guards": [],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 174
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 278
+    },
+    "brp": {
+      "newRetailers": 0,
+      "newRelations": 0,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 0
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": []
+  },
+  "changesTruncated": false
+}

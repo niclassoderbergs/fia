@@ -1,0 +1,174 @@
+{
+  "id": "20260704-023003",
+  "startedAt": "2026-07-04T02:30:03.957Z",
+  "finishedAt": "2026-07-04T02:30:07.956Z",
+  "durationMs": 3999,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "origin": "energi",
+  "scope": [
+    "brp"
+  ],
+  "totals": {
+    "dsos": 0,
+    "gridAreas": 0,
+    "brpRelations": 1773
+  },
+  "changeCount": 16,
+  "error": null,
+  "requestCount": 0,
+  "steps": [
+    {
+      "name": "Balansansvar (alla prisområden)",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility",
+      "fetched": 145497,
+      "durationMs": 3999
+    }
+  ],
+  "guards": [],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "brp": {
+      "newRetailers": 1,
+      "newRelations": 7,
+      "brpSwitches": 0,
+      "ended": 8,
+      "unchanged": 1765
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": [
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_retailer",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Vattenfall AB",
+        "action": "new_relation",
+        "retailer": "Fågelås Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE1"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE2"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE3"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "production",
+        "biddingZone": "SE4"
+      },
+      {
+        "action": "ended",
+        "fromBrp": "Vattenfall AB",
+        "retailer": "Almnäs Elhandel AB",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      }
+    ]
+  },
+  "changesTruncated": false
+}

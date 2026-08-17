@@ -76,6 +76,31 @@ docker compose --profile dev up web   # http://localhost:3200
 docker compose run --rm --entrypoint npx importer vitest run
 ```
 
+## Historiken från energi
+
+Körningshistoriken före utbrytningen ligger inläst i `data/runs/`. Den kom från
+energi-systemets `esett_brp_import_run` och `esett_import_run`:
+
+```bash
+./scripts/dump-energi-runs.sh            # SELECT ur energis databas → JSON
+npm run backfill /tmp/energi-esett-runs.json
+```
+
+Inläsningen är idempotent och rör aldrig en körning appen själv gjort. Den är
+gjord en gång; skripten finns kvar för att resultatet ska gå att härleda.
+
+Inlästa körningar märks med `origin: "energi"` och en `scope` — energi körde
+nätområden veckovis och balansansvar dagligen som **två separata jobb**, så en
+importerad rad täcker bara den ena halvan. Vyn visar streck, inte nollor, för
+det en körning inte omfattade.
+
+Tre saker fanns helt enkelt inte i källan och hittas därför inte på:
+`triggered_by` saknas på nätområdessidan (blir `unknown`, inte `cron`),
+stegtider loggades aldrig per endpoint (blir `null`, inte en gissning), och
+spärrar fanns inte alls. Misslyckade körningar lämnade inget spår i de
+tabellerna — historiken innehåller alltså bara lyckade körningar, vilket är
+precis det den här appen gör tvärtom.
+
 ## Drift och konfiguration
 
 Allt styrs via `.env` (se `.env.example`). De som spelar mest roll:

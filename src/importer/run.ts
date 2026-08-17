@@ -36,9 +36,10 @@ import {
 import { diffRecords } from '@/esett/diff';
 import { diffBrpRelations } from '@/esett/brp-diff';
 import { cmp } from '@/esett/sort';
+import { plural } from '@/lib/format';
 import { allPassed, failureSummary, guardAllZones, guardNonEmpty, guardShrink } from './guards';
 import { buildCommitMessage, commitData, push } from './git';
-import { DataStore, DATA_FILES } from './store';
+import { DataStore, DATA_FILES, runIdFromDate } from './store';
 import type { Dataset, GuardResult, RunReport, RunStep } from '@/lib/types';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -91,14 +92,6 @@ function readEnv(): Env {
   };
 }
 
-function runIdFrom(date: Date): string {
-  return date
-    .toISOString()
-    .replace(/[-:]/g, '')
-    .replace('T', '-')
-    .slice(0, 15);
-}
-
 /** Datum i Europe/Stockholm för commit-rubriken. */
 function stockholmDate(date: Date): string {
   return new Intl.DateTimeFormat('sv-SE', {
@@ -123,7 +116,7 @@ async function main(): Promise<void> {
   }
 
   const startedAt = new Date();
-  const runId = runIdFrom(startedAt);
+  const runId = runIdFromDate(startedAt);
   const client = new EsettOpenDataClient({
     base: env.baseUrl,
     minDelayMs: env.minDelayMs,
@@ -317,17 +310,23 @@ async function main(): Promise<void> {
   // --- Commit + push --------------------------------------------------------
   if (!dryRun && env.gitCommit) {
     const c = brpDiff.counts;
+    const d = dsoDiff.counts;
+    const g = gridAreaDiff.counts;
     const lines: string[] = [];
-    if (dsoDiff.counts.added) lines.push(`${dsoDiff.counts.added} nya nätägare`);
-    if (dsoDiff.counts.changed) lines.push(`${dsoDiff.counts.changed} ändrade nätägare`);
-    if (dsoDiff.counts.removed) lines.push(`${dsoDiff.counts.removed} borttagna nätägare`);
-    if (gridAreaDiff.counts.added) lines.push(`${gridAreaDiff.counts.added} nya nätområden`);
-    if (gridAreaDiff.counts.changed) lines.push(`${gridAreaDiff.counts.changed} ändrade nätområden`);
-    if (gridAreaDiff.counts.removed) lines.push(`${gridAreaDiff.counts.removed} borttagna nätområden`);
-    if (c.newRetailers) lines.push(`${c.newRetailers} nya elhandlare`);
-    if (c.newRelations) lines.push(`${c.newRelations} nya BRP-relationer`);
-    if (c.brpSwitches) lines.push(`${c.brpSwitches} BRP-byten`);
-    if (c.ended) lines.push(`${c.ended} upphörda BRP-relationer`);
+    if (d.added) lines.push(plural(d.added, 'ny nätägare', 'nya nätägare'));
+    if (d.changed) lines.push(plural(d.changed, 'ändrad nätägare', 'ändrade nätägare'));
+    if (d.removed) lines.push(plural(d.removed, 'borttagen nätägare', 'borttagna nätägare'));
+    if (g.added) lines.push(plural(g.added, 'nytt nätområde', 'nya nätområden'));
+    if (g.changed) lines.push(plural(g.changed, 'ändrat nätområde', 'ändrade nätområden'));
+    if (g.removed) lines.push(plural(g.removed, 'borttaget nätområde', 'borttagna nätområden'));
+    if (c.newRetailers) lines.push(plural(c.newRetailers, 'ny elhandlare', 'nya elhandlare'));
+    if (c.newRelations) {
+      lines.push(plural(c.newRelations, 'ny BRP-relation', 'nya BRP-relationer'));
+    }
+    if (c.brpSwitches) lines.push(plural(c.brpSwitches, 'BRP-byte', 'BRP-byten'));
+    if (c.ended) {
+      lines.push(plural(c.ended, 'upphörd BRP-relation', 'upphörda BRP-relationer'));
+    }
 
     const message = buildCommitMessage({
       dateLabel: stockholmDate(startedAt),

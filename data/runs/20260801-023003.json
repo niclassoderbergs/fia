@@ -1,0 +1,146 @@
+{
+  "id": "20260801-023003",
+  "startedAt": "2026-08-01T02:30:03.535Z",
+  "finishedAt": "2026-08-01T02:30:07.074Z",
+  "durationMs": 3539,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "origin": "energi",
+  "scope": [
+    "brp"
+  ],
+  "totals": {
+    "dsos": 0,
+    "gridAreas": 0,
+    "brpRelations": 1785
+  },
+  "changeCount": 12,
+  "error": null,
+  "requestCount": 0,
+  "steps": [
+    {
+      "name": "Balansansvar (alla prisområden)",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility",
+      "fetched": 145509,
+      "durationMs": 3539
+    }
+  ],
+  "guards": [],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "brp": {
+      "newRetailers": 3,
+      "newRelations": 9,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1773
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": [
+      {
+        "toBrp": "Enkel Energi ApS",
+        "action": "new_retailer",
+        "retailer": "Enkel Energi ApS",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Nidaros Energy ApS",
+        "action": "new_retailer",
+        "retailer": "Nidaros Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "UAB Vėjomaina",
+        "action": "new_retailer",
+        "retailer": "UAB Vėjomaina",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Enkel Energi ApS",
+        "action": "new_relation",
+        "retailer": "Enkel Energi ApS",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Nidaros Energy ApS",
+        "action": "new_relation",
+        "retailer": "Nidaros Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "UAB Vėjomaina",
+        "action": "new_relation",
+        "retailer": "UAB Vėjomaina",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Enkel Energi ApS",
+        "action": "new_relation",
+        "retailer": "Enkel Energi ApS",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Nidaros Energy ApS",
+        "action": "new_relation",
+        "retailer": "Nidaros Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "UAB Vėjomaina",
+        "action": "new_relation",
+        "retailer": "UAB Vėjomaina",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Enkel Energi ApS",
+        "action": "new_relation",
+        "retailer": "Enkel Energi ApS",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Nidaros Energy ApS",
+        "action": "new_relation",
+        "retailer": "Nidaros Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "UAB Vėjomaina",
+        "action": "new_relation",
+        "retailer": "UAB Vėjomaina",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      }
+    ]
+  },
+  "changesTruncated": false
+}

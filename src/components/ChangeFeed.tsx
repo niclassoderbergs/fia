@@ -5,9 +5,9 @@ import {
   RECORD_ACTION_LABEL,
   formatDateTime,
   formatDuration,
-  formatNumber,
+  plural,
 } from '@/lib/format';
-import type { FeedEntry } from '@/lib/types';
+import type { FeedEntry, RunScope } from '@/lib/types';
 
 /** Kort riktningsetikett — flödet är tätt, "Förbrukning" tar för mycket plats. */
 const DIRECTION_SHORT: Record<string, string> = {
@@ -40,30 +40,50 @@ function summaryLine(entry: FeedEntry): string {
   if (entry.status !== 'success') {
     return entry.error ?? 'körningen gick inte igenom';
   }
+
+  // Historik från energi kördes som två separata jobb, så en rad täcker bara
+  // den ena halvan. Redovisa aldrig siffror för det körningen inte omfattade.
+  const scope = entry.scope ?? ['dsos', 'gridAreas', 'brp'];
+  const covers = (part: RunScope) => scope.includes(part);
+
   if (entry.changeCount === 0) {
-    return `${formatNumber(entry.totals.brpRelations)} relationer · oförändrat`;
+    const totals: string[] = [];
+    if (covers('brp')) totals.push(plural(entry.totals.brpRelations, 'relation', 'relationer'));
+    if (covers('gridAreas')) {
+      totals.push(plural(entry.totals.gridAreas, 'nätområde', 'nätområden'));
+    }
+    if (covers('dsos') && !covers('brp')) {
+      totals.push(plural(entry.totals.dsos, 'nätägare', 'nätägare'));
+    }
+    return `${totals.join(' · ')} · oförändrat`;
   }
 
   const parts: string[] = [];
   const { brp, gridAreas, dsos } = entry.counts;
-  const n = formatNumber;
 
-  if (brp.newRetailers > 0) parts.push(`${n(brp.newRetailers)} nya elhandlare`);
-  if (brp.newRelations > 0) parts.push(`${n(brp.newRelations)} nya relationer`);
+  if (brp.newRetailers > 0) parts.push(plural(brp.newRetailers, 'ny elhandlare', 'nya elhandlare'));
+  if (brp.newRelations > 0) parts.push(plural(brp.newRelations, 'ny relation', 'nya relationer'));
 
-  const hasBrpChange =
-    brp.newRetailers + brp.newRelations + brp.brpSwitches + brp.ended > 0;
-  if (hasBrpChange) {
-    parts.push(`${n(brp.brpSwitches)} BRP-byten`);
-    parts.push(`${n(brp.ended)} upphörda`);
+  // Byten och upphörda redovisas även vid noll — de är de enda utfallen som
+  // kan betyda att balansansvar faktiskt flyttat, och "0 BRP-byten" svart på
+  // vitt är ett annat besked än att siffran inte nämns.
+  if (brp.newRetailers + brp.newRelations + brp.brpSwitches + brp.ended > 0) {
+    parts.push(plural(brp.brpSwitches, 'BRP-byte', 'BRP-byten'));
+    parts.push(plural(brp.ended, 'upphörd', 'upphörda'));
   }
 
-  if (gridAreas.added > 0) parts.push(`${n(gridAreas.added)} nya nätområden`);
-  if (gridAreas.changed > 0) parts.push(`${n(gridAreas.changed)} ändrade nätområden`);
-  if (gridAreas.removed > 0) parts.push(`${n(gridAreas.removed)} borttagna nätområden`);
-  if (dsos.added > 0) parts.push(`${n(dsos.added)} nya nätägare`);
-  if (dsos.changed > 0) parts.push(`${n(dsos.changed)} ändrade nätägare`);
-  if (dsos.removed > 0) parts.push(`${n(dsos.removed)} borttagna nätägare`);
+  if (gridAreas.added > 0) parts.push(plural(gridAreas.added, 'nytt nätområde', 'nya nätområden'));
+  if (gridAreas.changed > 0) {
+    parts.push(plural(gridAreas.changed, 'ändrat nätområde', 'ändrade nätområden'));
+  }
+  if (gridAreas.removed > 0) {
+    parts.push(plural(gridAreas.removed, 'borttaget nätområde', 'borttagna nätområden'));
+  }
+  if (dsos.added > 0) parts.push(plural(dsos.added, 'ny nätägare', 'nya nätägare'));
+  if (dsos.changed > 0) parts.push(plural(dsos.changed, 'ändrad nätägare', 'ändrade nätägare'));
+  if (dsos.removed > 0) {
+    parts.push(plural(dsos.removed, 'borttagen nätägare', 'borttagna nätägare'));
+  }
 
   return parts.join(' · ');
 }
@@ -71,8 +91,7 @@ function summaryLine(entry: FeedEntry): string {
 function badgeLabel(entry: FeedEntry): string {
   if (entry.status === 'blocked') return 'spärrad';
   if (entry.status === 'failed') return 'misslyckad';
-  if (entry.changeCount === 0) return '0 förändringar';
-  return `${formatNumber(entry.changeCount)} förändringar`;
+  return plural(entry.changeCount, 'förändring', 'förändringar');
 }
 
 function badgeClass(entry: FeedEntry): string {
@@ -102,6 +121,11 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
               <span className="feed-date">{formatDateTime(entry.startedAt)}</span>
               <span className={`badge ${badgeClass(entry)}`}>{badgeLabel(entry)}</span>
               <span className="feed-note">{summaryLine(entry)}</span>
+              {entry.origin === 'energi' ? (
+                <span className="badge badge-neutral" title="Inläst historik från energi-systemet">
+                  energi
+                </span>
+              ) : null}
               {entry.dryRun ? <span className="badge badge-neutral">torrkörning</span> : null}
               <span className="feed-duration">{formatDuration(entry.durationMs)}</span>
             </summary>
@@ -166,10 +190,19 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                 </p>
               ) : null}
 
-              {quiet ? (
+              {quiet && entry.origin !== 'energi' ? (
                 <p className="muted change-foot">
                   Allt hämtades och jämfördes — inget skiljde sig från föregående dygn, så inga
                   datafiler skrevs om.
+                </p>
+              ) : null}
+
+              {entry.origin === 'energi' ? (
+                <p className="muted change-foot">
+                  Körningen kommer från energi-systemet, där nätområden och balansansvar hämtades
+                  som två separata jobb. Den här raden omfattar bara{' '}
+                  {entry.scope?.includes('brp') ? 'balansansvaret' : 'nätområden och nätägare'} —
+                  siffror för den andra halvan hör till en annan rad.
                 </p>
               ) : null}
 

@@ -2,6 +2,51 @@
 
 Senaste överst.
 
+## 2026-08-17 — Förändringsflöde som startsida + historiken från energi inläst
+
+Två saker föll ut av samma insikt: kollegans uppgift är att se **deltat mellan
+dygnen**, inte att bläddra i registren. Vyn hade fel tyngdpunkt, och den hade
+dessutom bara två dygn att visa.
+
+**Beslut:**
+
+- **Startsidan är ett kronologiskt flöde**, ett dygn per rad, utfällbart. De
+  utfällbara raderna använder native `<details>` och filtret som döljer tysta
+  dygn är en ren CSS-syskonselektor — sidan förblir helt statisk, ingen
+  klientkod tillkom.
+- **BRP-byten och upphörda relationer redovisas även när de är noll.** De är de
+  enda utfallen som kan betyda att balansansvar faktiskt flyttat. Samma val som
+  energis admin-vy gjorde.
+- **Historiken lästes in i stället för att börja om från noll.** 59 körningar
+  från 2026-06-09 och framåt, ur `esett_brp_import_run` (50) och
+  `esett_import_run` (9).
+- **Inläst historik märks ut, inte tvättas ren.** `origin: "energi"` och en
+  `scope` per rad, eftersom energi körde nätområden och balansansvar som två
+  skilda jobb. Vyn visar streck för det en körning inte omfattade — en nolla
+  hade varit ett påstående om verkligheten i stället för en frånvaro av data.
+- **Ingen databasdrivare tillkom.** Inläsningen går via en JSON-dump
+  (`scripts/dump-energi-runs.sh`) som en ren transformering läser. Att appen
+  lever på filer är hela poängen med den; en `pg`-koppling hade motsagt det.
+- **`linked` behölls som eget utfall.** Energi hade "nätägarkopplingen sattes"
+  som egen händelse. Att platta till den mot `changed` hade gjort historiken
+  otrogen sitt ursprung, så unionen utökades i stället.
+- **`triggered_by` blir `unknown`, inte `cron`.** Nätområdessidan satte aldrig
+  fältet, och flera av körningarna skedde mitt på dagen — att anta schemalagt
+  hade varit en gissning presenterad som fakta.
+
+**Levererat:** `src/components/ChangeFeed.tsx`, ny startsida,
+`src/importer/backfill-map.ts` + `backfill.ts`, `scripts/dump-energi-runs.sh`,
+15 nya tester (71 totalt), samt `plural()` så räkneord böjs rätt ("1 ändrat
+nätområde", inte "1 ändrade nätområden").
+
+**Live-verifiering:** 61 rader i flödet, varav 10 med förändring. Äldsta
+2026-06-09. Startsidan 62 kB gzip. Bygget 71 statiska sidor.
+
+**Öppen tråd:** historiken importerades vid ett tillfälle. Fortsätter energi
+köra sina jobb parallellt driftar de två serierna isär — vid något läge bör
+energis eSett-jobb stängas av, vilket kräver deploy eftersom kill-switchen är
+hårdkodad.
+
 ## 2026-08-17 — Utbrytning av eSett-integrationen till fristående app
 
 eSett-integrationen bröts ut ur energi-systemet till en egen app enligt

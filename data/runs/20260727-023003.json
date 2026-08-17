@@ -1,0 +1,61 @@
+{
+  "id": "20260727-023003",
+  "startedAt": "2026-07-27T02:30:03.363Z",
+  "finishedAt": "2026-07-27T02:30:06.775Z",
+  "durationMs": 3412,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "origin": "energi",
+  "scope": [
+    "brp"
+  ],
+  "totals": {
+    "dsos": 0,
+    "gridAreas": 0,
+    "brpRelations": 1773
+  },
+  "changeCount": 0,
+  "error": null,
+  "requestCount": 0,
+  "steps": [
+    {
+      "name": "Balansansvar (alla prisområden)",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility",
+      "fetched": 145497,
+      "durationMs": 3412
+    }
+  ],
+  "guards": [],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "brp": {
+      "newRetailers": 0,
+      "newRelations": 0,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1773
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": []
+  },
+  "changesTruncated": false
+}

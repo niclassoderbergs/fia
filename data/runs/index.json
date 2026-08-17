@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T07:46:57.289Z",
+  "updatedAt": "2026-08-17T02:00:00.429Z",
   "runs": [
     {
       "id": "20260817-074226",
@@ -32,6 +32,1195 @@
       },
       "changeCount": 2237,
       "error": null
+    },
+    {
+      "id": "20260817-023003",
+      "startedAt": "2026-08-17T02:30:03.787Z",
+      "finishedAt": "2026-08-17T02:30:07.577Z",
+      "durationMs": 3790,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260817-020000",
+      "startedAt": "2026-08-17T02:00:00.169Z",
+      "finishedAt": "2026-08-17T02:00:00.429Z",
+      "durationMs": 260,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 1,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260816-023003",
+      "startedAt": "2026-08-16T02:30:03.590Z",
+      "finishedAt": "2026-08-16T02:30:07.188Z",
+      "durationMs": 3598,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260815-023003",
+      "startedAt": "2026-08-15T02:30:03.800Z",
+      "finishedAt": "2026-08-15T02:30:07.601Z",
+      "durationMs": 3801,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260814-023003",
+      "startedAt": "2026-08-14T02:30:03.924Z",
+      "finishedAt": "2026-08-14T02:30:07.851Z",
+      "durationMs": 3927,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260813-023003",
+      "startedAt": "2026-08-13T02:30:03.611Z",
+      "finishedAt": "2026-08-13T02:30:07.192Z",
+      "durationMs": 3581,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260812-023002",
+      "startedAt": "2026-08-12T02:30:02.933Z",
+      "finishedAt": "2026-08-12T02:30:05.883Z",
+      "durationMs": 2950,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260811-023003",
+      "startedAt": "2026-08-11T02:30:03.404Z",
+      "finishedAt": "2026-08-11T02:30:06.814Z",
+      "durationMs": 3410,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260810-222754",
+      "startedAt": "2026-08-10T22:27:54.796Z",
+      "finishedAt": "2026-08-10T22:27:56.722Z",
+      "durationMs": 1926,
+      "status": "success",
+      "triggeredBy": "manual",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260810-023003",
+      "startedAt": "2026-08-10T02:30:03.451Z",
+      "finishedAt": "2026-08-10T02:30:06.902Z",
+      "durationMs": 3451,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260810-020000",
+      "startedAt": "2026-08-10T02:00:00.276Z",
+      "finishedAt": "2026-08-10T02:00:00.708Z",
+      "durationMs": 432,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260809-023003",
+      "startedAt": "2026-08-09T02:30:03.309Z",
+      "finishedAt": "2026-08-09T02:30:06.601Z",
+      "durationMs": 3292,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260808-023003",
+      "startedAt": "2026-08-08T02:30:03.730Z",
+      "finishedAt": "2026-08-08T02:30:07.471Z",
+      "durationMs": 3741,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260807-023003",
+      "startedAt": "2026-08-07T02:30:03.584Z",
+      "finishedAt": "2026-08-07T02:30:07.179Z",
+      "durationMs": 3595,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260806-023003",
+      "startedAt": "2026-08-06T02:30:03.317Z",
+      "finishedAt": "2026-08-06T02:30:06.652Z",
+      "durationMs": 3335,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260805-023002",
+      "startedAt": "2026-08-05T02:30:02.945Z",
+      "finishedAt": "2026-08-05T02:30:05.906Z",
+      "durationMs": 2961,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260804-023003",
+      "startedAt": "2026-08-04T02:30:03.911Z",
+      "finishedAt": "2026-08-04T02:30:07.835Z",
+      "durationMs": 3924,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260803-023003",
+      "startedAt": "2026-08-03T02:30:03.326Z",
+      "finishedAt": "2026-08-03T02:30:06.662Z",
+      "durationMs": 3336,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260803-020000",
+      "startedAt": "2026-08-03T02:00:00.169Z",
+      "finishedAt": "2026-08-03T02:00:00.450Z",
+      "durationMs": 281,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 13,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260802-023003",
+      "startedAt": "2026-08-02T02:30:03.686Z",
+      "finishedAt": "2026-08-02T02:30:07.390Z",
+      "durationMs": 3704,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260801-023003",
+      "startedAt": "2026-08-01T02:30:03.535Z",
+      "finishedAt": "2026-08-01T02:30:07.074Z",
+      "durationMs": 3539,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1785
+      },
+      "changeCount": 12,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260731-023003",
+      "startedAt": "2026-07-31T02:30:03.405Z",
+      "finishedAt": "2026-07-31T02:30:06.833Z",
+      "durationMs": 3428,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260730-023003",
+      "startedAt": "2026-07-30T02:30:03.598Z",
+      "finishedAt": "2026-07-30T02:30:07.236Z",
+      "durationMs": 3638,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260729-023002",
+      "startedAt": "2026-07-29T02:30:02.982Z",
+      "finishedAt": "2026-07-29T02:30:05.984Z",
+      "durationMs": 3002,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260728-023003",
+      "startedAt": "2026-07-28T02:30:03.010Z",
+      "finishedAt": "2026-07-28T02:30:06.038Z",
+      "durationMs": 3028,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260727-023003",
+      "startedAt": "2026-07-27T02:30:03.363Z",
+      "finishedAt": "2026-07-27T02:30:06.775Z",
+      "durationMs": 3412,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260727-020000",
+      "startedAt": "2026-07-27T02:00:00.202Z",
+      "finishedAt": "2026-07-27T02:00:00.542Z",
+      "durationMs": 340,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 12,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260726-023003",
+      "startedAt": "2026-07-26T02:30:03.492Z",
+      "finishedAt": "2026-07-26T02:30:07.006Z",
+      "durationMs": 3514,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260725-023004",
+      "startedAt": "2026-07-25T02:30:04.179Z",
+      "finishedAt": "2026-07-25T02:30:08.371Z",
+      "durationMs": 4192,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260724-023003",
+      "startedAt": "2026-07-24T02:30:03.453Z",
+      "finishedAt": "2026-07-24T02:30:06.942Z",
+      "durationMs": 3489,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260723-023003",
+      "startedAt": "2026-07-23T02:30:03.019Z",
+      "finishedAt": "2026-07-23T02:30:06.050Z",
+      "durationMs": 3031,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260722-023003",
+      "startedAt": "2026-07-22T02:30:03.538Z",
+      "finishedAt": "2026-07-22T02:30:07.083Z",
+      "durationMs": 3545,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260721-023003",
+      "startedAt": "2026-07-21T02:30:03.274Z",
+      "finishedAt": "2026-07-21T02:30:06.560Z",
+      "durationMs": 3286,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260720-023002",
+      "startedAt": "2026-07-20T02:30:02.991Z",
+      "finishedAt": "2026-07-20T02:30:05.983Z",
+      "durationMs": 2992,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260720-020000",
+      "startedAt": "2026-07-20T02:00:00.232Z",
+      "finishedAt": "2026-07-20T02:00:00.636Z",
+      "durationMs": 404,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260719-023004",
+      "startedAt": "2026-07-19T02:30:04.086Z",
+      "finishedAt": "2026-07-19T02:30:08.216Z",
+      "durationMs": 4130,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260718-023003",
+      "startedAt": "2026-07-18T02:30:03.287Z",
+      "finishedAt": "2026-07-18T02:30:06.582Z",
+      "durationMs": 3295,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260717-023003",
+      "startedAt": "2026-07-17T02:30:03.558Z",
+      "finishedAt": "2026-07-17T02:30:07.113Z",
+      "durationMs": 3555,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260716-023003",
+      "startedAt": "2026-07-16T02:30:03.024Z",
+      "finishedAt": "2026-07-16T02:30:06.061Z",
+      "durationMs": 3037,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260715-023003",
+      "startedAt": "2026-07-15T02:30:03.250Z",
+      "finishedAt": "2026-07-15T02:30:06.550Z",
+      "durationMs": 3300,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260714-023003",
+      "startedAt": "2026-07-14T02:30:03.711Z",
+      "finishedAt": "2026-07-14T02:30:07.426Z",
+      "durationMs": 3715,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260713-023003",
+      "startedAt": "2026-07-13T02:30:03.372Z",
+      "finishedAt": "2026-07-13T02:30:06.769Z",
+      "durationMs": 3397,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260713-020000",
+      "startedAt": "2026-07-13T02:00:00.242Z",
+      "finishedAt": "2026-07-13T02:00:00.569Z",
+      "durationMs": 327,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 2,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260712-023003",
+      "startedAt": "2026-07-12T02:30:03.408Z",
+      "finishedAt": "2026-07-12T02:30:06.825Z",
+      "durationMs": 3417,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260711-023003",
+      "startedAt": "2026-07-11T02:30:03.573Z",
+      "finishedAt": "2026-07-11T02:30:07.153Z",
+      "durationMs": 3580,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260710-023003",
+      "startedAt": "2026-07-10T02:30:03.886Z",
+      "finishedAt": "2026-07-10T02:30:07.778Z",
+      "durationMs": 3892,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260709-023003",
+      "startedAt": "2026-07-09T02:30:03.526Z",
+      "finishedAt": "2026-07-09T02:30:07.063Z",
+      "durationMs": 3537,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260708-023003",
+      "startedAt": "2026-07-08T02:30:03.862Z",
+      "finishedAt": "2026-07-08T02:30:07.742Z",
+      "durationMs": 3880,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260705-023003",
+      "startedAt": "2026-07-05T02:30:03.503Z",
+      "finishedAt": "2026-07-05T02:30:07.015Z",
+      "durationMs": 3512,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260704-023003",
+      "startedAt": "2026-07-04T02:30:03.957Z",
+      "finishedAt": "2026-07-04T02:30:07.956Z",
+      "durationMs": 3999,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 16,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260703-023003",
+      "startedAt": "2026-07-03T02:30:03.421Z",
+      "finishedAt": "2026-07-03T02:30:06.849Z",
+      "durationMs": 3428,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260702-023003",
+      "startedAt": "2026-07-02T02:30:03.659Z",
+      "finishedAt": "2026-07-02T02:30:07.315Z",
+      "durationMs": 3656,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1773
+      },
+      "changeCount": 8,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260701-023003",
+      "startedAt": "2026-07-01T02:30:03.174Z",
+      "finishedAt": "2026-07-01T02:30:06.356Z",
+      "durationMs": 3182,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1765
+      },
+      "changeCount": 24,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260630-023003",
+      "startedAt": "2026-06-30T02:30:03.139Z",
+      "finishedAt": "2026-06-30T02:30:06.292Z",
+      "durationMs": 3153,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1741
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260629-105656",
+      "startedAt": "2026-06-29T10:56:56.125Z",
+      "finishedAt": "2026-06-29T10:56:57.496Z",
+      "durationMs": 1371,
+      "status": "success",
+      "triggeredBy": "manual",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1741
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260629-105654",
+      "startedAt": "2026-06-29T10:56:54.493Z",
+      "finishedAt": "2026-06-29T10:56:56.376Z",
+      "durationMs": 1883,
+      "status": "success",
+      "triggeredBy": "manual",
+      "dryRun": false,
+      "totals": {
+        "dsos": 0,
+        "gridAreas": 0,
+        "brpRelations": 1741
+      },
+      "changeCount": 1741,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "brp"
+      ]
+    },
+    {
+      "id": "20260625-143555",
+      "startedAt": "2026-06-25T14:35:55.308Z",
+      "finishedAt": "2026-06-25T14:35:55.595Z",
+      "durationMs": 287,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260618-133131",
+      "startedAt": "2026-06-18T13:31:31.680Z",
+      "finishedAt": "2026-06-18T13:31:32.088Z",
+      "durationMs": 408,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
+    },
+    {
+      "id": "20260609-153344",
+      "startedAt": "2026-06-09T15:33:44.422Z",
+      "finishedAt": "2026-06-09T15:33:44.644Z",
+      "durationMs": 222,
+      "status": "success",
+      "triggeredBy": "unknown",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 0
+      },
+      "changeCount": 0,
+      "error": null,
+      "origin": "energi",
+      "scope": [
+        "dsos",
+        "gridAreas"
+      ]
     }
   ]
 }

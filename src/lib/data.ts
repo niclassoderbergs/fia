@@ -98,6 +98,8 @@ export function getChangeFeed(): FeedEntry[] {
       changes: report?.changes ?? { records: [], brp: [] },
       changesTruncated: report?.changesTruncated ?? false,
       error: summary.error,
+      ...(summary.origin ? { origin: summary.origin } : {}),
+      ...(summary.scope ? { scope: summary.scope } : {}),
     };
   });
 }

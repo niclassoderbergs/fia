@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import StatusBadge from '@/components/StatusBadge';
 import { getRunIndex } from '@/lib/data';
-import { formatDateTime, formatDuration, formatNumber } from '@/lib/format';
+import { TRIGGER_LABEL, formatDateTime, formatDuration, formatNumber } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
@@ -46,11 +46,26 @@ export default function RunsPage() {
                   </td>
                   <td>
                     <StatusBadge status={run.status} dryRun={run.dryRun} />
+                    {run.origin === 'energi' ? (
+                      <span className="badge badge-neutral"> energi</span>
+                    ) : null}
                   </td>
-                  <td className="muted">{run.triggeredBy === 'cron' ? 'Schemalagd' : 'Manuell'}</td>
-                  <td className="num">{formatNumber(run.totals.gridAreas)}</td>
-                  <td className="num">{formatNumber(run.totals.dsos)}</td>
-                  <td className="num">{formatNumber(run.totals.brpRelations)}</td>
+                  <td className="muted">{TRIGGER_LABEL[run.triggeredBy] ?? run.triggeredBy}</td>
+                  {/* Historiken från energi täckte bara halva kedjan — visa streck
+                      för det körningen inte omfattade i stället för en nolla. */}
+                  <td className="num">
+                    {run.scope && !run.scope.includes('gridAreas')
+                      ? '—'
+                      : formatNumber(run.totals.gridAreas)}
+                  </td>
+                  <td className="num">
+                    {run.scope && !run.scope.includes('dsos') ? '—' : formatNumber(run.totals.dsos)}
+                  </td>
+                  <td className="num">
+                    {run.scope && !run.scope.includes('brp')
+                      ? '—'
+                      : formatNumber(run.totals.brpRelations)}
+                  </td>
                   <td className="num">{formatNumber(run.changeCount)}</td>
                   <td className="num muted">{formatDuration(run.durationMs)}</td>
                 </tr>

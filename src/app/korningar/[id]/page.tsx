@@ -7,10 +7,12 @@ import {
   BRP_ACTION_LABEL,
   DIRECTION_LABEL,
   RECORD_ACTION_LABEL,
+  TRIGGER_LABEL,
   formatDateTime,
   formatDuration,
   formatNumber,
 } from '@/lib/format';
+import type { RunScope } from '@/lib/types';
 
 export const dynamic = 'force-static';
 
@@ -24,6 +26,8 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
   if (!run) notFound();
 
   const { counts } = run;
+  const scope: RunScope[] = run.scope ?? ['dsos', 'gridAreas', 'brp'];
+  const covers = (part: RunScope) => scope.includes(part);
   const hasChanges = run.changes.records.length > 0 || run.changes.brp.length > 0;
   const skippedTotal =
     run.skipped.dsos.length + run.skipped.gridAreas.length + run.skipped.brp.length;
@@ -38,9 +42,19 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
         Körning {formatDateTime(run.startedAt)} <StatusBadge status={run.status} dryRun={run.dryRun} />
       </h1>
       <p className="lede">
-        {run.triggeredBy === 'cron' ? 'Schemalagd' : 'Manuellt startad'} · {formatDuration(run.durationMs)} ·{' '}
-        {run.requestCount} anrop mot eSett · id <span className="mono">{run.id}</span>
+        {TRIGGER_LABEL[run.triggeredBy] ?? run.triggeredBy} · {formatDuration(run.durationMs)}
+        {run.origin === 'energi' ? null : ` · ${run.requestCount} anrop mot eSett`} · id{' '}
+        <span className="mono">{run.id}</span>
       </p>
+
+      {run.origin === 'energi' ? (
+        <p className="notice">
+          Inläst historik från energi-systemet, där nätområden och balansansvar kördes som två
+          separata jobb — den här körningen omfattade bara{' '}
+          {covers('brp') ? 'balansansvaret' : 'nätområden och nätägare'}. Bara körningens totaltid
+          loggades där, så stegen saknar egna tider, och spärrar fanns inte.
+        </p>
+      ) : null}
 
       {run.error ? (
         <p className={`notice ${run.status === 'failed' ? 'notice-danger' : ''}`}>
@@ -63,35 +77,48 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
         </p>
       ) : null}
 
+      {/* Bara det körningen faktiskt omfattade — en nolla för något som aldrig
+          hämtades vore ett påstående om verkligheten, inte en frånvaro av data. */}
       <div className="stat-row">
-        <div className="stat">
-          <div className="stat-label">Nätområden</div>
-          <div className="stat-value">{formatNumber(run.totals.gridAreas)}</div>
-          <div className="stat-note">
-            +{counts.gridAreas.added} · ~{counts.gridAreas.changed} · −{counts.gridAreas.removed}
+        {covers('gridAreas') ? (
+          <div className="stat">
+            <div className="stat-label">Nätområden</div>
+            <div className="stat-value">{formatNumber(run.totals.gridAreas)}</div>
+            <div className="stat-note">
+              +{counts.gridAreas.added} · ~{counts.gridAreas.changed} · −{counts.gridAreas.removed}
+            </div>
           </div>
-        </div>
-        <div className="stat">
-          <div className="stat-label">Nätägare</div>
-          <div className="stat-value">{formatNumber(run.totals.dsos)}</div>
-          <div className="stat-note">
-            +{counts.dsos.added} · ~{counts.dsos.changed} · −{counts.dsos.removed}
+        ) : null}
+        {covers('dsos') ? (
+          <div className="stat">
+            <div className="stat-label">Nätägare</div>
+            <div className="stat-value">{formatNumber(run.totals.dsos)}</div>
+            <div className="stat-note">
+              +{counts.dsos.added} · ~{counts.dsos.changed} · −{counts.dsos.removed}
+            </div>
           </div>
-        </div>
-        <div className="stat">
-          <div className="stat-label">Balansansvar</div>
-          <div className="stat-value">{formatNumber(run.totals.brpRelations)}</div>
-          <div className="stat-note">
-            {counts.brp.brpSwitches} byten · {counts.brp.newRetailers} nya · {counts.brp.ended} upphörda
+        ) : null}
+        {covers('brp') ? (
+          <div className="stat">
+            <div className="stat-label">Balansansvar</div>
+            <div className="stat-value">{formatNumber(run.totals.brpRelations)}</div>
+            <div className="stat-note">
+              {counts.brp.brpSwitches} byten · {counts.brp.newRetailers} nya · {counts.brp.ended}{' '}
+              upphörda
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
 
       <h2>Spärrar</h2>
       <div className="card">
         <ul className="guard-list">
           {run.guards.length === 0 ? (
-            <li className="muted">Inga spärrar utvärderades — hämtningen nådde aldrig dit.</li>
+            <li className="muted">
+              {run.origin === 'energi'
+                ? 'Spärrar fanns inte i energi-systemet — de byggdes när integrationen bröts ut.'
+                : 'Inga spärrar utvärderades — hämtningen nådde aldrig dit.'}
+            </li>
           ) : (
             run.guards.map((guard) => (
               <li key={guard.name}>

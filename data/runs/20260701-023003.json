@@ -1,0 +1,230 @@
+{
+  "id": "20260701-023003",
+  "startedAt": "2026-07-01T02:30:03.174Z",
+  "finishedAt": "2026-07-01T02:30:06.356Z",
+  "durationMs": 3182,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "origin": "energi",
+  "scope": [
+    "brp"
+  ],
+  "totals": {
+    "dsos": 0,
+    "gridAreas": 0,
+    "brpRelations": 1765
+  },
+  "changeCount": 24,
+  "error": null,
+  "requestCount": 0,
+  "steps": [
+    {
+      "name": "Balansansvar (alla prisområden)",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility",
+      "fetched": 144751,
+      "durationMs": 3182
+    }
+  ],
+  "guards": [],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 0
+    },
+    "brp": {
+      "newRetailers": 5,
+      "newRelations": 19,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1741
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": [
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_retailer",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "production",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Epiq Energy ApS",
+        "action": "new_retailer",
+        "retailer": "Epiq Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Hybrid Greentech Energy Trading ApS",
+        "action": "new_retailer",
+        "retailer": "Hybrid Greentech Energy Trading ApS",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Monsson Energy AB",
+        "action": "new_retailer",
+        "retailer": "Monsson Energy AB",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Ntricity Market Services AB",
+        "action": "new_retailer",
+        "retailer": "Ntricity Market Services AB",
+        "direction": "consumption",
+        "biddingZone": "SE1"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "production",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Epiq Energy ApS",
+        "action": "new_relation",
+        "retailer": "Epiq Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Hybrid Greentech Energy Trading ApS",
+        "action": "new_relation",
+        "retailer": "Hybrid Greentech Energy Trading ApS",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Monsson Energy AB",
+        "action": "new_relation",
+        "retailer": "Monsson Energy AB",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Ntricity Market Services AB",
+        "action": "new_relation",
+        "retailer": "Ntricity Market Services AB",
+        "direction": "consumption",
+        "biddingZone": "SE2"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "production",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Epiq Energy ApS",
+        "action": "new_relation",
+        "retailer": "Epiq Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Hybrid Greentech Energy Trading ApS",
+        "action": "new_relation",
+        "retailer": "Hybrid Greentech Energy Trading ApS",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Monsson Energy AB",
+        "action": "new_relation",
+        "retailer": "Monsson Energy AB",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Ntricity Market Services AB",
+        "action": "new_relation",
+        "retailer": "Ntricity Market Services AB",
+        "direction": "consumption",
+        "biddingZone": "SE3"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "production",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Bixia AB",
+        "action": "new_relation",
+        "retailer": "Trygg Sverige Holding AB",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Epiq Energy ApS",
+        "action": "new_relation",
+        "retailer": "Epiq Energy ApS",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Hybrid Greentech Energy Trading ApS",
+        "action": "new_relation",
+        "retailer": "Hybrid Greentech Energy Trading ApS",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Monsson Energy AB",
+        "action": "new_relation",
+        "retailer": "Monsson Energy AB",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      },
+      {
+        "toBrp": "Ntricity Market Services AB",
+        "action": "new_relation",
+        "retailer": "Ntricity Market Services AB",
+        "direction": "consumption",
+        "biddingZone": "SE4"
+      }
+    ]
+  },
+  "changesTruncated": false
+}

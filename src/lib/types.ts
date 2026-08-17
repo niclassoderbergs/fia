@@ -21,7 +21,19 @@ export interface Dataset<T> {
 }
 
 export type RunStatus = 'success' | 'blocked' | 'failed';
-export type TriggeredBy = 'cron' | 'manual';
+
+/**
+ * `unknown` används bara för historik från energi-systemet, som aldrig satte
+ * triggered_by på nätområdessidan (9 av 9 rader NULL). Att gissa "cron" hade
+ * varit fel — flera av de körningarna skedde mitt på dagen.
+ */
+export type TriggeredBy = 'cron' | 'manual' | 'unknown';
+
+/** Vilka delar en körning omfattade. Saknas = alla tre (den här appens körningar). */
+export type RunScope = 'dsos' | 'gridAreas' | 'brp';
+
+/** Varifrån körningen kommer. Saknas = den här appen. */
+export type RunOrigin = 'energi';
 
 /** Ett hämtningssteg mot eSett. */
 export interface RunStep {
@@ -29,7 +41,8 @@ export interface RunStep {
   endpoint: string;
   /** Antal rader eSett svarade med (före filtrering). */
   fetched: number;
-  durationMs: number;
+  /** null för historik där bara körningens totaltid loggades. */
+  durationMs: number | null;
 }
 
 /** En spärr som utvärderats före skrivning. */
@@ -57,6 +70,14 @@ export interface RunSummary {
   totals: { dsos: number; gridAreas: number; brpRelations: number };
   changeCount: number;
   error: string | null;
+  /** Sätts bara på inläst historik — våra egna körningar saknar fältet. */
+  origin?: RunOrigin;
+  /**
+   * Vilka delar körningen omfattade. Saknas = alla. Historiken från energi
+   * kördes som två separata jobb (nätområden veckovis, balansansvar dagligen),
+   * så en importerad rad täcker bara den ena halvan.
+   */
+  scope?: RunScope[];
 }
 
 /** Full rapport per körning — allt kollegan behöver för att förstå ett dygn. */
@@ -106,4 +127,6 @@ export interface FeedEntry {
   changes: RunReport['changes'];
   changesTruncated: boolean;
   error: string | null;
+  origin?: RunOrigin;
+  scope?: RunScope[];
 }

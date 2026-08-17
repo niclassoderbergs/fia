@@ -28,7 +28,16 @@ export function formatNumber(n: number): string {
   return new Intl.NumberFormat('sv-SE').format(n);
 }
 
-export function formatDuration(ms: number): string {
+/**
+ * Räkneord med rätt böjning: "1 ändrat nätområde" men "13 ändrade nätområden".
+ * Noll tar pluralformen, vilket är rätt på svenska ("0 BRP-byten").
+ */
+export function plural(count: number, one: string, many: string): string {
+  return `${formatNumber(count)} ${count === 1 ? one : many}`;
+}
+
+export function formatDuration(ms: number | null): string {
+  if (ms === null) return '—';
   if (ms < 1000) return `${ms} ms`;
   const seconds = ms / 1000;
   if (seconds < 90) return `${seconds.toFixed(1).replace('.', ',')} s`;
@@ -58,6 +67,14 @@ export const RECORD_ACTION_LABEL: Record<string, string> = {
   added: 'Tillagd',
   changed: 'Ändrad',
   removed: 'Borttagen',
+  // Förekommer bara i historik från energi-systemet.
+  linked: 'Länkad',
+};
+
+export const TRIGGER_LABEL: Record<string, string> = {
+  cron: 'Schemalagd',
+  manual: 'Manuell',
+  unknown: 'Okänd',
 };
 
 /** Svensk kollation för visningslistor. Påverkar aldrig filer i data/. */
