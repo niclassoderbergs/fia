@@ -50,16 +50,15 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
       </h1>
       <p className="lede">
         {TRIGGER_LABEL[run.triggeredBy] ?? run.triggeredBy} · {formatDuration(run.durationMs)}
-        {run.origin === 'energi' ? null : ` · ${run.requestCount} anrop mot eSett`} · id{' '}
+        {run.requestCount > 0 ? ` · ${run.requestCount} anrop mot eSett` : ''} · id{' '}
         <span className="mono">{run.id}</span>
       </p>
 
-      {run.origin === 'energi' ? (
+      {run.scope ? (
         <p className="notice">
-          Inläst historik från energi-systemet, där nätområden och balansansvar kördes som två
-          separata jobb — den här körningen omfattade bara{' '}
-          {covers('brp') ? 'balansansvaret' : 'nätområden och nätägare'}. Bara körningens totaltid
-          loggades där, så stegen saknar egna tider, och spärrar fanns inte.
+          Äldre körning som bara omfattade{' '}
+          {covers('brp') ? 'balansansvaret' : 'nätområden och nätägare'} — nätområden och
+          balansansvar hämtades då i separata körningar, och bara totaltiden loggades.
         </p>
       ) : null}
 
@@ -141,8 +140,8 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
         <ul className="guard-list">
           {run.guards.length === 0 ? (
             <li className="muted">
-              {run.origin === 'energi'
-                ? 'Spärrar fanns inte i energi-systemet — de byggdes när integrationen bröts ut.'
+              {run.scope
+                ? 'Spärrar loggades inte för den här körningen.'
                 : 'Inga spärrar utvärderades — hämtningen nådde aldrig dit.'}
             </li>
           ) : (

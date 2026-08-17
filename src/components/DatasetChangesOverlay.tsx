@@ -69,14 +69,6 @@ export default function DatasetChangesOverlay({
                   <span className="badge badge-neutral">
                     {plural(entry.records.length + entry.brp.length, 'förändring', 'förändringar')}
                   </span>
-                  {entry.origin === 'energi' ? (
-                    <span
-                      className="badge badge-neutral"
-                      title="Inläst historik från energi-systemet"
-                    >
-                      energi
-                    </span>
-                  ) : null}
                   <a className="dialog-run-link" href={`/korningar/${entry.runId}`}>
                     körningen →
                   </a>

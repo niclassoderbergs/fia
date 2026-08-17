@@ -67,8 +67,6 @@ export const RECORD_ACTION_LABEL: Record<string, string> = {
   added: 'Tillagd',
   changed: 'Ändrad',
   removed: 'Borttagen',
-  // Förekommer bara i historik från energi-systemet.
-  linked: 'Länkad',
 };
 
 export const TRIGGER_LABEL: Record<string, string> = {

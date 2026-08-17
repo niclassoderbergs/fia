@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T08:46:26.042Z",
+  "updatedAt": "2026-08-17T02:00:00.429Z",
   "runs": [
     {
       "id": "20260817-083855",
@@ -428,7 +428,7 @@
         "gridAreas": 278,
         "brpRelations": 0
       },
-      "changeCount": 13,
+      "changeCount": 0,
       "error": null,
       "origin": "energi",
       "scope": [
@@ -589,7 +589,7 @@
         "gridAreas": 278,
         "brpRelations": 0
       },
-      "changeCount": 12,
+      "changeCount": 0,
       "error": null,
       "origin": "energi",
       "scope": [

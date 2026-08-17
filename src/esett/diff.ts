@@ -15,13 +15,7 @@ export interface FieldChange {
   to: string | null;
 }
 
-/**
- * `linked` skapas aldrig av den här appen — den finns bara i körningar
- * importerade från energi-systemet, där "nätägarkopplingen sattes" var ett eget
- * utfall. Den behålls i unionen hellre än plattas till `changed`, så historiken
- * säger samma sak som den gjorde i sitt ursprung.
- */
-export type ChangeAction = 'added' | 'changed' | 'removed' | 'linked';
+export type ChangeAction = 'added' | 'changed' | 'removed';
 
 /** En förändrad post i ändringsloggen. */
 export interface RecordChange {

@@ -16,7 +16,7 @@
     "gridAreas": 278,
     "brpRelations": 0
   },
-  "changeCount": 13,
+  "changeCount": 0,
   "error": null,
   "requestCount": 0,
   "steps": [
@@ -43,9 +43,9 @@
     },
     "gridAreas": {
       "added": 0,
-      "changed": 13,
+      "changed": 0,
       "removed": 0,
-      "unchanged": 265
+      "unchanged": 278
     },
     "brp": {
       "newRetailers": 0,
@@ -61,177 +61,7 @@
     "brp": []
   },
   "changes": {
-    "records": [
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[z10] Område 402038286",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[s6] Område 393149285",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[s6] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[s6] Område 393178927",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[s6] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[onbz04] Område 401401512",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[mvp] Område 402514489",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[mvp] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[mvp] Område 401322074",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[mvp] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[swgui] Område 401305595",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[z06] Område 402030670",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[mvp] Område 401346819",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[mvp] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[mvp] Område 401371487",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[mvp] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[s6] Område 401951719",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "[s6] Eldistribution AB",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[swgui] Område 408178677",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      },
-      {
-        "entity": "grid_area",
-        "code": "—",
-        "name": "[onbz04] Område 408194105",
-        "action": "linked",
-        "fields": [
-          {
-            "to": "Test-DSO 13000",
-            "from": null,
-            "field": "DSO-koppling"
-          }
-        ]
-      }
-    ],
+    "records": [],
     "brp": []
   },
   "changesTruncated": false

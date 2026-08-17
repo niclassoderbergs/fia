@@ -67,11 +67,11 @@ describe('mapRecordChange', () => {
       action: 'updated',
       fields: [],
     });
-    expect(result.entity).toBe('dso');
-    expect(result.action).toBe('changed');
+    expect(result?.entity).toBe('dso');
+    expect(result?.action).toBe('changed');
   });
 
-  it('behåller linked som eget utfall i stället för att platta till det', () => {
+  it('städar bort linked-händelser — intern testdata-bokföring, inte eSett-förändringar', () => {
     const result = mapRecordChange({
       entity: 'grid_area',
       code: '—',
@@ -79,16 +79,13 @@ describe('mapRecordChange', () => {
       action: 'linked',
       fields: [{ field: 'DSO-koppling', from: null, to: 'Test-DSO 13000' }],
     });
-    expect(result.action).toBe('linked');
-    expect(result.fields).toEqual([
-      { field: 'DSO-koppling', from: null, to: 'Test-DSO 13000' },
-    ]);
+    expect(result).toBeNull();
   });
 
   it('översätter inserted till added', () => {
     expect(
       mapRecordChange({ entity: 'grid_area', code: 'X', name: 'X', action: 'inserted', fields: [] })
-        .action,
+        ?.action,
     ).toBe('added');
   });
 });
@@ -151,10 +148,22 @@ describe('gridRunToReport', () => {
     expect(report.durationMs).toBe(260);
   });
 
-  it('räknar länkningar som ändrade nätområden', () => {
-    const report = gridRunToReport(gridRow({ mga_updated: 2, mga_linked: 13 }));
-    expect(report.counts.gridAreas.changed).toBe(15);
-    expect(report.counts.gridAreas.unchanged).toBe(278 - 15);
+  it('räknar inte länkningar som förändringar', () => {
+    const report = gridRunToReport(
+      gridRow({
+        mga_updated: 2,
+        mga_linked: 13,
+        changes: [
+          { entity: 'grid_area', code: 'A', name: 'A', action: 'updated', fields: [] },
+          { entity: 'grid_area', code: 'B', name: 'B', action: 'updated', fields: [] },
+          { entity: 'grid_area', code: '—', name: '[z06] Test', action: 'linked', fields: [] },
+        ],
+      }),
+    );
+    expect(report.counts.gridAreas.changed).toBe(2);
+    expect(report.counts.gridAreas.unchanged).toBe(278 - 2);
+    expect(report.changeCount).toBe(2);
+    expect(report.changes.records.map((c) => c.action)).toEqual(['changed', 'changed']);
   });
 
   it('ger unknown som trigger när energi inte satte fältet', () => {

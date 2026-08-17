@@ -61,7 +61,7 @@ function summaryLine(entry: FeedEntry): string {
     const records = dataset.entity ? recordsByEntity.get(dataset.entity) : undefined;
     if (!records || records.length === 0) continue;
     const added = records.filter((c) => c.action === 'added').length;
-    const changed = records.filter((c) => c.action === 'changed' || c.action === 'linked').length;
+    const changed = records.filter((c) => c.action === 'changed').length;
     const removed = records.filter((c) => c.action === 'removed').length;
     const parts: string[] = [];
     if (added > 0) parts.push(plural(added, 'ny', 'nya'));
@@ -112,11 +112,6 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
               <span className="feed-date">{formatDateTime(entry.startedAt)}</span>
               <span className={`badge ${badgeClass(entry)}`}>{badgeLabel(entry)}</span>
               <span className="feed-note">{summaryLine(entry)}</span>
-              {entry.origin === 'energi' ? (
-                <span className="badge badge-neutral" title="Inläst historik från energi-systemet">
-                  energi
-                </span>
-              ) : null}
               {entry.dryRun ? <span className="badge badge-neutral">torrkörning</span> : null}
               <span className="feed-duration">{formatDuration(entry.durationMs)}</span>
             </summary>
@@ -180,19 +175,18 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                 </p>
               ) : null}
 
-              {quiet && entry.origin !== 'energi' ? (
+              {quiet && !entry.scope ? (
                 <p className="muted change-foot">
                   Allt hämtades och jämfördes — inget skiljde sig från föregående dygn, så inga
                   datafiler skrevs om.
                 </p>
               ) : null}
 
-              {entry.origin === 'energi' ? (
+              {entry.scope ? (
                 <p className="muted change-foot">
-                  Körningen kommer från energi-systemet, där nätområden och balansansvar hämtades
-                  som två separata jobb. Den här raden omfattar bara{' '}
-                  {entry.scope?.includes('brp') ? 'balansansvaret' : 'nätområden och nätägare'} —
-                  siffror för den andra halvan hör till en annan rad.
+                  Äldre körning som bara omfattade{' '}
+                  {entry.scope.includes('brp') ? 'balansansvaret' : 'nätområden och nätägare'} —
+                  nätområden och balansansvar hämtades då i separata körningar.
                 </p>
               ) : null}
 

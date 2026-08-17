@@ -46,9 +46,6 @@ export default function RunsPage() {
                   </td>
                   <td>
                     <StatusBadge status={run.status} dryRun={run.dryRun} />
-                    {run.origin === 'energi' ? (
-                      <span className="badge badge-neutral"> energi</span>
-                    ) : null}
                   </td>
                   <td className="muted">{TRIGGER_LABEL[run.triggeredBy] ?? run.triggeredBy}</td>
                   {/* Historiken från energi täckte bara halva kedjan — visa streck

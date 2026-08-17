@@ -76,16 +76,21 @@ export function mapTrigger(raw: string | null): TriggeredBy {
   return 'unknown';
 }
 
-/** energis entity/action → våra. `linked` behålls som eget utfall. */
-export function mapRecordChange(change: EnergiGridChange): RecordChange {
+/**
+ * energis entity/action → våra. Returnerar null för rader som inte hör hemma
+ * här: energis `linked`-händelser var intern bokföring av DSO-kopplingar mot
+ * systemets egna testdata (2026-07-27 och 2026-08-03, 25 rader) — inte
+ * förändringar i eSetts data. De städas bort vid inläsningen.
+ */
+export function mapRecordChange(change: EnergiGridChange): RecordChange | null {
+  if (change.action === 'linked') return null;
+
   const action: ChangeAction =
     change.action === 'inserted'
       ? 'added'
-      : change.action === 'linked'
-        ? 'linked'
-        : change.action === 'removed'
-          ? 'removed'
-          : 'changed';
+      : change.action === 'removed'
+        ? 'removed'
+        : 'changed';
 
   return {
     entity: change.entity === 'actor' ? 'dso' : 'grid_area',
@@ -157,7 +162,9 @@ export function brpRunToReport(row: EnergiBrpRun): RunReport {
 
 export function gridRunToReport(row: EnergiGridRun): RunReport {
   const startedAt = new Date(row.created_at);
-  const changes = (row.changes ?? []).map(mapRecordChange);
+  const changes = (row.changes ?? [])
+    .map(mapRecordChange)
+    .filter((c): c is RecordChange => c !== null);
 
   // Bara totaltiden loggades — stegen får null hellre än en påhittad siffra.
   const steps: RunStep[] = [
@@ -175,8 +182,8 @@ export function gridRunToReport(row: EnergiGridRun): RunReport {
     },
   ];
 
-  // energi räknade "länkad" separat; för oss är det en ändring av nätområdet.
-  const gridChanged = row.mga_updated + row.mga_linked;
+  // mga_linked räknas inte — länkningarna städas bort i mapRecordChange.
+  const gridChanged = row.mga_updated;
 
   return {
     id: runIdFromDate(startedAt),

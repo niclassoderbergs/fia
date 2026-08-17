@@ -131,7 +131,6 @@ export function getChangeFeed(): FeedEntry[] {
 export interface DatasetChangeEntry {
   runId: string;
   startedAt: string;
-  origin?: 'energi';
   changesTruncated: boolean;
   records: RecordChange[];
   brp: BrpChange[];
@@ -161,7 +160,6 @@ export function getDatasetChangeHistory(slug: string): DatasetChangeEntry[] {
     entries.push({
       runId: feedEntry.id,
       startedAt: feedEntry.startedAt,
-      ...(feedEntry.origin ? { origin: feedEntry.origin } : {}),
       changesTruncated: feedEntry.changesTruncated,
       records,
       brp,

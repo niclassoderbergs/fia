@@ -23,7 +23,6 @@ export const RECORD_BADGE_CLASS: Record<string, string> = {
   added: 'badge-ok',
   changed: 'badge-warn',
   removed: 'badge-danger',
-  linked: 'badge-neutral',
 };
 
 export function RecordChangeRow({ change }: { change: RecordChange }) {
