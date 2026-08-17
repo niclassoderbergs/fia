@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-08-17T07:39:18.501Z",
+  "updatedAt": "2026-08-17T07:46:57.289Z",
   "runs": [
+    {
+      "id": "20260817-074226",
+      "startedAt": "2026-08-17T07:42:26.668Z",
+      "finishedAt": "2026-08-17T07:46:57.289Z",
+      "durationMs": 270621,
+      "status": "success",
+      "triggeredBy": "manual",
+      "dryRun": false,
+      "totals": {
+        "dsos": 174,
+        "gridAreas": 278,
+        "brpRelations": 1785
+      },
+      "changeCount": 0,
+      "error": null
+    },
     {
       "id": "20260817-073447",
       "startedAt": "2026-08-17T07:34:47.903Z",

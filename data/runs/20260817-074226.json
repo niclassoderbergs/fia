@@ -1,0 +1,129 @@
+{
+  "id": "20260817-074226",
+  "startedAt": "2026-08-17T07:42:26.668Z",
+  "finishedAt": "2026-08-17T07:46:57.289Z",
+  "durationMs": 270621,
+  "status": "success",
+  "triggeredBy": "manual",
+  "dryRun": false,
+  "totals": {
+    "dsos": 174,
+    "gridAreas": 278,
+    "brpRelations": 1785
+  },
+  "changeCount": 0,
+  "error": null,
+  "requestCount": 7,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 174,
+      "durationMs": 217
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 486,
+      "durationMs": 44965
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 44967
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 9933,
+      "durationMs": 45315
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 26555,
+      "durationMs": 45001
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 83653,
+      "durationMs": 45404
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 25368,
+      "durationMs": 44666
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "174 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "278 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1785 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 174
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 278
+    },
+    "brp": {
+      "newRetailers": 0,
+      "newRelations": 0,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1785
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": []
+  },
+  "changes": {
+    "records": [],
+    "brp": []
+  },
+  "changesTruncated": false
+}
