@@ -123,6 +123,7 @@ export function getChangeFeed(): FeedEntry[] {
       error: summary.error,
       ...(summary.origin ? { origin: summary.origin } : {}),
       ...(summary.scope ? { scope: summary.scope } : {}),
+      ...(summary.seeded?.length ? { seeded: summary.seeded } : {}),
     };
   });
 }

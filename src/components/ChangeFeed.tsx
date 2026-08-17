@@ -5,6 +5,17 @@ import { DATASETS, RBR } from '@/lib/datasets';
 import { formatDateTime, formatDuration, plural } from '@/lib/format';
 import type { FeedEntry, RecordChange, RunScope } from '@/lib/types';
 
+/** Läsbara namn för seedade dataset i flödestexten. */
+const SEED_LABELS: Record<RunScope, string> = {
+  dsos: 'nätägare',
+  gridAreas: 'nätområden',
+  brp: 'balansansvar',
+  retailers: 'elhandlare',
+  brpParties: 'balansansvariga',
+  bsps: 'balanstjänsteleverantörer',
+  banks: 'settlementbanker',
+};
+
 /**
  * Sammanfattningsraden speglar eSett-strukturen: ett segment per dataset som
  * hade förändringar, med eSetts korta namn som prefix. Inom RBR-segmentet
@@ -19,6 +30,10 @@ function summaryLine(entry: FeedEntry): string {
 
   const scope = entry.scope ?? null;
   const covers = (part: RunScope) => scope === null || scope.includes(part);
+
+  if (entry.changeCount === 0 && entry.seeded?.length) {
+    return `utgångsläge etablerat: ${entry.seeded.map((s) => SEED_LABELS[s]).join(', ')}`;
+  }
 
   if (entry.changeCount === 0) {
     const totals: string[] = [];
@@ -76,6 +91,7 @@ function summaryLine(entry: FeedEntry): string {
 function badgeLabel(entry: FeedEntry): string {
   if (entry.status === 'blocked') return 'spärrad';
   if (entry.status === 'failed') return 'misslyckad';
+  if (entry.changeCount === 0 && entry.seeded?.length) return 'utgångsläge';
   return plural(entry.changeCount, 'förändring', 'förändringar');
 }
 
@@ -175,7 +191,14 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                 </p>
               ) : null}
 
-              {quiet && !entry.scope ? (
+              {entry.seeded?.length ? (
+                <p className="muted change-foot">
+                  Första hämtningen av {entry.seeded.map((s) => SEED_LABELS[s]).join(', ')} —
+                  utgångsläget etablerades. Förändringar redovisas från och med nästa körning.
+                </p>
+              ) : null}
+
+              {quiet && !entry.scope && !entry.seeded?.length ? (
                 <p className="muted change-foot">
                   Allt hämtades och jämfördes — inget skiljde sig från föregående dygn, så inga
                   datafiler skrevs om.

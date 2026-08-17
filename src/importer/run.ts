@@ -48,7 +48,18 @@ import { plural } from '@/lib/format';
 import { allPassed, failureSummary, guardAllZones, guardNonEmpty, guardShrink } from './guards';
 import { buildCommitMessage, commitData, push } from './git';
 import { DataStore, DATA_FILES, runIdFromDate } from './store';
-import type { Dataset, GuardResult, RunReport, RunStep } from '@/lib/types';
+import type { Dataset, GuardResult, RunReport, RunScope, RunStep } from '@/lib/types';
+
+/** Läsbara namn för seedade dataset i commit-meddelandet. */
+const SEED_LABELS: Record<RunScope, string> = {
+  dsos: 'nätägare',
+  gridAreas: 'nätområden',
+  brp: 'balansansvar',
+  retailers: 'elhandlare',
+  brpParties: 'balansansvariga',
+  bsps: 'BSP',
+  banks: 'banker',
+};
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 /** Ändringslistor i rapporten kapas här — kapningen flaggas alltid i rapporten. */
@@ -396,16 +407,43 @@ async function main(): Promise<void> {
   }
 
   const finishedAt = new Date();
+
+  // Första hämtningen av ett dataset är ett utgångsläge, inte en förändring —
+  // att lista varje post som "tillagd" vore brus som dränker verkliga
+  // förändringar. Datafilerna skrivs, men seedade dataset döljs ur körningens
+  // ändringslista och räknas inte i changeCount.
+  const seeded: RunScope[] = [];
+  if (status === 'success') {
+    if (prevDsos.length === 0 && dsos.records.length > 0) seeded.push('dsos');
+    if (prevGridAreas.length === 0 && gridAreas.records.length > 0) seeded.push('gridAreas');
+    if (prevBrp.length === 0 && brp.records.length > 0) seeded.push('brp');
+    if (prevRetailers.length === 0 && retailers.records.length > 0) seeded.push('retailers');
+    if (prevBrpParties.length === 0 && brpParties.records.length > 0) seeded.push('brpParties');
+    if (prevBsps.length === 0 && bsps.records.length > 0) seeded.push('bsps');
+    if (prevBanks.length === 0 && banks.records.length > 0) seeded.push('banks');
+  }
+  const unlessSeeded = <T>(key: RunScope, changes: T[]): T[] =>
+    seeded.includes(key) ? [] : changes;
+  const zeroDiff = { added: 0, changed: 0, removed: 0, unchanged: 0 };
+
+  const reportDsoChanges = unlessSeeded('dsos', dsoDiff.changes);
+  const reportGridChanges = unlessSeeded('gridAreas', gridAreaDiff.changes);
+  const reportBrpChanges = unlessSeeded('brp', brpDiff.changes);
+  const reportRetailerChanges = unlessSeeded('retailers', retailerDiff.changes);
+  const reportBrpPartyChanges = unlessSeeded('brpParties', brpPartyDiff.changes);
+  const reportBspChanges = unlessSeeded('bsps', bspDiff.changes);
+  const reportBankChanges = unlessSeeded('banks', bankDiff.changes);
+
   const allChanges = [
-    ...dsoDiff.changes,
-    ...gridAreaDiff.changes,
-    ...retailerDiff.changes,
-    ...brpPartyDiff.changes,
-    ...bspDiff.changes,
-    ...bankDiff.changes,
+    ...reportDsoChanges,
+    ...reportGridChanges,
+    ...reportRetailerChanges,
+    ...reportBrpPartyChanges,
+    ...reportBspChanges,
+    ...reportBankChanges,
   ];
-  const changeCount = allChanges.length + brpDiff.changes.length;
-  const truncated = allChanges.length > MAX_CHANGES_IN_REPORT || brpDiff.changes.length > MAX_CHANGES_IN_REPORT;
+  const changeCount = allChanges.length + reportBrpChanges.length;
+  const truncated = allChanges.length > MAX_CHANGES_IN_REPORT || reportBrpChanges.length > MAX_CHANGES_IN_REPORT;
 
   const report: RunReport = {
     id: runId,
@@ -429,14 +467,17 @@ async function main(): Promise<void> {
     requestCount: client.requestCount,
     steps,
     guards,
+    ...(seeded.length > 0 ? { seeded } : {}),
     counts: {
-      dsos: dsoDiff.counts,
-      gridAreas: gridAreaDiff.counts,
-      brp: brpDiff.counts,
-      retailers: retailerDiff.counts,
-      brpParties: brpPartyDiff.counts,
-      bsps: bspDiff.counts,
-      banks: bankDiff.counts,
+      dsos: seeded.includes('dsos') ? zeroDiff : dsoDiff.counts,
+      gridAreas: seeded.includes('gridAreas') ? zeroDiff : gridAreaDiff.counts,
+      brp: seeded.includes('brp')
+        ? { newRetailers: 0, newRelations: 0, brpSwitches: 0, ended: 0, unchanged: 0 }
+        : brpDiff.counts,
+      retailers: seeded.includes('retailers') ? zeroDiff : retailerDiff.counts,
+      brpParties: seeded.includes('brpParties') ? zeroDiff : brpPartyDiff.counts,
+      bsps: seeded.includes('bsps') ? zeroDiff : bspDiff.counts,
+      banks: seeded.includes('banks') ? zeroDiff : bankDiff.counts,
     },
     skipped: {
       dsos: dsos.skipped,
@@ -449,7 +490,7 @@ async function main(): Promise<void> {
     },
     changes: {
       records: allChanges.slice(0, MAX_CHANGES_IN_REPORT),
-      brp: brpDiff.changes.slice(0, MAX_CHANGES_IN_REPORT),
+      brp: reportBrpChanges.slice(0, MAX_CHANGES_IN_REPORT),
     },
     changesTruncated: truncated,
   };
@@ -458,10 +499,13 @@ async function main(): Promise<void> {
 
   // --- Commit + push --------------------------------------------------------
   if (!dryRun && env.gitCommit) {
-    const c = brpDiff.counts;
-    const d = dsoDiff.counts;
-    const g = gridAreaDiff.counts;
+    const c = report.counts.brp;
+    const d = report.counts.dsos;
+    const g = report.counts.gridAreas;
     const lines: string[] = [];
+    if (seeded.length > 0) {
+      lines.push(`första hämtningen av ${seeded.map((s) => SEED_LABELS[s]).join(', ')}`);
+    }
     if (d.added) lines.push(plural(d.added, 'ny nätägare', 'nya nätägare'));
     if (d.changed) lines.push(plural(d.changed, 'ändrad nätägare', 'ändrade nätägare'));
     if (d.removed) lines.push(plural(d.removed, 'borttagen nätägare', 'borttagna nätägare'));
@@ -478,10 +522,10 @@ async function main(): Promise<void> {
     }
     // Registerposter (EXP01/EXP06): en rad per registret och utfall, bara nollskilda.
     for (const [diff, one, many] of [
-      [retailerDiff, 'elhandlarpost', 'elhandlarposter'],
-      [brpPartyDiff, 'BRP-post', 'BRP-poster'],
-      [bspDiff, 'BSP-post', 'BSP-poster'],
-      [bankDiff, 'bankpost', 'bankposter'],
+      [{ counts: report.counts.retailers ?? zeroDiff }, 'elhandlarpost', 'elhandlarposter'],
+      [{ counts: report.counts.brpParties ?? zeroDiff }, 'BRP-post', 'BRP-poster'],
+      [{ counts: report.counts.bsps ?? zeroDiff }, 'BSP-post', 'BSP-poster'],
+      [{ counts: report.counts.banks ?? zeroDiff }, 'bankpost', 'bankposter'],
     ] as const) {
       if (diff.counts.added) lines.push(plural(diff.counts.added, `ny ${one}`, `nya ${many}`));
       if (diff.counts.changed) {

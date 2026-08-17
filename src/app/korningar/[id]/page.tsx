@@ -15,6 +15,17 @@ import {
 } from '@/lib/format';
 import type { RunScope } from '@/lib/types';
 
+/** Läsbara namn för seedade dataset. */
+const SEED_LABEL: Record<RunScope, string> = {
+  dsos: 'nätägare',
+  gridAreas: 'nätområden',
+  brp: 'balansansvar',
+  retailers: 'elhandlare',
+  brpParties: 'balansansvariga',
+  bsps: 'balanstjänsteleverantörer',
+  banks: 'settlementbanker',
+};
+
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
@@ -59,6 +70,14 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
           Äldre körning som bara omfattade{' '}
           {covers('brp') ? 'balansansvaret' : 'nätområden och nätägare'} — nätområden och
           balansansvar hämtades då i separata körningar, och bara totaltiden loggades.
+        </p>
+      ) : null}
+
+      {run.seeded?.length ? (
+        <p className="notice">
+          Körningen etablerade utgångsläget för{' '}
+          {run.seeded.map((s) => SEED_LABEL[s]).join(', ')} — den första hämtningen är ingen
+          förändring, så de delarna redovisas utan ändringsposter.
         </p>
       ) : null}
 

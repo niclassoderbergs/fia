@@ -110,10 +110,18 @@ const emptyBrpCounts = () => ({
   unchanged: 0,
 });
 
-export function brpRunToReport(row: EnergiBrpRun): RunReport {
+export function brpRunToReport(
+  row: EnergiBrpRun,
+  options: { seed?: boolean } = {},
+): RunReport {
   const startedAt = new Date(row.created_at);
-  const changes = row.changes ?? [];
-  const changeCount = row.new_retailers + row.new_relations + row.brp_switches + row.ended;
+  // Den kronologiskt första BRP-körningen etablerade utgångsläget — varje
+  // relation loggades då som "ny". Det är ingen förändring; döljs som seed.
+  const seed = options.seed === true;
+  const changes = seed ? [] : (row.changes ?? []);
+  const changeCount = seed
+    ? 0
+    : row.new_retailers + row.new_relations + row.brp_switches + row.ended;
 
   const steps: RunStep[] = [
     {
@@ -134,6 +142,7 @@ export function brpRunToReport(row: EnergiBrpRun): RunReport {
     dryRun: false,
     origin: 'energi',
     scope: ['brp'],
+    ...(seed ? { seeded: ['brp' as const] } : {}),
     totals: { dsos: 0, gridAreas: 0, brpRelations: row.relations_seen },
     changeCount,
     error: null,
@@ -143,16 +152,18 @@ export function brpRunToReport(row: EnergiBrpRun): RunReport {
     counts: {
       dsos: emptyDiffCounts(),
       gridAreas: emptyDiffCounts(),
-      brp: {
-        newRetailers: row.new_retailers,
-        newRelations: row.new_relations,
-        brpSwitches: row.brp_switches,
-        ended: row.ended,
-        unchanged: Math.max(
-          0,
-          row.relations_seen - (row.new_retailers + row.new_relations + row.brp_switches),
-        ),
-      },
+      brp: seed
+        ? { newRetailers: 0, newRelations: 0, brpSwitches: 0, ended: 0, unchanged: 0 }
+        : {
+            newRetailers: row.new_retailers,
+            newRelations: row.new_relations,
+            brpSwitches: row.brp_switches,
+            ended: row.ended,
+            unchanged: Math.max(
+              0,
+              row.relations_seen - (row.new_retailers + row.new_relations + row.brp_switches),
+            ),
+          },
     },
     skipped: { dsos: [], gridAreas: [], brp: [] },
     changes: { records: [], brp: changes },

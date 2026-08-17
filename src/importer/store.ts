@@ -108,6 +108,7 @@ export class DataStore {
       // inte tilldelas undefined, och våra egna körningar ska sakna fälten helt.
       ...(report.origin ? { origin: report.origin } : {}),
       ...(report.scope ? { scope: report.scope } : {}),
+      ...(report.seeded?.length ? { seeded: report.seeded } : {}),
     };
 
     const runs = [summary, ...index.runs.filter((r) => r.id !== report.id)]

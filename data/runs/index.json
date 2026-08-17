@@ -18,8 +18,14 @@
         "bsps": 33,
         "banks": 34
       },
-      "changeCount": 406,
-      "error": null
+      "changeCount": 0,
+      "error": null,
+      "seeded": [
+        "retailers",
+        "brpParties",
+        "bsps",
+        "banks"
+      ]
     },
     {
       "id": "20260817-074226",
@@ -50,8 +56,13 @@
         "gridAreas": 278,
         "brpRelations": 1785
       },
-      "changeCount": 2237,
-      "error": null
+      "changeCount": 0,
+      "error": null,
+      "seeded": [
+        "dsos",
+        "gridAreas",
+        "brp"
+      ]
     },
     {
       "id": "20260817-023003",
@@ -1172,10 +1183,13 @@
         "gridAreas": 0,
         "brpRelations": 1741
       },
-      "changeCount": 1741,
+      "changeCount": 0,
       "error": null,
       "origin": "energi",
       "scope": [
+        "brp"
+      ],
+      "seeded": [
         "brp"
       ]
     },

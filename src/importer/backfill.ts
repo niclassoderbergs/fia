@@ -29,7 +29,8 @@ function main(): void {
   const store = new DataStore(join(ROOT, 'data'));
 
   const reports = [
-    ...(dump.brp ?? []).map(brpRunToReport),
+    // Dumpen är sorterad på created_at — första BRP-raden är utgångsläget.
+    ...(dump.brp ?? []).map((row, i) => brpRunToReport(row, { seed: i === 0 })),
     ...(dump.grid ?? []).map(gridRunToReport),
   ];
 

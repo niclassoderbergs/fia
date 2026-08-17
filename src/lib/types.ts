@@ -112,6 +112,12 @@ export interface RunSummary {
    * så en importerad rad täcker bara den ena halvan.
    */
   scope?: RunScope[];
+  /**
+   * Dataset vars FÖRSTA hämtning skedde i den här körningen. Ett utgångsläge
+   * är ingen förändring: att lista varje post som "tillagd" vore brus, så
+   * seedade dataset döljs ur ändringslistan och räknas inte i changeCount.
+   */
+  seeded?: RunScope[];
 }
 
 /** Full rapport per körning — allt kollegan behöver för att förstå ett dygn. */
@@ -171,4 +177,5 @@ export interface FeedEntry {
   error: string | null;
   origin?: RunOrigin;
   scope?: RunScope[];
+  seeded?: RunScope[];
 }

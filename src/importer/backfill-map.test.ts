@@ -128,6 +128,40 @@ describe('brpRunToReport', () => {
     expect(brpRunToReport(brpRow({ changes: changes.slice(0, 12) })).changesTruncated).toBe(false);
   });
 
+  it('döljer utgångsläget: seed-körningen får inga ändringsposter', () => {
+    // Första hämtningen loggade varje relation som "ny" — det är ett
+    // utgångsläge, ingen förändring.
+    const report = brpRunToReport(
+      brpRow({
+        new_retailers: 237,
+        new_relations: 1504,
+        changes: [
+          {
+            action: 'new_retailer',
+            biddingZone: 'SE1',
+            retailer: 'X',
+            direction: 'consumption',
+            toBrp: 'Y',
+          },
+        ],
+      }),
+      { seed: true },
+    );
+
+    expect(report.seeded).toEqual(['brp']);
+    expect(report.changeCount).toBe(0);
+    expect(report.changes.brp).toEqual([]);
+    expect(report.counts.brp).toEqual({
+      newRetailers: 0,
+      newRelations: 0,
+      brpSwitches: 0,
+      ended: 0,
+      unchanged: 0,
+    });
+    // Totalen påverkas inte — datat fanns ju.
+    expect(report.totals.brpRelations).toBe(1785);
+  });
+
   it('påstår inte att det gjordes några anrop vi kan räkna', () => {
     expect(brpRunToReport(brpRow()).requestCount).toBe(0);
     expect(brpRunToReport(brpRow()).guards).toEqual([]);
