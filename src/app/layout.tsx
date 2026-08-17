@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import SideNav from '@/components/SideNav';
 import { getRunIndex } from '@/lib/data';
 import { formatDateTime } from '@/lib/format';
 
@@ -8,7 +9,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'fia — eSett',
-  description: 'Nätområden, nätägare och balansansvar från eSett open data',
+  description: 'Förändringsbevakning av eSett open data — strukturen på svenska elmarknaden',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,24 +21,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="masthead">
           <div className="masthead-inner">
             <Link href="/" className="wordmark">
-              fia<span>eSett open data</span>
+              fia<span>eSett open data · förändringsbevakning</span>
             </Link>
-            <nav className="nav">
-              <Link href="/">Förändringar</Link>
-              <Link href="/natomraden">Nätområden</Link>
-              <Link href="/natagare">Nätägare</Link>
-              <Link href="/balansansvar">Balansansvar</Link>
-              <Link href="/korningar">Körningar</Link>
-            </nav>
           </div>
         </header>
-        <main>{children}</main>
-        <footer className="pagefoot">
-          Data hämtad från eSett open data.{' '}
-          {latest
-            ? `Senaste körning ${formatDateTime(latest.startedAt)}.`
-            : 'Ingen körning har genomförts än.'}
-        </footer>
+        <div className="shell">
+          <SideNav />
+          <main>{children}</main>
+          <footer className="pagefoot">
+            Data från eSett open data (api.opendata.esett.com).{' '}
+            {latest
+              ? `Senaste körning ${formatDateTime(latest.startedAt)}.`
+              : 'Ingen körning har genomförts än.'}
+          </footer>
+        </div>
       </body>
     </html>
   );

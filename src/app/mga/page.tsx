@@ -1,14 +1,13 @@
+import DatasetHeader from '@/components/DatasetHeader';
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getGridAreas, getLastSuccessfulRun } from '@/lib/data';
-import { formatDateTime } from '@/lib/format';
+import { getGridAreas } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Nätområden — fia' };
+export const metadata = { title: 'Metering Grid Areas — fia' };
 
-export default function GridAreasPage() {
+export default function MgaPage() {
   const dataset = getGridAreas();
-  const checked = getLastSuccessfulRun();
 
   const rows: Row[] = dataset.rows.map((area) => ({
     id: area.mgaCode,
@@ -28,13 +27,11 @@ export default function GridAreasPage() {
 
   return (
     <>
-      <h1>Nätområden</h1>
-      <p className="lede">
-        Svenska nätområden (MGA) av typen DISTRIBUTION, med prisområde och nätägare, från{' '}
-        <span className="mono">{dataset.source}</span>. Innehållet ändrades senast{' '}
-        {formatDateTime(dataset.fetchedAt)}
-        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}.
-      </p>
+      <DatasetHeader
+        slug="mga"
+        fetchedAt={dataset.fetchedAt}
+        lede="Svenska nätområden av typen DISTRIBUTION, med prisområde och nätägare."
+      />
 
       {unlinked > 0 || ambiguous > 0 ? (
         <p className="notice">

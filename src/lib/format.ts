@@ -77,6 +77,16 @@ export const TRIGGER_LABEL: Record<string, string> = {
   unknown: 'Okänd',
 };
 
+/** Läsbar etikett per entity-värde i RecordChange-poster. */
+export const ENTITY_LABEL: Record<string, string> = {
+  dso: 'Nätägare',
+  grid_area: 'Nätområde',
+  retailer: 'Elhandlare',
+  brp_party: 'Balansansvarig',
+  bsp: 'Balanstjänsteleverantör',
+  bank: 'Settlementbank',
+};
+
 /** Svensk kollation för visningslistor. Påverkar aldrig filer i data/. */
 export function sortSv(a: string, b: string): number {
   return a.localeCompare(b, 'sv');

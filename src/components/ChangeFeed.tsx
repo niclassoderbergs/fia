@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { DATASETS, RBR } from '@/lib/datasets';
 import {
   BRP_ACTION_LABEL,
   RECORD_ACTION_LABEL,
@@ -7,7 +8,7 @@ import {
   formatDuration,
   plural,
 } from '@/lib/format';
-import type { FeedEntry, RunScope } from '@/lib/types';
+import type { FeedEntry, RecordChange, RunScope } from '@/lib/types';
 
 /** Kort riktningsetikett — flödet är tätt, "Förbrukning" tar för mycket plats. */
 const DIRECTION_SHORT: Record<string, string> = {
@@ -26,25 +27,23 @@ const RECORD_BADGE_CLASS: Record<string, string> = {
   added: 'badge-ok',
   changed: 'badge-warn',
   removed: 'badge-danger',
+  linked: 'badge-neutral',
 };
 
 /**
- * En rad text som säger vad dygnet innebar.
- *
- * När något ändrats redovisas BRP-byten och upphörda relationer även när de är
- * noll. De två är de enda utfallen som kan betyda att en kund flyttat
- * balansansvar — att se "0 BRP-byten" svart på vitt är ett annat besked än att
- * siffran inte nämns.
+ * Sammanfattningsraden speglar eSett-strukturen: ett segment per dataset som
+ * hade förändringar, med eSetts korta namn som prefix. Inom RBR-segmentet
+ * redovisas byten och upphörda även när de är noll — de två är de enda
+ * utfallen som kan betyda att balansansvar faktiskt flyttat, och "0 byten"
+ * svart på vitt är ett annat besked än att siffran inte nämns.
  */
 function summaryLine(entry: FeedEntry): string {
   if (entry.status !== 'success') {
     return entry.error ?? 'körningen gick inte igenom';
   }
 
-  // Historik från energi kördes som två separata jobb, så en rad täcker bara
-  // den ena halvan. Redovisa aldrig siffror för det körningen inte omfattade.
-  const scope = entry.scope ?? ['dsos', 'gridAreas', 'brp'];
-  const covers = (part: RunScope) => scope.includes(part);
+  const scope = entry.scope ?? null;
+  const covers = (part: RunScope) => scope === null || scope.includes(part);
 
   if (entry.changeCount === 0) {
     const totals: string[] = [];
@@ -58,34 +57,45 @@ function summaryLine(entry: FeedEntry): string {
     return `${totals.join(' · ')} · oförändrat`;
   }
 
-  const parts: string[] = [];
-  const { brp, gridAreas, dsos } = entry.counts;
-
-  if (brp.newRetailers > 0) parts.push(plural(brp.newRetailers, 'ny elhandlare', 'nya elhandlare'));
-  if (brp.newRelations > 0) parts.push(plural(brp.newRelations, 'ny relation', 'nya relationer'));
-
-  // Byten och upphörda redovisas även vid noll — de är de enda utfallen som
-  // kan betyda att balansansvar faktiskt flyttat, och "0 BRP-byten" svart på
-  // vitt är ett annat besked än att siffran inte nämns.
-  if (brp.newRetailers + brp.newRelations + brp.brpSwitches + brp.ended > 0) {
-    parts.push(plural(brp.brpSwitches, 'BRP-byte', 'BRP-byten'));
-    parts.push(plural(brp.ended, 'upphörd', 'upphörda'));
+  const segments: string[] = [];
+  const recordsByEntity = new Map<string, RecordChange[]>();
+  for (const change of entry.changes.records) {
+    const list = recordsByEntity.get(change.entity);
+    if (list) list.push(change);
+    else recordsByEntity.set(change.entity, [change]);
   }
 
-  if (gridAreas.added > 0) parts.push(plural(gridAreas.added, 'nytt nätområde', 'nya nätområden'));
-  if (gridAreas.changed > 0) {
-    parts.push(plural(gridAreas.changed, 'ändrat nätområde', 'ändrade nätområden'));
-  }
-  if (gridAreas.removed > 0) {
-    parts.push(plural(gridAreas.removed, 'borttaget nätområde', 'borttagna nätområden'));
-  }
-  if (dsos.added > 0) parts.push(plural(dsos.added, 'ny nätägare', 'nya nätägare'));
-  if (dsos.changed > 0) parts.push(plural(dsos.changed, 'ändrad nätägare', 'ändrade nätägare'));
-  if (dsos.removed > 0) {
-    parts.push(plural(dsos.removed, 'borttagen nätägare', 'borttagna nätägare'));
+  for (const dataset of DATASETS) {
+    if (dataset.slug === 'rbr') {
+      const { brp } = entry.counts;
+      const total = brp.newRetailers + brp.newRelations + brp.brpSwitches + brp.ended;
+      if (total === 0) continue;
+      const parts: string[] = [];
+      if (brp.newRetailers > 0) {
+        parts.push(plural(brp.newRetailers, 'ny elhandlare', 'nya elhandlare'));
+      }
+      if (brp.newRelations > 0) {
+        parts.push(plural(brp.newRelations, 'ny relation', 'nya relationer'));
+      }
+      parts.push(plural(brp.brpSwitches, 'byte', 'byten'));
+      parts.push(plural(brp.ended, 'upphörd', 'upphörda'));
+      segments.push(`${dataset.short}: ${parts.join(', ')}`);
+      continue;
+    }
+
+    const records = dataset.entity ? recordsByEntity.get(dataset.entity) : undefined;
+    if (!records || records.length === 0) continue;
+    const added = records.filter((c) => c.action === 'added').length;
+    const changed = records.filter((c) => c.action === 'changed' || c.action === 'linked').length;
+    const removed = records.filter((c) => c.action === 'removed').length;
+    const parts: string[] = [];
+    if (added > 0) parts.push(plural(added, 'ny', 'nya'));
+    if (changed > 0) parts.push(plural(changed, 'ändrad', 'ändrade'));
+    if (removed > 0) parts.push(plural(removed, 'borttagen', 'borttagna'));
+    segments.push(`${dataset.short}: ${parts.join(', ')}`);
   }
 
-  return parts.join(' · ');
+  return segments.join(' · ');
 }
 
 function badgeLabel(entry: FeedEntry): string {
@@ -101,6 +111,25 @@ function badgeClass(entry: FeedEntry): string {
   return 'badge-ok';
 }
 
+function RecordRow({ change }: { change: RecordChange }) {
+  return (
+    <div className="change-row">
+      <span className={`badge ${RECORD_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
+        {RECORD_ACTION_LABEL[change.action] ?? change.action}
+      </span>
+      <span className="change-main">{change.name}</span>
+      <span className="change-meta mono">{change.code}</span>
+      <span className="change-brp">
+        {change.fields.map((f) => (
+          <span key={f.field} className="change-field">
+            {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
+          </span>
+        ))}
+      </span>
+    </div>
+  );
+}
+
 export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
   if (entries.length === 0) {
     return (
@@ -114,6 +143,12 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
     <div className="feed">
       {entries.map((entry) => {
         const quiet = entry.status === 'success' && entry.changeCount === 0;
+        const recordsByEntity = new Map<string, RecordChange[]>();
+        for (const change of entry.changes.records) {
+          const list = recordsByEntity.get(change.entity);
+          if (list) list.push(change);
+          else recordsByEntity.set(change.entity, [change]);
+        }
 
         return (
           <details key={entry.id} className="feed-item" data-quiet={quiet ? 'true' : 'false'}>
@@ -145,43 +180,57 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                 </p>
               ) : null}
 
-              {entry.changes.brp.map((change, i) => (
-                <div className="change-row" key={`brp-${change.retailer}-${change.biddingZone}-${i}`}>
-                  <span className={`badge ${BRP_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
-                    {BRP_ACTION_LABEL[change.action] ?? change.action}
-                  </span>
-                  <span className="change-main">{change.retailer}</span>
-                  <span className="change-meta">{change.biddingZone}</span>
-                  <span className="change-meta">
-                    {DIRECTION_SHORT[change.direction] ?? change.direction}
-                  </span>
-                  <span className="change-brp">
-                    {change.fromBrp ? <span>{change.fromBrp}</span> : null}
-                    {change.fromBrp && change.toBrp ? <span className="arrow">→</span> : null}
-                    {change.toBrp ? <strong>{change.toBrp}</strong> : null}
-                  </span>
-                </div>
-              ))}
+              {/* Grupperna följer eSetts meny — samma ordning och rubriker som
+                  på deras open data-sida, med EXP-taggen bredvid. */}
+              {DATASETS.map((dataset) => {
+                if (dataset.slug === 'rbr') {
+                  if (entry.changes.brp.length === 0) return null;
+                  return (
+                    <div key={dataset.slug}>
+                      <div className="change-group">
+                        {RBR.title} <span className="exp-tag">{RBR.exp}</span>
+                      </div>
+                      {entry.changes.brp.map((change, i) => (
+                        <div
+                          className="change-row"
+                          key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}
+                        >
+                          <span
+                            className={`badge ${BRP_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}
+                          >
+                            {BRP_ACTION_LABEL[change.action] ?? change.action}
+                          </span>
+                          <span className="change-main">{change.retailer}</span>
+                          <span className="change-meta">{change.biddingZone}</span>
+                          <span className="change-meta">
+                            {DIRECTION_SHORT[change.direction] ?? change.direction}
+                          </span>
+                          <span className="change-brp">
+                            {change.fromBrp ? <span>{change.fromBrp}</span> : null}
+                            {change.fromBrp && change.toBrp ? (
+                              <span className="arrow">→</span>
+                            ) : null}
+                            {change.toBrp ? <strong>{change.toBrp}</strong> : null}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
 
-              {entry.changes.records.map((change, i) => (
-                <div className="change-row" key={`rec-${change.entity}-${change.code}-${i}`}>
-                  <span className={`badge ${RECORD_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
-                    {RECORD_ACTION_LABEL[change.action] ?? change.action}
-                  </span>
-                  <span className="change-main">{change.name}</span>
-                  <span className="change-meta mono">{change.code}</span>
-                  <span className="change-meta">
-                    {change.entity === 'dso' ? 'nätägare' : 'nätområde'}
-                  </span>
-                  <span className="change-brp">
-                    {change.fields.map((f) => (
-                      <span key={f.field} className="change-field">
-                        {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
-                      </span>
+                const records = dataset.entity ? recordsByEntity.get(dataset.entity) : undefined;
+                if (!records || records.length === 0) return null;
+                return (
+                  <div key={dataset.slug}>
+                    <div className="change-group">
+                      {dataset.title} <span className="exp-tag">{dataset.exp}</span>
+                    </div>
+                    {records.map((change, i) => (
+                      <RecordRow key={`${change.entity}-${change.code}-${i}`} change={change} />
                     ))}
-                  </span>
-                </div>
-              ))}
+                  </div>
+                );
+              })}
 
               {entry.changesTruncated ? (
                 <p className="muted change-foot">

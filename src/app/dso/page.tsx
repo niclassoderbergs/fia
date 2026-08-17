@@ -1,15 +1,15 @@
+import DatasetHeader from '@/components/DatasetHeader';
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getDsos, getGridAreas, getLastSuccessfulRun } from '@/lib/data';
-import { formatDateTime, formatNumber } from '@/lib/format';
+import { getDsos, getGridAreas } from '@/lib/data';
+import { formatNumber } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Nätägare — fia' };
+export const metadata = { title: 'Distribution System Operators — fia' };
 
-export default function DsosPage() {
+export default function DsoPage() {
   const dataset = getDsos();
   const gridAreas = getGridAreas().rows;
-  const checked = getLastSuccessfulRun();
 
   const areasByDso = new Map<string, number>();
   for (const area of gridAreas) {
@@ -29,17 +29,15 @@ export default function DsosPage() {
 
   return (
     <>
-      <h1>Nätägare</h1>
-      <p className="lede">
-        Svenska nätägare (DSO) enligt eSett, från <span className="mono">{dataset.source}</span>.
-        Koden är den femsiffriga NSE-koden som också används som Ediel-id. Innehållet ändrades
-        senast {formatDateTime(dataset.fetchedAt)}
-        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}.
-      </p>
+      <DatasetHeader
+        slug="dso"
+        fetchedAt={dataset.fetchedAt}
+        lede="Svenska nätägare (DSO). Koden är den femsiffriga NSE-koden som också används som Ediel-id."
+      />
 
       <FilterableTable
         columns={[
-          { key: 'dsoCode', label: 'Kod', mono: true },
+          { key: 'dsoCode', label: 'dsoCode', mono: true },
           { key: 'name', label: 'Namn' },
           { key: 'codingScheme', label: 'Kodschema' },
           { key: 'areas', label: 'Nätområden', numeric: true },

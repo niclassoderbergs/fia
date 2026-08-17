@@ -3,10 +3,28 @@
 
 import type { BrpChange, BrpDiffCounts } from '@/esett/brp-diff';
 import type { DiffCounts, RecordChange } from '@/esett/diff';
-import type { BrpRelation, DsoRecord, GridAreaRecord, SkippedRow } from '@/esett/mappers';
+import type {
+  BankRecord,
+  BrpPartyRecord,
+  BrpRelation,
+  BspRecord,
+  DsoRecord,
+  GridAreaRecord,
+  RetailerRecord,
+  SkippedRow,
+} from '@/esett/mappers';
 
 export type { BrpChange, BrpDiffCounts, DiffCounts, RecordChange };
-export type { BrpRelation, DsoRecord, GridAreaRecord, SkippedRow };
+export type {
+  BankRecord,
+  BrpPartyRecord,
+  BrpRelation,
+  BspRecord,
+  DsoRecord,
+  GridAreaRecord,
+  RetailerRecord,
+  SkippedRow,
+};
 
 /** En datafil: poster plus var och när de kom ifrån. */
 export interface Dataset<T> {
@@ -29,8 +47,15 @@ export type RunStatus = 'success' | 'blocked' | 'failed';
  */
 export type TriggeredBy = 'cron' | 'manual' | 'unknown';
 
-/** Vilka delar en körning omfattade. Saknas = alla tre (den här appens körningar). */
-export type RunScope = 'dsos' | 'gridAreas' | 'brp';
+/** Vilka delar en körning omfattade. Saknas = allt (den här appens körningar). */
+export type RunScope =
+  | 'dsos'
+  | 'gridAreas'
+  | 'brp'
+  | 'retailers'
+  | 'brpParties'
+  | 'bsps'
+  | 'banks';
 
 /** Varifrån körningen kommer. Saknas = den här appen. */
 export type RunOrigin = 'energi';
@@ -67,7 +92,16 @@ export interface RunSummary {
    */
   triggeredBy: TriggeredBy;
   dryRun: boolean;
-  totals: { dsos: number; gridAreas: number; brpRelations: number };
+  /** De fyra sista fälten tillkom när registren utökades — äldre rapporter saknar dem. */
+  totals: {
+    dsos: number;
+    gridAreas: number;
+    brpRelations: number;
+    retailers?: number;
+    brpParties?: number;
+    bsps?: number;
+    banks?: number;
+  };
   changeCount: number;
   error: string | null;
   /** Sätts bara på inläst historik — våra egna körningar saknar fältet. */
@@ -90,11 +124,19 @@ export interface RunReport extends RunSummary {
     dsos: DiffCounts;
     gridAreas: DiffCounts;
     brp: BrpDiffCounts;
+    retailers?: DiffCounts;
+    brpParties?: DiffCounts;
+    bsps?: DiffCounts;
+    banks?: DiffCounts;
   };
   skipped: {
     dsos: SkippedRow[];
     gridAreas: SkippedRow[];
     brp: SkippedRow[];
+    retailers?: SkippedRow[];
+    brpParties?: SkippedRow[];
+    bsps?: SkippedRow[];
+    banks?: SkippedRow[];
   };
   changes: {
     records: RecordChange[];

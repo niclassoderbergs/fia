@@ -25,9 +25,16 @@ byggdes och varför det skiljer sig.
 | Webbvyns läsning | [src/lib/data.ts](../src/lib/data.ts) |
 | Lösenordsgrind | [src/middleware.ts](../src/middleware.ts) |
 
-Sju HTTP-anrop per körning: EXP01 (DSO), EXP03 (MGA), EXP04 MBAOptions, och
-EXP04 RetailerBalanceResponsibility en gång per prisområde. Inga credentials —
+Elva HTTP-anrop per körning: fyra EXP01-register (DSO, Retailers, BRP, BSP),
+EXP03 (MGA), EXP06 (banker), EXP04 MBAOptions samt EXP04
+RetailerBalanceResponsibility en gång per prisområde. Inga credentials —
 API:t är publikt och kräver ingen autentisering.
+
+Vyn speglar eSetts egen open data-sida: samma titlar, slugs och ordning
+(`src/lib/datasets.ts` är enda källan), deras färgpalett och header-gradient
+(extraherade ur produktions-CSS:en 2026-08-17), och API:ets fältnamn som
+kolumnrubriker. Bara strukturdata — priser, volymer och avgifter (EXP05,
+EXP08–EXP18) ingår inte.
 
 ## Vad som ärvdes och vad som ersattes
 

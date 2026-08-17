@@ -83,6 +83,34 @@ describe('EsettOpenDataClient — hämtning', () => {
     ]);
   });
 
+  it('hämtar EXP01-registren med serverside SE-filter', async () => {
+    const { client, urls } = makeClient([
+      json([{ reCode: 'RE1', reName: 'Alfa El', country: 'SE' }]),
+      json([{ brpCode: 'B1', brpName: 'Kraft', country: 'SE' }]),
+      json([{ bspCode: 'S1', bspName: 'Balans', country: 'SE' }]),
+    ]);
+
+    await client.fetchSwedishRetailers();
+    await client.fetchSwedishBrpParties();
+    await client.fetchSwedishBsps();
+
+    expect(urls).toEqual([
+      'https://esett.test/EXP01/Retailers?country=SE',
+      'https://esett.test/EXP01/BalanceResponsibleParties?country=SE',
+      'https://esett.test/EXP01/BalanceServiceProviders?country=SE',
+    ]);
+  });
+
+  it('hämtar settlementbanker utan filter — endpointen saknar parametrar', async () => {
+    const { client, urls } = makeClient([
+      json([{ bic: 'ESSESESS', name: 'SEB', country: 'SE' }]),
+    ]);
+
+    const banks = await client.fetchSettlementBanks();
+    expect(urls).toEqual(['https://esett.test/EXP06/Banks']);
+    expect(banks).toHaveLength(1);
+  });
+
   it('url-kodar EIC-koden i mba-parametern', async () => {
     const { client, urls } = makeClient([json([])]);
     await client.fetchRetailerBalanceResponsibilities('10Y+A/B');

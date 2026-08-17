@@ -1,9 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  mapBanks,
+  mapBrpParties,
   mapBrpRelations,
+  mapBsps,
   mapDsos,
   mapGridAreas,
+  mapRetailers,
   normalizeDirection,
   type ZoneBatch,
 } from './mappers';
@@ -94,6 +98,59 @@ describe('mapGridAreas', () => {
     expect(result.skipped).toEqual([
       { code: 'SE001', reason: 'okänt prisområde "FI" (förväntat SE1–SE4)' },
     ]);
+  });
+});
+
+describe('registermappning (EXP01/EXP06)', () => {
+  it('sorterar elhandlare på reCode och skippar dubbletter', () => {
+    const result = mapRetailers([
+      { reCode: 'RE2', reName: 'Beta El', codingScheme: 'NSE', country: 'SE' },
+      { reCode: 'RE1', reName: 'Alfa El', codingScheme: 'NSE', country: 'SE' },
+      { reCode: 'RE1', reName: 'Alfa El igen', codingScheme: 'NSE', country: 'SE' },
+    ]);
+
+    expect(result.records.map((r) => r.reCode)).toEqual(['RE1', 'RE2']);
+    expect(result.skipped).toEqual([{ code: 'RE1', reason: 'dubblett på kod' }]);
+  });
+
+  it('behåller BRP-registrets giltighetsdatum och normaliserar tomt till null', () => {
+    const result = mapBrpParties([
+      {
+        brpCode: 'BRP1',
+        brpName: 'Kraft AB',
+        businessId: '556677-8899',
+        codingScheme: 'NSE',
+        country: 'SE',
+        validityStart: '2020-01-01T00:00:00',
+        validityEnd: '',
+      },
+    ]);
+
+    expect(result.records[0]).toMatchObject({
+      brpCode: 'BRP1',
+      businessId: '556677-8899',
+      validityStart: '2020-01-01T00:00:00',
+      validityEnd: null,
+    });
+  });
+
+  it('mappar BSP med organisationsnummer', () => {
+    const result = mapBsps([
+      { bspCode: 'BSP1', bspName: 'Balans AB', businessId: '11', codingScheme: null, country: 'SE' },
+    ]);
+    expect(result.records[0]).toMatchObject({ bspCode: 'BSP1', codingScheme: null });
+  });
+
+  it('nycklar banker på BIC och sorterar deterministiskt', () => {
+    const rows = [
+      { bic: 'NDEAFIHH', name: 'Nordea', country: 'FI' },
+      { bic: 'ESSESESS', name: 'SEB', country: 'SE' },
+    ];
+    const forward = mapBanks(rows);
+    const reversed = mapBanks([...rows].reverse());
+
+    expect(forward.records.map((r) => r.bic)).toEqual(['ESSESESS', 'NDEAFIHH']);
+    expect(reversed).toEqual(forward);
   });
 });
 

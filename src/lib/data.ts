@@ -8,11 +8,15 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type {
+  BankRecord,
+  BrpPartyRecord,
   BrpRelation,
+  BspRecord,
   Dataset,
   DsoRecord,
   FeedEntry,
   GridAreaRecord,
+  RetailerRecord,
   RunIndex,
   RunReport,
 } from './types';
@@ -43,6 +47,22 @@ export function getGridAreas(): Dataset<GridAreaRecord> {
 
 export function getBrpRelations(): Dataset<BrpRelation> {
   return readJson<Dataset<BrpRelation>>('brp-relations.json') ?? emptyDataset();
+}
+
+export function getRetailers(): Dataset<RetailerRecord> {
+  return readJson<Dataset<RetailerRecord>>('retailers.json') ?? emptyDataset();
+}
+
+export function getBrpParties(): Dataset<BrpPartyRecord> {
+  return readJson<Dataset<BrpPartyRecord>>('brp-parties.json') ?? emptyDataset();
+}
+
+export function getBsps(): Dataset<BspRecord> {
+  return readJson<Dataset<BspRecord>>('bsps.json') ?? emptyDataset();
+}
+
+export function getBanks(): Dataset<BankRecord> {
+  return readJson<Dataset<BankRecord>>('banks.json') ?? emptyDataset();
 }
 
 export function getRunIndex(): RunIndex {

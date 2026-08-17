@@ -21,6 +21,10 @@ export const DATA_FILES = {
   dsos: 'dsos.json',
   gridAreas: 'grid-areas.json',
   brpRelations: 'brp-relations.json',
+  retailers: 'retailers.json',
+  brpParties: 'brp-parties.json',
+  bsps: 'bsps.json',
+  banks: 'banks.json',
   runIndex: join('runs', 'index.json'),
 } as const;
 

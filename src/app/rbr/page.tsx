@@ -1,14 +1,14 @@
+import DatasetHeader from '@/components/DatasetHeader';
 import FilterableTable, { type Row } from '@/components/FilterableTable';
-import { getBrpRelations, getLastSuccessfulRun } from '@/lib/data';
-import { DIRECTION_LABEL, formatDateTime, formatNumber, sortSv } from '@/lib/format';
+import { getBrpRelations } from '@/lib/data';
+import { DIRECTION_LABEL, formatNumber, sortSv } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export const metadata = { title: 'Balansansvar — fia' };
+export const metadata = { title: 'Retailer Balance Responsibilities — fia' };
 
-export default function BrpPage() {
+export default function RbrPage() {
   const dataset = getBrpRelations();
-  const checked = getLastSuccessfulRun();
 
   const rows: Row[] = dataset.rows.map((rel) => ({
     id: `${rel.biddingZone}|${rel.retailerName}|${rel.direction}`,
@@ -31,14 +31,11 @@ export default function BrpPage() {
 
   return (
     <>
-      <h1>Balansansvar</h1>
-      <p className="lede">
-        Vilken balansansvarig (BRP) varje elhandlare har, per prisområde och riktning, från{' '}
-        <span className="mono">{dataset.source}</span>. Innehållet ändrades senast{' '}
-        {formatDateTime(dataset.fetchedAt)}
-        {checked ? ` och kontrollerades mot eSett ${formatDateTime(checked.startedAt)}` : ''}. Sök
-        på ett nätområdesnamn för att se relationerna som gäller där.
-      </p>
+      <DatasetHeader
+        slug="rbr"
+        fetchedAt={dataset.fetchedAt}
+        lede="Vilken balansansvarig (BRP) varje elhandlare har, per prisområde och riktning. Sök på ett nätområdesnamn för att se relationerna som gäller där."
+      />
 
       <p className="notice">
         eSett anger de här relationerna med <strong>namn</strong> — utan koder och utan

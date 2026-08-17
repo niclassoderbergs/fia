@@ -13,9 +13,13 @@
 
 import { cmp } from './sort';
 import type {
+  EsettBankRow,
+  EsettBrpPartyRow,
+  EsettBspRow,
   EsettDsoRow,
   EsettMgaRow,
   EsettRetailerBalanceRow,
+  EsettRetailerRow,
 } from './schemas';
 
 export { cmp };
@@ -65,6 +69,42 @@ export interface BrpRelation {
   conflicts: Array<{ brpName: string; mgaNames: string[] }>;
 }
 
+/**
+ * Registerposter från EXP01/EXP06. Fältnamnen är eSetts egna (reCode, brpName,
+ * bic …) — vyn ska matcha API:et, och ett påhittat mellannamn hade bara varit
+ * en översättning till för läsaren att hålla i huvudet.
+ */
+export interface RetailerRecord {
+  reCode: string;
+  reName: string;
+  codingScheme: string | null;
+  country: string;
+}
+
+export interface BrpPartyRecord {
+  brpCode: string;
+  brpName: string;
+  businessId: string | null;
+  codingScheme: string | null;
+  country: string;
+  validityStart: string | null;
+  validityEnd: string | null;
+}
+
+export interface BspRecord {
+  bspCode: string;
+  bspName: string;
+  businessId: string | null;
+  codingScheme: string | null;
+  country: string;
+}
+
+export interface BankRecord {
+  bic: string;
+  name: string;
+  country: string;
+}
+
 /** En rad vi medvetet inte tog med, med skäl. Hamnar i körningsrapporten. */
 export interface SkippedRow {
   code: string;
@@ -90,6 +130,87 @@ export function normalizeDirection(raw: string): Direction | null {
   if (v === 'production') return 'production';
   if (v === 'consumption') return 'consumption';
   return null;
+}
+
+/**
+ * Gemensam kärna för registermappning: trimma, skippa tomma koder och
+ * dubbletter med skäl, sortera deterministiskt på kod.
+ */
+function mapRegistry<R, T>(
+  rows: R[],
+  getCode: (row: R) => string,
+  build: (row: R, code: string) => T,
+): MapResult<T> {
+  const byCode = new Map<string, T>();
+  const skipped: SkippedRow[] = [];
+
+  for (const row of rows) {
+    const code = getCode(row).trim();
+    if (!code) {
+      skipped.push({ code: '<saknas>', reason: 'tom kod' });
+      continue;
+    }
+    if (byCode.has(code)) {
+      skipped.push({ code, reason: 'dubblett på kod' });
+      continue;
+    }
+    byCode.set(code, build(row, code));
+  }
+
+  return {
+    records: [...byCode.entries()]
+      .sort(([a], [b]) => cmp(a, b))
+      .map(([, record]) => record),
+    skipped: sortSkipped(skipped),
+  };
+}
+
+const trimOrNull = (v: string | null | undefined): string | null => {
+  const t = v?.trim();
+  return t ? t : null;
+};
+
+/** EXP01 /Retailers → elhandlarregistret. */
+export function mapRetailers(rows: EsettRetailerRow[]): MapResult<RetailerRecord> {
+  return mapRegistry(rows, (r) => r.reCode, (r, reCode) => ({
+    reCode,
+    reName: r.reName.trim(),
+    codingScheme: trimOrNull(r.codingScheme),
+    country: r.country,
+  }));
+}
+
+/** EXP01 /BalanceResponsibleParties → BRP-registret, med giltighetsdatum bevarade. */
+export function mapBrpParties(rows: EsettBrpPartyRow[]): MapResult<BrpPartyRecord> {
+  return mapRegistry(rows, (r) => r.brpCode, (r, brpCode) => ({
+    brpCode,
+    brpName: r.brpName.trim(),
+    businessId: trimOrNull(r.businessId),
+    codingScheme: trimOrNull(r.codingScheme),
+    country: r.country,
+    validityStart: trimOrNull(r.validityStart),
+    validityEnd: trimOrNull(r.validityEnd),
+  }));
+}
+
+/** EXP01 /BalanceServiceProviders → BSP-registret. */
+export function mapBsps(rows: EsettBspRow[]): MapResult<BspRecord> {
+  return mapRegistry(rows, (r) => r.bspCode, (r, bspCode) => ({
+    bspCode,
+    bspName: r.bspName.trim(),
+    businessId: trimOrNull(r.businessId),
+    codingScheme: trimOrNull(r.codingScheme),
+    country: r.country,
+  }));
+}
+
+/** EXP06 /Banks → settlementbanker, nyckel på BIC. Hela Norden — inget SE-filter. */
+export function mapBanks(rows: EsettBankRow[]): MapResult<BankRecord> {
+  return mapRegistry(rows, (r) => r.bic, (r, bic) => ({
+    bic,
+    name: r.name.trim(),
+    country: r.country.trim(),
+  }));
 }
 
 /** eSett-DSO → vår nätägarpost. Dubbletter på dsoCode slås ihop, första vinner. */

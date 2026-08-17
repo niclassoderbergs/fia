@@ -1,8 +1,14 @@
 # fia — eSett open data
 
-Hämtar svenska nätområden, nätägare och balansansvar från eSetts öppna API en
-gång per dygn, sparar resultatet som JSON-filer i det här repot och publicerar
-en läsvy via Vercel.
+Förändringsbevakning av strukturen på svenska elmarknaden. Hämtar eSetts
+strukturdata en gång per dygn, sparar resultatet som JSON-filer i det här
+repot och publicerar en läsvy via Vercel. Vyn följer eSetts egen open
+data-sida (opendata.esett.com) i namn, ordning och utseende — men med
+förändringarna i centrum: startsidan är ett flöde över vad som skiljde sig
+mellan dygnen, inte tabellerna.
+
+Bara struktur. Priser, volymer och avgifter (EXP05, EXP08–EXP18) ingår
+medvetet inte.
 
 **Ingen databas.** Filerna under `data/` *är* databasen, och git är
 historiken: `git log -p data/brp-relations.json` visar exakt vad som ändrats
@@ -28,13 +34,23 @@ cron (04:30 + slumpad fördröjning)
 
 ## Innehållet i `data/`
 
-| Fil | Innehåll |
-| --- | --- |
-| `dsos.json` | Nätägare (DSO) från EXP01 |
-| `grid-areas.json` | Nätområden (MGA) från EXP03, med prisområde och nätägarlänk |
-| `brp-relations.json` | Elhandlare→BRP från EXP04, per prisområde och riktning |
-| `runs/index.json` | De senaste 400 körningarna i sammanfattning |
-| `runs/<id>.json` | Full rapport per körning: steg, spärrar, förändringar |
+Vy-slugs och gruppering är eSetts egna (`/dso`, `/mga`, `/rbr` …) så varje vy
+går att slå upp mot exakt en endpoint:
+
+| Fil | Vy | Källa |
+| --- | --- | --- |
+| `brp-parties.json` | Balance Responsible Parties | `EXP01/BalanceResponsibleParties?country=SE` |
+| `bsps.json` | Balancing Service Providers | `EXP01/BalanceServiceProviders?country=SE` |
+| `dsos.json` | Distribution System Operators | `EXP01/DistributionSystemOperators?country=SE` |
+| `grid-areas.json` | Metering Grid Areas | `EXP03/MeteringGridAreas?mgaType=DISTRIBUTION` |
+| `brp-relations.json` | Retailer Balance Responsibilities | `EXP04/RetailerBalanceResponsibility` per prisområde |
+| `retailers.json` | Retailers | `EXP01/Retailers?country=SE` |
+| `banks.json` | Settlement Banks | `EXP06/Banks` (hela Norden — endpointen saknar filter) |
+| `runs/index.json` | Körningar | De senaste 400 i sammanfattning |
+| `runs/<id>.json` | Körningsdetalj | Full rapport: steg, spärrar, förändringar |
+
+Registerposterna behåller API:ets fältnamn (`reCode`, `brpName`, `bic` …) —
+vyn ska gå att läsa mot API-dokumentationen utan översättningstabell.
 
 Alla listor är sorterade i kodpunktsordning och serialiseras identiskt varje
 gång. Det är avsiktligt: utan det blir varje daglig commit en diff även när

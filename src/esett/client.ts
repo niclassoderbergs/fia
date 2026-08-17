@@ -10,15 +10,23 @@
 // Spec: https://api.opendata.esett.com/openapi?format=json
 
 import {
+  esettBankRowSchema,
+  esettBrpPartyRowSchema,
+  esettBspRowSchema,
   esettDsoRowSchema,
   esettMbaOptionsResponseSchema,
   esettMgaRowSchema,
   esettRetailerBalanceRowSchema,
+  esettRetailerRowSchema,
   parseRows,
+  type EsettBankRow,
+  type EsettBrpPartyRow,
+  type EsettBspRow,
   type EsettDsoRow,
   type EsettMbaOption,
   type EsettMgaRow,
   type EsettRetailerBalanceRow,
+  type EsettRetailerRow,
 } from './schemas';
 
 const DEFAULT_BASE = 'https://api.opendata.esett.com';
@@ -82,6 +90,38 @@ export class EsettOpenDataClient {
     const endpoint = '/EXP01/DistributionSystemOperators?country=SE';
     const body = await this.fetchJson(endpoint);
     return parseRows(endpoint, esettDsoRowSchema, body);
+  }
+
+  /** EXP01 — svenska elhandlare. Registret med koder, till skillnad från EXP04:s rena namn. */
+  async fetchSwedishRetailers(): Promise<EsettRetailerRow[]> {
+    const endpoint = '/EXP01/Retailers?country=SE';
+    const body = await this.fetchJson(endpoint);
+    return parseRows(endpoint, esettRetailerRowSchema, body);
+  }
+
+  /** EXP01 — svenska balansansvariga parter. Enda registret som bär giltighetsdatum. */
+  async fetchSwedishBrpParties(): Promise<EsettBrpPartyRow[]> {
+    const endpoint = '/EXP01/BalanceResponsibleParties?country=SE';
+    const body = await this.fetchJson(endpoint);
+    return parseRows(endpoint, esettBrpPartyRowSchema, body);
+  }
+
+  /** EXP01 — svenska balanstjänsteleverantörer (BSP). */
+  async fetchSwedishBsps(): Promise<EsettBspRow[]> {
+    const endpoint = '/EXP01/BalanceServiceProviders?country=SE';
+    const body = await this.fetchJson(endpoint);
+    return parseRows(endpoint, esettBspRowSchema, body);
+  }
+
+  /**
+   * EXP06 — settlementbanker. Endpointen saknar parametrar, och bankerna
+   * betjänar hela Norden — därför inget SE-filter: att anta att listan bär
+   * country='SE' för svenska banker vore en gissning om eSetts data.
+   */
+  async fetchSettlementBanks(): Promise<EsettBankRow[]> {
+    const endpoint = '/EXP06/Banks';
+    const body = await this.fetchJson(endpoint);
+    return parseRows(endpoint, esettBankRowSchema, body);
   }
 
   /**

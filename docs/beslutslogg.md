@@ -2,6 +2,48 @@
 
 Senaste överst.
 
+## 2026-08-17 — UX efter eSetts open data-sida + fyra nya strukturregister
+
+Användaren vill att vyn ska likna eSetts egen open data-sida
+(opendata.esett.com) med förändringarna kvar i centrum, att förändringar
+presenteras enligt sidans struktur, och att **bara strukturdata** ingår —
+priser, volymer och avgifter exkluderas.
+
+**Beslut:**
+
+- **eSetts struktur är den enda källan** (`src/lib/datasets.ts`): titlar,
+  slugs (`/brp`, `/bsp`, `/dso`, `/mga`, `/rbr`, `/retailers`, `/sb`), ordning
+  och EXP-grupper extraherades ur deras produktionsbundle och API:ets
+  OpenAPI-spec. Nav, sidor och flödesgruppering läser alla ur samma modul.
+- **Fyra nya register hämtas** för att strukturdelen ska vara komplett:
+  Retailers, Balance Responsible Parties, Balancing Service Providers (EXP01)
+  och Settlement Banks (EXP06). Handovern noterade EXP01-systerendpointsen som
+  orörda; nu används de. BRP-registret är det enda med giltighetsdatum — ett
+  satt slutdatum är en tidig signal som EXP04-namnen aldrig kan ge.
+- **EXP05/EXP08–EXP18 (avgifter, priser, volymer) exkluderas** per uttrycklig
+  instruktion. Settlement Banks togs med — banker är struktur, inte pris.
+- **Bankerna SE-filtreras inte.** Endpointen saknar parametrar och bankerna
+  betjänar hela Norden; att anta att `country='SE'` pekar ut "våra" banker
+  vore en gissning om eSetts datamodell.
+- **API:ets fältnamn behålls** i registerposterna (`reCode`, `brpName`,
+  `bic`) och visas som kolumnrubriker — vyn ska matcha API:et, inte införa en
+  egen namnrymd.
+- **Design efter eSetts riktiga tokens**, extraherade ur deras CSS: marinblå
+  #003971, klarblå #2199d1, lila #a991d2, header-gradienten
+  `linear-gradient(45deg, …)`, bakgrund #fafafa, platt sidomeny som deras
+  drawer. Deras typsnitt (Code Pro) är licensierat → systemsans.
+- **Förändringsflödet grupperar per eSett-dataset** i menyns ordning, med
+  EXP-tagg per grupp och dataset-prefix i sammanfattningsraden
+  (`RBR: 1 byte, 0 upphörda · Retailers: 2 nya`).
+- **Gamla adresser 301-redirectas** (`/natomraden` → `/mga` osv).
+
+**Levererat:** 4 nya zod-scheman + klientmetoder, generisk registermappning,
+diff + spärrar (icke-tomt + krympning) för alla sju dataseten, fyra nya
+vy-sidor, sidomeny, eSett-tema, omgjord flödesgruppering, 6 nya tester (77
+totalt). Körningen gör nu 11 anrop mot eSett per dygn.
+
+**Live-verifiering:** se commit — seedkörning med de fyra nya registren.
+
 ## 2026-08-17 — Förändringsflöde som startsida + historiken från energi inläst
 
 Två saker föll ut av samma insikt: kollegans uppgift är att se **deltat mellan

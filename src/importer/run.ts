@@ -24,13 +24,21 @@ import { dirname, join } from 'node:path';
 
 import { EsettOpenDataClient } from '@/esett/client';
 import {
+  mapBanks,
+  mapBrpParties,
   mapBrpRelations,
+  mapBsps,
   mapDsos,
   mapGridAreas,
+  mapRetailers,
+  type BankRecord,
   type BiddingZone,
+  type BrpPartyRecord,
   type BrpRelation,
+  type BspRecord,
   type DsoRecord,
   type GridAreaRecord,
+  type RetailerRecord,
   type ZoneBatch,
 } from '@/esett/mappers';
 import { diffRecords } from '@/esett/diff';
@@ -132,6 +140,10 @@ async function main(): Promise<void> {
   let dsos: ReturnType<typeof mapDsos> = { records: [], skipped: [] };
   let gridAreas: ReturnType<typeof mapGridAreas> = { records: [], skipped: [] };
   let brp: ReturnType<typeof mapBrpRelations> = { records: [], skipped: [] };
+  let retailers: ReturnType<typeof mapRetailers> = { records: [], skipped: [] };
+  let brpParties: ReturnType<typeof mapBrpParties> = { records: [], skipped: [] };
+  let bsps: ReturnType<typeof mapBsps> = { records: [], skipped: [] };
+  let banks: ReturnType<typeof mapBanks> = { records: [], skipped: [] };
   let foundZones: string[] = [];
 
   const timed = async <T>(name: string, endpoint: string, fn: () => Promise<T>, count: (r: T) => number): Promise<T> => {
@@ -143,10 +155,30 @@ async function main(): Promise<void> {
 
   try {
     // --- Hämtning -----------------------------------------------------------
+    // Ordningen speglar eSetts exportgrupper: EXP01-registren, EXP03, EXP06,
+    // sist EXP04 som behöver EIC-koderna.
     const rawDsos = await timed(
       'Nätägare (DSO)',
       '/EXP01/DistributionSystemOperators?country=SE',
       () => client.fetchSwedishDsos(),
+      (r) => r.length,
+    );
+    const rawRetailers = await timed(
+      'Elhandlare (Retailers)',
+      '/EXP01/Retailers?country=SE',
+      () => client.fetchSwedishRetailers(),
+      (r) => r.length,
+    );
+    const rawBrpParties = await timed(
+      'Balansansvariga (BRP)',
+      '/EXP01/BalanceResponsibleParties?country=SE',
+      () => client.fetchSwedishBrpParties(),
+      (r) => r.length,
+    );
+    const rawBsps = await timed(
+      'Balanstjänsteleverantörer (BSP)',
+      '/EXP01/BalanceServiceProviders?country=SE',
+      () => client.fetchSwedishBsps(),
       (r) => r.length,
     );
     const rawMgas = await timed(
@@ -154,6 +186,12 @@ async function main(): Promise<void> {
       '/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION',
       () => client.fetchSwedishMgas(),
       (r) => r.totalNordic,
+    );
+    const rawBanks = await timed(
+      'Settlementbanker',
+      '/EXP06/Banks',
+      () => client.fetchSettlementBanks(),
+      (r) => r.length,
     );
     const mbaOptions = await timed(
       'Prisområden (MBA)',
@@ -178,6 +216,10 @@ async function main(): Promise<void> {
     dsos = mapDsos(rawDsos);
     gridAreas = mapGridAreas(rawMgas.rows, dsos.records);
     brp = mapBrpRelations(zoneBatches);
+    retailers = mapRetailers(rawRetailers);
+    brpParties = mapBrpParties(rawBrpParties);
+    bsps = mapBsps(rawBsps);
+    banks = mapBanks(rawBanks);
 
     status = 'success';
   } catch (err) {
@@ -190,6 +232,10 @@ async function main(): Promise<void> {
   const prevDsos = store.previousRows<DsoRecord>(DATA_FILES.dsos);
   const prevGridAreas = store.previousRows<GridAreaRecord>(DATA_FILES.gridAreas);
   const prevBrp = store.previousRows<BrpRelation>(DATA_FILES.brpRelations);
+  const prevRetailers = store.previousRows<RetailerRecord>(DATA_FILES.retailers);
+  const prevBrpParties = store.previousRows<BrpPartyRecord>(DATA_FILES.brpParties);
+  const prevBsps = store.previousRows<BspRecord>(DATA_FILES.bsps);
+  const prevBanks = store.previousRows<BankRecord>(DATA_FILES.banks);
 
   const emptyDiff = { changes: [], counts: { added: 0, changed: 0, removed: 0, unchanged: 0 } };
   const emptyBrpDiff = {
@@ -227,16 +273,80 @@ async function main(): Promise<void> {
 
   const brpDiff = status === 'success' ? diffBrpRelations(prevBrp, brp.records) : emptyBrpDiff;
 
+  const retailerDiff =
+    status === 'success'
+      ? diffRecords(prevRetailers, retailers.records, {
+          entity: 'retailer',
+          key: (r) => r.reCode,
+          label: (r) => r.reName,
+          fields: [
+            { key: 'reName', label: 'namn' },
+            { key: 'codingScheme', label: 'kodschema' },
+          ],
+        })
+      : emptyDiff;
+
+  const brpPartyDiff =
+    status === 'success'
+      ? diffRecords(prevBrpParties, brpParties.records, {
+          entity: 'brp_party',
+          key: (r) => r.brpCode,
+          label: (r) => r.brpName,
+          fields: [
+            { key: 'brpName', label: 'namn' },
+            { key: 'businessId', label: 'organisationsnummer' },
+            { key: 'validityStart', label: 'giltig från' },
+            { key: 'validityEnd', label: 'giltig till' },
+            { key: 'codingScheme', label: 'kodschema' },
+          ],
+        })
+      : emptyDiff;
+
+  const bspDiff =
+    status === 'success'
+      ? diffRecords(prevBsps, bsps.records, {
+          entity: 'bsp',
+          key: (r) => r.bspCode,
+          label: (r) => r.bspName,
+          fields: [
+            { key: 'bspName', label: 'namn' },
+            { key: 'businessId', label: 'organisationsnummer' },
+            { key: 'codingScheme', label: 'kodschema' },
+          ],
+        })
+      : emptyDiff;
+
+  const bankDiff =
+    status === 'success'
+      ? diffRecords(prevBanks, banks.records, {
+          entity: 'bank',
+          key: (r) => r.bic,
+          label: (r) => r.name,
+          fields: [
+            { key: 'name', label: 'namn' },
+            { key: 'country', label: 'land' },
+          ],
+        })
+      : emptyDiff;
+
   // --- Spärrar --------------------------------------------------------------
   if (status === 'success') {
     guards.push(
       guardNonEmpty('Nätägare', dsos.records.length),
       guardNonEmpty('Nätområden', gridAreas.records.length),
       guardNonEmpty('Balansansvar', brp.records.length),
+      guardNonEmpty('Elhandlare', retailers.records.length),
+      guardNonEmpty('Balansansvariga', brpParties.records.length),
+      guardNonEmpty('Balanstjänsteleverantörer', bsps.records.length),
+      guardNonEmpty('Settlementbanker', banks.records.length),
       guardAllZones(foundZones),
       guardShrink('Nätägare', prevDsos.length, dsoDiff.counts.removed, env.maxShrinkPct),
       guardShrink('Nätområden', prevGridAreas.length, gridAreaDiff.counts.removed, env.maxShrinkPct),
       guardShrink('Balansansvar', prevBrp.length, brpDiff.counts.ended, env.maxShrinkPct),
+      guardShrink('Elhandlare', prevRetailers.length, retailerDiff.counts.removed, env.maxShrinkPct),
+      guardShrink('Balansansvariga', prevBrpParties.length, brpPartyDiff.counts.removed, env.maxShrinkPct),
+      guardShrink('Balanstjänsteleverantörer', prevBsps.length, bspDiff.counts.removed, env.maxShrinkPct),
+      guardShrink('Settlementbanker', prevBanks.length, bankDiff.counts.removed, env.maxShrinkPct),
     );
     if (!allPassed(guards)) {
       status = 'blocked';
@@ -269,12 +379,31 @@ async function main(): Promise<void> {
       brpDiff.changes.length > 0 || prevBrp.length === 0
         ? store.write(DATA_FILES.brpRelations, dataset('/EXP04/RetailerBalanceResponsibility', brp.records))
         : false,
+      retailerDiff.changes.length > 0 || prevRetailers.length === 0
+        ? store.write(DATA_FILES.retailers, dataset('/EXP01/Retailers', retailers.records))
+        : false,
+      brpPartyDiff.changes.length > 0 || prevBrpParties.length === 0
+        ? store.write(DATA_FILES.brpParties, dataset('/EXP01/BalanceResponsibleParties', brpParties.records))
+        : false,
+      bspDiff.changes.length > 0 || prevBsps.length === 0
+        ? store.write(DATA_FILES.bsps, dataset('/EXP01/BalanceServiceProviders', bsps.records))
+        : false,
+      bankDiff.changes.length > 0 || prevBanks.length === 0
+        ? store.write(DATA_FILES.banks, dataset('/EXP06/Banks', banks.records))
+        : false,
     ];
-    log(`datafiler skrivna: ${wrote.filter(Boolean).length} av 3`);
+    log(`datafiler skrivna: ${wrote.filter(Boolean).length} av ${wrote.length}`);
   }
 
   const finishedAt = new Date();
-  const allChanges = [...dsoDiff.changes, ...gridAreaDiff.changes];
+  const allChanges = [
+    ...dsoDiff.changes,
+    ...gridAreaDiff.changes,
+    ...retailerDiff.changes,
+    ...brpPartyDiff.changes,
+    ...bspDiff.changes,
+    ...bankDiff.changes,
+  ];
   const changeCount = allChanges.length + brpDiff.changes.length;
   const truncated = allChanges.length > MAX_CHANGES_IN_REPORT || brpDiff.changes.length > MAX_CHANGES_IN_REPORT;
 
@@ -290,14 +419,34 @@ async function main(): Promise<void> {
       dsos: dsos.records.length,
       gridAreas: gridAreas.records.length,
       brpRelations: brp.records.length,
+      retailers: retailers.records.length,
+      brpParties: brpParties.records.length,
+      bsps: bsps.records.length,
+      banks: banks.records.length,
     },
     changeCount,
     error,
     requestCount: client.requestCount,
     steps,
     guards,
-    counts: { dsos: dsoDiff.counts, gridAreas: gridAreaDiff.counts, brp: brpDiff.counts },
-    skipped: { dsos: dsos.skipped, gridAreas: gridAreas.skipped, brp: brp.skipped },
+    counts: {
+      dsos: dsoDiff.counts,
+      gridAreas: gridAreaDiff.counts,
+      brp: brpDiff.counts,
+      retailers: retailerDiff.counts,
+      brpParties: brpPartyDiff.counts,
+      bsps: bspDiff.counts,
+      banks: bankDiff.counts,
+    },
+    skipped: {
+      dsos: dsos.skipped,
+      gridAreas: gridAreas.skipped,
+      brp: brp.skipped,
+      retailers: retailers.skipped,
+      brpParties: brpParties.skipped,
+      bsps: bsps.skipped,
+      banks: banks.skipped,
+    },
     changes: {
       records: allChanges.slice(0, MAX_CHANGES_IN_REPORT),
       brp: brpDiff.changes.slice(0, MAX_CHANGES_IN_REPORT),
@@ -326,6 +475,21 @@ async function main(): Promise<void> {
     if (c.brpSwitches) lines.push(plural(c.brpSwitches, 'BRP-byte', 'BRP-byten'));
     if (c.ended) {
       lines.push(plural(c.ended, 'upphörd BRP-relation', 'upphörda BRP-relationer'));
+    }
+    // Registerposter (EXP01/EXP06): en rad per registret och utfall, bara nollskilda.
+    for (const [diff, one, many] of [
+      [retailerDiff, 'elhandlarpost', 'elhandlarposter'],
+      [brpPartyDiff, 'BRP-post', 'BRP-poster'],
+      [bspDiff, 'BSP-post', 'BSP-poster'],
+      [bankDiff, 'bankpost', 'bankposter'],
+    ] as const) {
+      if (diff.counts.added) lines.push(plural(diff.counts.added, `ny ${one}`, `nya ${many}`));
+      if (diff.counts.changed) {
+        lines.push(plural(diff.counts.changed, `ändrad ${one}`, `ändrade ${many}`));
+      }
+      if (diff.counts.removed) {
+        lines.push(plural(diff.counts.removed, `borttagen ${one}`, `borttagna ${many}`));
+      }
     }
 
     const message = buildCommitMessage({

@@ -20,6 +20,45 @@ export const esettDsoRowSchema = z.object({
 });
 export type EsettDsoRow = z.infer<typeof esettDsoRowSchema>;
 
+/** EXP01 /Retailers — en elhandlare i registret (med kod, till skillnad från EXP04). */
+export const esettRetailerRowSchema = z.object({
+  reCode: z.string().min(1),
+  reName: z.string(),
+  codingScheme: z.string().nullish(),
+  country: z.string().min(1),
+});
+export type EsettRetailerRow = z.infer<typeof esettRetailerRowSchema>;
+
+/** EXP01 /BalanceResponsibleParties — en balansansvarig part. Enda registret med giltighetsdatum. */
+export const esettBrpPartyRowSchema = z.object({
+  brpCode: z.string().min(1),
+  brpName: z.string(),
+  businessId: z.string().nullish(),
+  codingScheme: z.string().nullish(),
+  country: z.string().min(1),
+  validityStart: z.string().nullish(),
+  validityEnd: z.string().nullish(),
+});
+export type EsettBrpPartyRow = z.infer<typeof esettBrpPartyRowSchema>;
+
+/** EXP01 /BalanceServiceProviders — en balanstjänsteleverantör. */
+export const esettBspRowSchema = z.object({
+  bspCode: z.string().min(1),
+  bspName: z.string(),
+  businessId: z.string().nullish(),
+  codingScheme: z.string().nullish(),
+  country: z.string().min(1),
+});
+export type EsettBspRow = z.infer<typeof esettBspRowSchema>;
+
+/** EXP06 /Banks — en settlementbank. Endpointen saknar parametrar helt. */
+export const esettBankRowSchema = z.object({
+  bic: z.string().min(1),
+  name: z.string(),
+  country: z.string(),
+});
+export type EsettBankRow = z.infer<typeof esettBankRowSchema>;
+
 /** EXP03 /MeteringGridAreas — ett nätområde (MGA). */
 export const esettMgaRowSchema = z.object({
   mgaCode: z.string().min(1),

@@ -6,6 +6,7 @@ import { getRun, getRunIndex } from '@/lib/data';
 import {
   BRP_ACTION_LABEL,
   DIRECTION_LABEL,
+  ENTITY_LABEL,
   RECORD_ACTION_LABEL,
   TRIGGER_LABEL,
   formatDateTime,
@@ -30,7 +31,13 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
   const covers = (part: RunScope) => scope.includes(part);
   const hasChanges = run.changes.records.length > 0 || run.changes.brp.length > 0;
   const skippedTotal =
-    run.skipped.dsos.length + run.skipped.gridAreas.length + run.skipped.brp.length;
+    run.skipped.dsos.length +
+    run.skipped.gridAreas.length +
+    run.skipped.brp.length +
+    (run.skipped.retailers?.length ?? 0) +
+    (run.skipped.brpParties?.length ?? 0) +
+    (run.skipped.bsps?.length ?? 0) +
+    (run.skipped.banks?.length ?? 0);
 
   return (
     <>
@@ -108,6 +115,25 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
             </div>
           </div>
         ) : null}
+        {/* Registren som tillkom vid eSett-struktureringen — finns bara i nyare körningar. */}
+        {(
+          [
+            ['Elhandlare', run.totals.retailers, counts.retailers],
+            ['Balansansvariga', run.totals.brpParties, counts.brpParties],
+            ['BSP', run.totals.bsps, counts.bsps],
+            ['Banker', run.totals.banks, counts.banks],
+          ] as const
+        ).map(([label, total, diffCounts]) =>
+          total === undefined ? null : (
+            <div className="stat" key={label}>
+              <div className="stat-label">{label}</div>
+              <div className="stat-value">{formatNumber(total)}</div>
+              <div className="stat-note">
+                +{diffCounts?.added ?? 0} · ~{diffCounts?.changed ?? 0} · −{diffCounts?.removed ?? 0}
+              </div>
+            </div>
+          ),
+        )}
       </div>
 
       <h2>Spärrar</h2>
@@ -247,9 +273,7 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
                         {RECORD_ACTION_LABEL[change.action] ?? change.action}
                       </span>
                     </td>
-                    <td className="muted">
-                      {change.entity === 'dso' ? 'Nätägare' : 'Nätområde'}
-                    </td>
+                    <td className="muted">{ENTITY_LABEL[change.entity] ?? change.entity}</td>
                     <td className="mono">{change.code}</td>
                     <td>{change.name}</td>
                     <td className="muted">
@@ -290,6 +314,10 @@ export default async function RunPage({ params }: { params: Promise<{ id: string
                     ['Nätägare', run.skipped.dsos],
                     ['Nätområde', run.skipped.gridAreas],
                     ['Balansansvar', run.skipped.brp],
+                    ['Elhandlare', run.skipped.retailers ?? []],
+                    ['Balansansvarig', run.skipped.brpParties ?? []],
+                    ['BSP', run.skipped.bsps ?? []],
+                    ['Bank', run.skipped.banks ?? []],
                   ] as const
                 ).flatMap(([label, rows]) =>
                   rows.map((row, i) => (
