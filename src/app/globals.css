@@ -380,6 +380,151 @@ button:hover {
   font-size: 14px;
 }
 
+/* --- Förändringsflöde ------------------------------------------------------ */
+
+/* Kryssruta och etikett är syskon till .feed (krav för ~-selektorn nedan),
+   så de sätts på samma rad med inline-block i stället för en flex-wrapper. */
+.feed-filter-input {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px 14px 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.feed-filter {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Kryssrutan döljer tysta dygn — ren CSS, ingen klientkod. */
+.feed-filter-input:checked ~ .feed .feed-item[data-quiet='true'] {
+  display: none;
+}
+
+.feed-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.feed-item[data-quiet='true'] {
+  background: transparent;
+}
+
+.feed-item[open] {
+  border-color: var(--border-strong);
+}
+
+.feed-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  cursor: pointer;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.feed-summary::-webkit-details-marker {
+  display: none;
+}
+
+.feed-summary::before {
+  content: '›';
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.12s ease;
+  display: inline-block;
+}
+
+.feed-item[open] > .feed-summary::before {
+  transform: rotate(90deg);
+}
+
+.feed-summary:hover {
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+}
+
+.feed-date {
+  font-variant-numeric: tabular-nums;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.feed-item[data-quiet='true'] .feed-date {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.feed-note {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.feed-duration {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.feed-body {
+  padding: 4px 16px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.change-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.change-row + .change-row {
+  border-top: 1px solid var(--border);
+}
+
+.change-main {
+  font-weight: 500;
+}
+
+.change-meta {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.change-brp {
+  margin-left: auto;
+  text-align: right;
+}
+
+.change-field {
+  display: block;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.change-foot {
+  margin: 12px 0 0;
+  font-size: 13px;
+}
+
 /* --- Övrigt --------------------------------------------------------------- */
 
 .empty {

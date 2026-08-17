@@ -1,111 +1,73 @@
-import Link from 'next/link';
-
-import StatusBadge from '@/components/StatusBadge';
-import { countByZone, getBrpRelations, getDsos, getGridAreas, getRunIndex } from '@/lib/data';
-import { formatDateTime, formatDuration, formatNumber } from '@/lib/format';
+import ChangeFeed from '@/components/ChangeFeed';
+import { getBrpRelations, getChangeFeed, getGridAreas, getLastSuccessfulRun } from '@/lib/data';
+import { formatDateTime, formatNumber } from '@/lib/format';
 
 export const dynamic = 'force-static';
 
-export default function OverviewPage() {
-  const gridAreas = getGridAreas();
-  const dsos = getDsos();
+export default function ChangesPage() {
+  const entries = getChangeFeed();
+  const checked = getLastSuccessfulRun();
   const brp = getBrpRelations();
-  const runs = getRunIndex().runs;
-  const latest = runs[0];
+  const gridAreas = getGridAreas();
 
-  const zones = countByZone(gridAreas.rows);
-  const conflicts = brp.rows.filter((r) => r.conflicts.length > 0).length;
-  const unlinked = gridAreas.rows.filter((r) => r.dsoCode === null).length;
-
-  if (!latest) {
-    return (
-      <>
-        <h1>Översikt</h1>
-        <p className="lede">Ingen import har körts än. Kör <span className="mono">npm run import</span> på servern.</p>
-      </>
-    );
-  }
+  const withChanges = entries.filter((e) => e.changeCount > 0).length;
+  const problems = entries.filter((e) => e.status !== 'success').length;
+  const latest = entries[0];
 
   return (
     <>
-      <h1>Översikt</h1>
+      <h1>Förändringar</h1>
       <p className="lede">
-        Registret hämtas från eSett open data varje natt och sparas som filer i det här repot.
-        Sidan visar innehållet i den senast lyckade körningen.
+        Ett dygn per rad, nyaste först. Fäll ut en rad för att se exakt vad som skiljde sig mot
+        föregående körning. De flesta dygn är oförändrade — det är meningen.
       </p>
 
-      {latest.status !== 'success' ? (
+      {latest && latest.status !== 'success' ? (
         <p className={`notice ${latest.status === 'failed' ? 'notice-danger' : ''}`}>
-          <strong>Senaste körningen ({formatDateTime(latest.startedAt)}) gick inte igenom.</strong>{' '}
-          Siffrorna nedan är därför oförändrade sedan senast lyckade körning.{' '}
-          {latest.error ? <span className="mono">{latest.error}</span> : null}{' '}
-          <Link href={`/korningar/${latest.id}`}>Se körningen →</Link>
+          <strong>Senaste körningen gick inte igenom.</strong> Innehållet i registren är kvar från
+          föregående lyckade körning{checked ? ` (${formatDateTime(checked.startedAt)})` : ''}.
         </p>
       ) : null}
 
       <div className="stat-row">
         <div className="stat">
-          <div className="stat-label">Nätområden</div>
-          <div className="stat-value">{formatNumber(gridAreas.count)}</div>
-          <div className="stat-note">
-            {['SE1', 'SE2', 'SE3', 'SE4'].map((z) => `${z} ${zones[z] ?? 0}`).join(' · ')}
+          <div className="stat-label">Senast kontrollerad</div>
+          <div className="stat-value" style={{ fontSize: '19px', paddingTop: '8px' }}>
+            {checked ? formatDateTime(checked.startedAt) : '—'}
           </div>
+          <div className="stat-note">mot eSett open data</div>
         </div>
         <div className="stat">
-          <div className="stat-label">Nätägare</div>
-          <div className="stat-value">{formatNumber(dsos.count)}</div>
-          <div className="stat-note">
-            {unlinked > 0 ? `${unlinked} nätområden utan träff` : 'alla nätområden länkade'}
-          </div>
+          <div className="stat-label">Dygn med förändring</div>
+          <div className="stat-value">{formatNumber(withChanges)}</div>
+          <div className="stat-note">av {formatNumber(entries.length)} körningar</div>
         </div>
         <div className="stat">
-          <div className="stat-label">Balansansvar</div>
+          <div className="stat-label">Relationer nu</div>
           <div className="stat-value">{formatNumber(brp.count)}</div>
-          <div className="stat-note">
-            {conflicts > 0 ? `${conflicts} med delad BRP` : 'inga delade relationer'}
-          </div>
+          <div className="stat-note">{formatNumber(gridAreas.count)} nätområden</div>
         </div>
         <div className="stat">
-          <div className="stat-label">Senaste körning</div>
-          <div className="stat-value" style={{ fontSize: '18px', paddingTop: '6px' }}>
-            <StatusBadge status={latest.status} dryRun={latest.dryRun} />
+          <div className="stat-label">Körningar med problem</div>
+          <div className="stat-value">{formatNumber(problems)}</div>
+          <div className="stat-note">
+            {problems === 0 ? 'inga spärrade eller misslyckade' : 'se markerade rader nedan'}
           </div>
-          <div className="stat-note">{formatDateTime(latest.startedAt)}</div>
         </div>
       </div>
 
-      <h2>Senaste körningarna</h2>
-      <div className="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Tidpunkt</th>
-              <th>Status</th>
-              <th>Start</th>
-              <th className="num">Förändringar</th>
-              <th className="num">Tid</th>
-            </tr>
-          </thead>
-          <tbody>
-            {runs.slice(0, 10).map((run) => (
-              <tr key={run.id}>
-                <td>
-                  <Link href={`/korningar/${run.id}`}>{formatDateTime(run.startedAt)}</Link>
-                </td>
-                <td>
-                  <StatusBadge status={run.status} dryRun={run.dryRun} />
-                </td>
-                <td className="muted">{run.triggeredBy === 'cron' ? 'Schemalagd' : 'Manuell'}</td>
-                <td className="num">{formatNumber(run.changeCount)}</td>
-                <td className="num muted">{formatDuration(run.durationMs)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p style={{ marginTop: '12px' }}>
-        <Link href="/korningar">Alla körningar →</Link>
-      </p>
+      {/*
+        Filtret är en ren CSS-växel: kryssrutan döljer tysta dygn via en
+        systerselektor. Ingen klientkod behövs, sidan förblir helt statisk.
+        Kryssruta, etikett och flöde måste vara syskon för att ~ ska matcha —
+        ingen wrapper emellan.
+      */}
+      <input type="checkbox" id="only-changes" className="feed-filter-input" />
+      <label htmlFor="only-changes" className="feed-filter">
+        Visa bara dygn med förändring
+      </label>
+
+      <ChangeFeed entries={entries} />
     </>
   );
 }

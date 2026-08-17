@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               fia<span>eSett open data</span>
             </Link>
             <nav className="nav">
-              <Link href="/">Översikt</Link>
+              <Link href="/">Förändringar</Link>
               <Link href="/natomraden">Nätområden</Link>
               <Link href="/natagare">Nätägare</Link>
               <Link href="/balansansvar">Balansansvar</Link>

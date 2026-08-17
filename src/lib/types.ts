@@ -88,3 +88,22 @@ export interface RunIndex {
   /** Nyaste först. */
   runs: RunSummary[];
 }
+
+/**
+ * En rad i förändringsflödet — körningens sammanfattning plus dess faktiska
+ * ändringar, men utan det tekniska (steg, spärrar, överhoppade rader) som bara
+ * hör hemma på körningens egen sida.
+ */
+export interface FeedEntry {
+  id: string;
+  startedAt: string;
+  status: RunStatus;
+  dryRun: boolean;
+  durationMs: number;
+  changeCount: number;
+  totals: RunSummary['totals'];
+  counts: RunReport['counts'];
+  changes: RunReport['changes'];
+  changesTruncated: boolean;
+  error: string | null;
+}
