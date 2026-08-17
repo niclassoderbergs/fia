@@ -15,6 +15,15 @@ services:
     environment:
       HOME: /tmp
       npm_config_cache: /tmp/.npm
+      # ssh letar upp ~/.ssh via användarens hemkatalog i passwd (/home/node
+      # för uid 1000 i node-imagen), INTE via $HOME. Utan de här flaggorna
+      # hittas varken nyckeln eller known_hosts och pushen faller på
+      # "Host key verification failed".
+      GIT_SSH_COMMAND: >-
+        ssh -F /tmp/.ssh/config
+        -o UserKnownHostsFile=/tmp/.ssh/known_hosts
+        -o IdentitiesOnly=yes
+        -i /tmp/.ssh/id_ed25519
     volumes:
       - .:/app
       # SSH-nyckeln för push till GitHub. Skrivskyddad — containern ska kunna

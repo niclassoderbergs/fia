@@ -337,12 +337,24 @@ async function main(): Promise<void> {
     const sha = commitData(ROOT, message);
     if (sha) {
       log(`commit ${sha.slice(0, 8)}`);
-      if (env.gitPush) {
-        push({ cwd: ROOT, remote: env.gitRemote, branch: env.gitBranch });
-        log(`pushad till ${env.gitRemote}/${env.gitBranch} — Vercel deployar`);
-      }
     } else {
       log('inga ändringar under data/ — ingen commit');
+    }
+
+    // Pushen får misslyckas utan att körningen räknas som misslyckad: datat
+    // ligger committat lokalt och följer med nästa dygns push. Vi loggar
+    // tydligt och sätter exit-koden så cron kan larma, men kastar inte —
+    // en nätverksstrul ska inte se ut som en kraschad import.
+    if (env.gitPush) {
+      try {
+        push({ cwd: ROOT, remote: env.gitRemote, branch: env.gitBranch });
+        log(`pushad till ${env.gitRemote}/${env.gitBranch} — Vercel deployar`);
+      } catch (err) {
+        const detail = err instanceof Error ? err.message.split('\n')[0] : String(err);
+        log(`PUSH MISSLYCKADES: ${detail}`);
+        log('datat är committat lokalt och pushas med nästa körning');
+        process.exitCode = 1;
+      }
     }
   }
 
