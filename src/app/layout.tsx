@@ -8,8 +8,9 @@ import { formatDateTime } from '@/lib/format';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'fia — eSett',
-  description: 'Förändringsbevakning av eSett open data — strukturen på svenska elmarknaden',
+  title: 'fia — Förändringar i avräkningsstrukturen',
+  description:
+    'fia — Förändringar i avräkningsstrukturen. Daglig bevakning av eSett open data: aktörer, nätområden och balansansvar på svenska elmarknaden.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="masthead">
           <div className="masthead-inner">
             <Link href="/" className="wordmark">
-              fia<span>eSett open data · förändringsbevakning</span>
+              fia<span>Förändringar i avräkningsstrukturen</span>
             </Link>
           </div>
         </header>

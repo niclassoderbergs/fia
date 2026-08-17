@@ -16,7 +16,8 @@ export default async function LoginPage({
       <div className="login-card">
         <h1>fia</h1>
         <p className="muted" style={{ margin: 0 }}>
-          Nätområden, nätägare och balansansvar från eSett open data.
+          Förändringar i avräkningsstrukturen — aktörer, nätområden och balansansvar från eSett
+          open data.
         </p>
 
         <form method="post" action="/api/login">

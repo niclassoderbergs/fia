@@ -1,4 +1,4 @@
-# fia — eSett open data
+# fia — Förändringar i avräkningsstrukturen
 
 Förändringsbevakning av strukturen på svenska elmarknaden. Hämtar eSetts
 strukturdata en gång per dygn, sparar resultatet som JSON-filer i det här

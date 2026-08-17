@@ -62,7 +62,7 @@ export default function ChangesPage() {
         Kryssruta, etikett och flöde måste vara syskon för att ~ ska matcha —
         ingen wrapper emellan.
       */}
-      <input type="checkbox" id="only-changes" className="feed-filter-input" />
+      <input type="checkbox" id="only-changes" className="feed-filter-input" defaultChecked />
       <label htmlFor="only-changes" className="feed-filter">
         Visa bara dygn med förändring
       </label>

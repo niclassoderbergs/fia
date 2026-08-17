@@ -2,6 +2,29 @@
 
 Senaste överst.
 
+## 2026-08-17 — Namnet: fia = Förändringar i avräkningsstrukturen
+
+Namnspåning med kravet att FIA skulle vara en förkortning av något lämpligt.
+Valet föll på **Förändringar i avräkningsstrukturen** — det mest precisa av
+kandidaterna: allt appen hämtar (aktörsregister, nätområden, BRP-relationer,
+settlementbanker) är just den nordiska balansavräkningens struktur, så namnet
+täcker alla sju dataseten utan att ljuga.
+
+**Beslut:**
+
+- Formellt namn: *fia — Förändringar i avräkningsstrukturen*. Sentence case i
+  löptext; initialerna f-i-a bär förkortningen.
+- Bortvalda kandidater: *Förändringar i aktörslandskapet* (nätområden och
+  banker är inte aktörer), *Fånga, Indexera, Avisera* (säger inget om domänen),
+  *Förändringar i aktörsregistret* (singular är fel — sju dataset).
+- "Fia med knuff"-taglinen lades inte in i appen.
+
+**Levererat:** namnet i header-ordmärket, sidtitel/metadata, inloggningssidan,
+README och package.json.
+
+Samma dag: "Visa bara dygn med förändring" förkryssad som default på
+startsidan — tysta dygn är normalfallet och ska inte skymma förändringarna.
+
 ## 2026-08-17 — UX efter eSetts open data-sida + fyra nya strukturregister
 
 Användaren vill att vyn ska likna eSetts egen open data-sida
