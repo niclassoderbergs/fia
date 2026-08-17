@@ -7,8 +7,10 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { datasetBySlug } from './datasets';
 import type {
   BankRecord,
+  BrpChange,
   BrpPartyRecord,
   BrpRelation,
   BspRecord,
@@ -16,6 +18,7 @@ import type {
   DsoRecord,
   FeedEntry,
   GridAreaRecord,
+  RecordChange,
   RetailerRecord,
   RunIndex,
   RunReport,
@@ -122,6 +125,49 @@ export function getChangeFeed(): FeedEntry[] {
       ...(summary.scope ? { scope: summary.scope } : {}),
     };
   });
+}
+
+/** En körning med enbart de förändringar som berör ett visst dataset. */
+export interface DatasetChangeEntry {
+  runId: string;
+  startedAt: string;
+  origin?: 'energi';
+  changesTruncated: boolean;
+  records: RecordChange[];
+  brp: BrpChange[];
+}
+
+/**
+ * Förändringshistorik för EN vy: varje körning som ändrade något i just det
+ * datasetet, nyaste först. Driver "Visa förändringar"-overlayn på
+ * dataset-sidorna.
+ *
+ * RBR har sin egen difftyp (BrpChange); övriga filtreras på entity-fältet i
+ * körningens RecordChange-lista.
+ */
+export function getDatasetChangeHistory(slug: string): DatasetChangeEntry[] {
+  const dataset = datasetBySlug(slug);
+  if (!dataset) return [];
+
+  const entries: DatasetChangeEntry[] = [];
+  for (const feedEntry of getChangeFeed()) {
+    const brp = slug === 'rbr' ? feedEntry.changes.brp : [];
+    const records =
+      dataset.entity === null
+        ? []
+        : feedEntry.changes.records.filter((c) => c.entity === dataset.entity);
+    if (brp.length === 0 && records.length === 0) continue;
+
+    entries.push({
+      runId: feedEntry.id,
+      startedAt: feedEntry.startedAt,
+      ...(feedEntry.origin ? { origin: feedEntry.origin } : {}),
+      changesTruncated: feedEntry.changesTruncated,
+      records,
+      brp,
+    });
+  }
+  return entries;
 }
 
 /** Nätområden per prisområde — används i översiktens nyckeltal. */

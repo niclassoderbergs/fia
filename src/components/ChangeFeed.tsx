@@ -1,34 +1,9 @@
 import Link from 'next/link';
 
+import { BrpChangeRow, RecordChangeRow } from '@/components/ChangeRows';
 import { DATASETS, RBR } from '@/lib/datasets';
-import {
-  BRP_ACTION_LABEL,
-  RECORD_ACTION_LABEL,
-  formatDateTime,
-  formatDuration,
-  plural,
-} from '@/lib/format';
+import { formatDateTime, formatDuration, plural } from '@/lib/format';
 import type { FeedEntry, RecordChange, RunScope } from '@/lib/types';
-
-/** Kort riktningsetikett — flödet är tätt, "Förbrukning" tar för mycket plats. */
-const DIRECTION_SHORT: Record<string, string> = {
-  consumption: 'kons',
-  production: 'prod',
-};
-
-const BRP_BADGE_CLASS: Record<string, string> = {
-  new_retailer: 'badge-ok',
-  new_relation: 'badge-neutral',
-  brp_switch: 'badge-warn',
-  ended: 'badge-danger',
-};
-
-const RECORD_BADGE_CLASS: Record<string, string> = {
-  added: 'badge-ok',
-  changed: 'badge-warn',
-  removed: 'badge-danger',
-  linked: 'badge-neutral',
-};
 
 /**
  * Sammanfattningsraden speglar eSett-strukturen: ett segment per dataset som
@@ -111,25 +86,6 @@ function badgeClass(entry: FeedEntry): string {
   return 'badge-ok';
 }
 
-function RecordRow({ change }: { change: RecordChange }) {
-  return (
-    <div className="change-row">
-      <span className={`badge ${RECORD_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}>
-        {RECORD_ACTION_LABEL[change.action] ?? change.action}
-      </span>
-      <span className="change-main">{change.name}</span>
-      <span className="change-meta mono">{change.code}</span>
-      <span className="change-brp">
-        {change.fields.map((f) => (
-          <span key={f.field} className="change-field">
-            {f.field}: {f.from ?? '∅'} <span className="arrow">→</span> {f.to ?? '∅'}
-          </span>
-        ))}
-      </span>
-    </div>
-  );
-}
-
 export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
   if (entries.length === 0) {
     return (
@@ -191,28 +147,10 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                         {RBR.title} <span className="exp-tag">{RBR.exp}</span>
                       </div>
                       {entry.changes.brp.map((change, i) => (
-                        <div
-                          className="change-row"
+                        <BrpChangeRow
                           key={`${change.biddingZone}-${change.retailer}-${change.direction}-${i}`}
-                        >
-                          <span
-                            className={`badge ${BRP_BADGE_CLASS[change.action] ?? 'badge-neutral'}`}
-                          >
-                            {BRP_ACTION_LABEL[change.action] ?? change.action}
-                          </span>
-                          <span className="change-main">{change.retailer}</span>
-                          <span className="change-meta">{change.biddingZone}</span>
-                          <span className="change-meta">
-                            {DIRECTION_SHORT[change.direction] ?? change.direction}
-                          </span>
-                          <span className="change-brp">
-                            {change.fromBrp ? <span>{change.fromBrp}</span> : null}
-                            {change.fromBrp && change.toBrp ? (
-                              <span className="arrow">→</span>
-                            ) : null}
-                            {change.toBrp ? <strong>{change.toBrp}</strong> : null}
-                          </span>
-                        </div>
+                          change={change}
+                        />
                       ))}
                     </div>
                   );
@@ -226,7 +164,10 @@ export default function ChangeFeed({ entries }: { entries: FeedEntry[] }) {
                       {dataset.title} <span className="exp-tag">{dataset.exp}</span>
                     </div>
                     {records.map((change, i) => (
-                      <RecordRow key={`${change.entity}-${change.code}-${i}`} change={change} />
+                      <RecordChangeRow
+                        key={`${change.entity}-${change.code}-${i}`}
+                        change={change}
+                      />
                     ))}
                   </div>
                 );

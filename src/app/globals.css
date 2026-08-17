@@ -689,6 +689,112 @@ button:hover {
   font-size: 13px;
 }
 
+/* --- Dataset-sidhuvud + förändringsoverlay ---------------------------------- */
+
+.dataset-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+}
+
+.dataset-head-row .endpoint-line {
+  margin: 0;
+}
+
+dialog.changes-dialog {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0;
+  width: min(780px, calc(100vw - 32px));
+  max-height: min(82vh, 900px);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 18px 60px rgba(0, 20, 45, 0.45);
+  /* Centrerad — dialogens default margin:auto gäller bara horisontellt. */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* display:flex på dialog slår ut [open]-togglingen — återställ stängd. */
+dialog.changes-dialog:not([open]) {
+  display: none;
+}
+
+dialog.changes-dialog::backdrop {
+  background: rgba(0, 25, 50, 0.55);
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 18px;
+  background: var(--header-gradient);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.dialog-title {
+  font-weight: 650;
+  font-size: 15px;
+}
+
+.dialog-title .exp-tag {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
+}
+
+button.dialog-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+button.dialog-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+}
+
+.dialog-body {
+  overflow-y: auto;
+  padding: 6px 18px 18px;
+}
+
+.dialog-run {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.dialog-run:last-child {
+  border-bottom: none;
+}
+
+.dialog-run-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 0 4px;
+}
+
+.dialog-run-link {
+  margin-left: auto;
+  font-size: 13px;
+}
+
 /* --- Övrigt ----------------------------------------------------------------- */
 
 .empty {
