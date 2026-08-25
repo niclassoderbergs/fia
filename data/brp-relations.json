@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T07:34:47.903Z",
-  "runId": "20260817-073447",
+  "fetchedAt": "2026-08-25T02:39:37.402Z",
+  "runId": "20260825-023937",
   "source": "/EXP04/RetailerBalanceResponsibility",
-  "count": 1785,
+  "count": 1786,
   "rows": [
     {
       "biddingZone": "SE1",
@@ -95605,7 +95605,18 @@
       "direction": "consumption",
       "brpName": "Ntricity Market Services AB",
       "mgaNames": [
+        "Lerum",
         "Stamnät Snittområde 3"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE3",
+      "retailerName": "Ntricity Market Services AB",
+      "direction": "production",
+      "brpName": "Ntricity Market Services AB",
+      "mgaNames": [
+        "Lerum"
       ],
       "conflicts": []
     },
