@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T08:38:55.216Z",
-  "runId": "20260817-083855",
+  "fetchedAt": "2026-08-26T02:52:36.254Z",
+  "runId": "20260826-025236",
   "source": "/EXP01/BalanceServiceProviders",
-  "count": 33,
+  "count": 34,
   "rows": [
     {
       "bspCode": "11000",
@@ -197,6 +197,13 @@
       "bspCode": "7080005051286",
       "bspName": "Å Energi Vannkraft AS",
       "businessId": "882973972",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7080005051392",
+      "bspName": "Hafslund Kraft AS",
+      "businessId": "976894677",
       "codingScheme": "GS1",
       "country": "SE"
     },
