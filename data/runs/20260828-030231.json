@@ -1,0 +1,225 @@
+{
+  "id": "20260828-030231",
+  "startedAt": "2026-08-28T03:02:31.448Z",
+  "finishedAt": "2026-08-28T03:10:02.887Z",
+  "durationMs": 451439,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "totals": {
+    "dsos": 174,
+    "gridAreas": 278,
+    "brpRelations": 1786,
+    "retailers": 256,
+    "brpParties": 83,
+    "bsps": 34,
+    "banks": 34
+  },
+  "changeCount": 0,
+  "error": null,
+  "requestCount": 11,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 174,
+      "durationMs": 207
+    },
+    {
+      "name": "Elhandlare (Retailers)",
+      "endpoint": "/EXP01/Retailers?country=SE",
+      "fetched": 256,
+      "durationMs": 44992
+    },
+    {
+      "name": "Balansansvariga (BRP)",
+      "endpoint": "/EXP01/BalanceResponsibleParties?country=SE",
+      "fetched": 83,
+      "durationMs": 45250
+    },
+    {
+      "name": "Balanstjänsteleverantörer (BSP)",
+      "endpoint": "/EXP01/BalanceServiceProviders?country=SE",
+      "fetched": 34,
+      "durationMs": 44739
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 486,
+      "durationMs": 45037
+    },
+    {
+      "name": "Settlementbanker",
+      "endpoint": "/EXP06/Banks",
+      "fetched": 34,
+      "durationMs": 44999
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 45042
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 9933,
+      "durationMs": 45275
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 26555,
+      "durationMs": 45388
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 83655,
+      "durationMs": 45771
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 25368,
+      "durationMs": 44618
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "174 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "278 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1786 poster"
+    },
+    {
+      "name": "Elhandlare: icke-tomt svar",
+      "ok": true,
+      "detail": "256 poster"
+    },
+    {
+      "name": "Balansansvariga: icke-tomt svar",
+      "ok": true,
+      "detail": "83 poster"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: icke-tomt svar",
+      "ok": true,
+      "detail": "34 poster"
+    },
+    {
+      "name": "Settlementbanker: icke-tomt svar",
+      "ok": true,
+      "detail": "34 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Elhandlare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvariga: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Settlementbanker: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 174
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 278
+    },
+    "brp": {
+      "newRetailers": 0,
+      "newRelations": 0,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1786
+    },
+    "retailers": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 256
+    },
+    "brpParties": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 83
+    },
+    "bsps": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 34
+    },
+    "banks": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 34
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": [],
+    "retailers": [],
+    "brpParties": [],
+    "bsps": [],
+    "banks": []
+  },
+  "changes": {
+    "records": [],
+    "brp": []
+  },
+  "changesTruncated": false
+}
