@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T08:38:55.216Z",
-  "runId": "20260817-083855",
+  "fetchedAt": "2026-08-31T02:54:02.062Z",
+  "runId": "20260831-025402",
   "source": "/EXP01/BalanceResponsibleParties",
-  "count": 83,
+  "count": 85,
   "rows": [
     {
       "brpCode": "10000",
@@ -149,6 +149,15 @@
       "validityEnd": "2026-12-31T23:00:00"
     },
     {
+      "brpCode": "22850",
+      "brpName": "SR Vindparker AB",
+      "businessId": "559154-1452",
+      "codingScheme": "NSE",
+      "country": "SE",
+      "validityStart": "2026-08-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
       "brpCode": "28350",
       "brpName": "Borr Holding Aktiebolag",
       "businessId": "559210-7329",
@@ -281,6 +290,15 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-03-31T22:00:00",
+      "validityEnd": "2026-12-31T23:00:00"
+    },
+    {
+      "brpCode": "46X000000000039N",
+      "brpName": "AxD Power Trading AB",
+      "businessId": "559471-0625",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-08-08T22:00:00",
       "validityEnd": "2026-12-31T23:00:00"
     },
     {

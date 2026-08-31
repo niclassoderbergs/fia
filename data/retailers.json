@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T08:38:55.216Z",
-  "runId": "20260817-083855",
+  "fetchedAt": "2026-08-31T02:54:02.062Z",
+  "runId": "20260831-025402",
   "source": "/EXP01/Retailers",
-  "count": 256,
+  "count": 257,
   "rows": [
     {
       "reCode": "10000",
@@ -1010,6 +1010,12 @@
       "reCode": "46900",
       "reName": "Switch Nordic Green AB",
       "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "46X000000000039N",
+      "reName": "AxD Power Trading AB",
+      "codingScheme": "EIC",
       "country": "SE"
     },
     {
