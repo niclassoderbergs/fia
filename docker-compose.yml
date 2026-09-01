@@ -32,7 +32,9 @@ services:
       - ${HOME}/.ssh:/tmp/.ssh:ro
     network_mode: bridge
 
-  # Lokal förhandsgranskning av webbvyn på http://localhost:3200.
+  # Lokal förhandsgranskning av webbvyn på http://localhost:3700.
+  # 3100–3600 är upptagna av energi-stacken (admin, web, portal, elpriskoll,
+  # grafana, mobile-api) — 3700 är nästa lediga i samma serie.
   # Vercel bygger och kör produktionsversionen — den här är bara för utveckling.
   web:
     image: node:22-alpine
@@ -43,9 +45,9 @@ services:
     environment:
       HOME: /tmp
       npm_config_cache: /tmp/.npm
-    command: sh -c "npm install --no-audit --no-fund && npx next dev -p 3200 -H 0.0.0.0"
+    command: sh -c "npm install --no-audit --no-fund && npx next dev -p 3700 -H 0.0.0.0"
     ports:
-      - "3200:3200"
+      - "3700:3700"
     volumes:
       - .:/app
     profiles:

@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "next dev -p 3200",
+    "dev": "next dev -p 3700",
     "build": "next build",
     "start": "next start",
     "import": "tsx src/importer/run.ts",

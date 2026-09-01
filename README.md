@@ -83,7 +83,7 @@ som fortfarande gör omförsök aldrig krockar med nästa.
 ### Webbvyn lokalt
 
 ```bash
-docker compose --profile dev up web   # http://localhost:3200
+docker compose --profile dev up web   # http://localhost:3700
 ```
 
 ### Tester
