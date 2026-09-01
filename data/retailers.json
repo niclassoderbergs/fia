@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-31T02:54:02.062Z",
-  "runId": "20260831-025402",
+  "fetchedAt": "2026-09-01T03:06:26.128Z",
+  "runId": "20260901-030626",
   "source": "/EXP01/Retailers",
-  "count": 257,
+  "count": 260,
   "rows": [
     {
       "reCode": "10000",
@@ -41,8 +41,20 @@
       "country": "SE"
     },
     {
+      "reCode": "10770",
+      "reName": "Nibela AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
       "reCode": "10810",
       "reName": "Nätkraft Borås AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "10820",
+      "reName": "Norrlands Miljökraft AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -463,6 +475,12 @@
     {
       "reCode": "21470",
       "reName": "Motala Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21550",
+      "reName": "Green Hero Energy AB",
       "codingScheme": "NSE",
       "country": "SE"
     },

@@ -1,0 +1,424 @@
+{
+  "id": "20260901-030626",
+  "startedAt": "2026-09-01T03:06:26.128Z",
+  "finishedAt": "2026-09-01T03:13:57.142Z",
+  "durationMs": 451014,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "totals": {
+    "dsos": 174,
+    "gridAreas": 278,
+    "brpRelations": 1802,
+    "retailers": 260,
+    "brpParties": 85,
+    "bsps": 34,
+    "banks": 34
+  },
+  "changeCount": 27,
+  "error": null,
+  "requestCount": 11,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 174,
+      "durationMs": 202
+    },
+    {
+      "name": "Elhandlare (Retailers)",
+      "endpoint": "/EXP01/Retailers?country=SE",
+      "fetched": 260,
+      "durationMs": 44970
+    },
+    {
+      "name": "Balansansvariga (BRP)",
+      "endpoint": "/EXP01/BalanceResponsibleParties?country=SE",
+      "fetched": 85,
+      "durationMs": 45003
+    },
+    {
+      "name": "Balanstjänsteleverantörer (BSP)",
+      "endpoint": "/EXP01/BalanceServiceProviders?country=SE",
+      "fetched": 34,
+      "durationMs": 44985
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 486,
+      "durationMs": 45058
+    },
+    {
+      "name": "Settlementbanker",
+      "endpoint": "/EXP06/Banks",
+      "fetched": 34,
+      "durationMs": 44950
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 45020
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 10049,
+      "durationMs": 45405
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 26847,
+      "durationMs": 45703
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 84510,
+      "durationMs": 45557
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 25635,
+      "durationMs": 44007
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "174 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "278 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1802 poster"
+    },
+    {
+      "name": "Elhandlare: icke-tomt svar",
+      "ok": true,
+      "detail": "260 poster"
+    },
+    {
+      "name": "Balansansvariga: icke-tomt svar",
+      "ok": true,
+      "detail": "85 poster"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: icke-tomt svar",
+      "ok": true,
+      "detail": "34 poster"
+    },
+    {
+      "name": "Settlementbanker: icke-tomt svar",
+      "ok": true,
+      "detail": "34 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Elhandlare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvariga: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Settlementbanker: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 174
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 278
+    },
+    "brp": {
+      "newRetailers": 3,
+      "newRelations": 13,
+      "brpSwitches": 8,
+      "ended": 0,
+      "unchanged": 1778
+    },
+    "retailers": {
+      "added": 3,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 257
+    },
+    "brpParties": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 85
+    },
+    "bsps": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 34
+    },
+    "banks": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 34
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": [],
+    "retailers": [],
+    "brpParties": [],
+    "bsps": [],
+    "banks": []
+  },
+  "changes": {
+    "records": [
+      {
+        "entity": "retailer",
+        "code": "10770",
+        "name": "Nibela AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "retailer",
+        "code": "10820",
+        "name": "Norrlands Miljökraft AB",
+        "action": "added",
+        "fields": []
+      },
+      {
+        "entity": "retailer",
+        "code": "21550",
+        "name": "Green Hero Energy AB",
+        "action": "added",
+        "fields": []
+      }
+    ],
+    "brp": [
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "AxD Power Trading AB",
+        "direction": "consumption",
+        "toBrp": "AxD Power Trading AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Gridex EL AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Gridex EL AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "SR Vindparker AB",
+        "direction": "consumption",
+        "toBrp": "SR Vindparker AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE1",
+        "retailer": "katshing Energy AB",
+        "direction": "consumption",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE1",
+        "retailer": "katshing Energy AB",
+        "direction": "production",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "AxD Power Trading AB",
+        "direction": "consumption",
+        "toBrp": "AxD Power Trading AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Gridex EL AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Gridex EL AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "SR Vindparker AB",
+        "direction": "consumption",
+        "toBrp": "SR Vindparker AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE2",
+        "retailer": "katshing Energy AB",
+        "direction": "consumption",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE2",
+        "retailer": "katshing Energy AB",
+        "direction": "production",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "AxD Power Trading AB",
+        "direction": "consumption",
+        "toBrp": "AxD Power Trading AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "Gridex EL AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "Gridex EL AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "SR Vindparker AB",
+        "direction": "consumption",
+        "toBrp": "SR Vindparker AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE3",
+        "retailer": "katshing Energy AB",
+        "direction": "consumption",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE3",
+        "retailer": "katshing Energy AB",
+        "direction": "production",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "AxD Power Trading AB",
+        "direction": "consumption",
+        "toBrp": "AxD Power Trading AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "Gridex EL AB",
+        "direction": "consumption",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "Gridex EL AB",
+        "direction": "production",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "SR Vindparker AB",
+        "direction": "consumption",
+        "toBrp": "SR Vindparker AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE4",
+        "retailer": "katshing Energy AB",
+        "direction": "consumption",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE4",
+        "retailer": "katshing Energy AB",
+        "direction": "production",
+        "fromBrp": "Volue Energy Market Services Sverige Filial",
+        "toBrp": "Bixia AB"
+      }
+    ]
+  },
+  "changesTruncated": false
+}
