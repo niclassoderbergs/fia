@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T08:38:55.216Z",
-  "runId": "20260817-083855",
+  "fetchedAt": "2026-09-02T02:30:13.626Z",
+  "runId": "20260902-023013",
   "source": "/EXP06/Banks",
-  "count": 34,
+  "count": 33,
   "rows": [
     {
       "bic": "BNPANOKKXXX",
@@ -142,11 +142,6 @@
     {
       "bic": "SPARNO22",
       "name": "SpareBank Møre",
-      "country": "NO"
-    },
-    {
-      "bic": "SPAVNOBB",
-      "name": "Sparebanken Vest",
       "country": "NO"
     },
     {
