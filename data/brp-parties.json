@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-31T02:54:02.062Z",
-  "runId": "20260831-025402",
+  "fetchedAt": "2026-09-03T02:38:22.228Z",
+  "runId": "20260903-023822",
   "source": "/EXP01/BalanceResponsibleParties",
   "count": 85,
   "rows": [
@@ -11,7 +11,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11000",
@@ -20,7 +20,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11400",
@@ -29,7 +29,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11X0-0000-0613-3",
@@ -38,7 +38,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-03-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11XDANSKECOM---P",
@@ -47,7 +47,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11XESFORIN-----H",
@@ -56,7 +56,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2024-10-30T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "11XOME-HANDEL--G",
@@ -65,7 +65,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2024-09-08T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "12300",
@@ -74,7 +74,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "13200",
@@ -83,7 +83,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "13250",
@@ -92,7 +92,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2024-11-30T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "14600",
@@ -101,7 +101,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "17150",
@@ -110,7 +110,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2024-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "18450",
@@ -119,7 +119,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2025-07-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "19XSKYQUANT1910A",
@@ -128,7 +128,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2025-01-04T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "19XTRMEWOBROT--I",
@@ -137,7 +137,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2020-09-29T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "21450",
@@ -146,7 +146,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2026-06-29T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "22850",
@@ -155,7 +155,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2026-08-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "28350",
@@ -164,7 +164,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2026-07-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "36810",
@@ -173,7 +173,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2024-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "40100",
@@ -182,7 +182,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "40900",
@@ -191,7 +191,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "41X6VEJOMAINA141",
@@ -200,7 +200,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-07-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "42500",
@@ -209,7 +209,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "42800",
@@ -218,7 +218,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "44X-00000000260U",
@@ -227,7 +227,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2024-04-13T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X0000000000561",
@@ -236,7 +236,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2022-06-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X000000000088P",
@@ -245,7 +245,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2021-05-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X000000000112H",
@@ -254,7 +254,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2022-11-06T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X000000000203E",
@@ -263,7 +263,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2024-08-18T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X0000000002424",
@@ -272,7 +272,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2025-07-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X000000000278K",
@@ -281,7 +281,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-03-05T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "45X000000000279I",
@@ -290,7 +290,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-03-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "46X000000000039N",
@@ -299,7 +299,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-08-08T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "46X000000000365A",
@@ -308,7 +308,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2025-06-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "46X000000000418F",
@@ -317,7 +317,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-06-29T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "46X000000000429A",
@@ -326,7 +326,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-06-29T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "48500",
@@ -335,7 +335,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "48700",
@@ -344,7 +344,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "48800",
@@ -353,7 +353,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "48X000000000361P",
@@ -362,7 +362,7 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2024-11-30T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "49100",
@@ -371,7 +371,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "49500",
@@ -380,7 +380,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "5055069600062",
@@ -389,7 +389,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-04-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "5790002415494",
@@ -398,7 +398,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "5790002649851",
@@ -407,7 +407,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-07-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "5790002829383",
@@ -416,7 +416,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-08-03T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "5790002834028",
@@ -425,7 +425,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-04-05T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "62000",
@@ -434,7 +434,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2024-08-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "62350",
@@ -443,7 +443,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "63000",
@@ -452,7 +452,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "6429830186717",
@@ -461,7 +461,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2023-12-12T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "6430076200037",
@@ -470,7 +470,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-03-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "64700",
@@ -479,7 +479,7 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080003837530",
@@ -488,7 +488,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2018-02-28T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080004359376",
@@ -497,7 +497,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2023-01-22T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080004362444",
@@ -506,7 +506,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-05-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080005050869",
@@ -515,7 +515,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080005050999",
@@ -524,7 +524,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080005051286",
@@ -533,7 +533,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080005051392",
@@ -542,7 +542,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010006363",
@@ -551,7 +551,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2019-09-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010006509",
@@ -560,7 +560,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-01-04T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010007049",
@@ -569,7 +569,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2017-09-13T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010008411",
@@ -578,7 +578,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010010124",
@@ -587,7 +587,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010011091",
@@ -596,7 +596,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-10-29T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010011411",
@@ -605,7 +605,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-10-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010011961",
@@ -614,7 +614,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-01-09T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010013248",
@@ -623,7 +623,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-01-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010014023",
@@ -632,7 +632,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-08-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010014337",
@@ -641,7 +641,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-08-28T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010014443",
@@ -650,7 +650,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2022-06-15T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010014788",
@@ -659,7 +659,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2023-09-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010018243",
@@ -668,7 +668,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-04-26T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010018397",
@@ -677,7 +677,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2021-12-07T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010020222",
@@ -686,7 +686,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-02-02T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010023865",
@@ -695,7 +695,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-08-13T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080010024619",
@@ -704,7 +704,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-05-11T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080011062955",
@@ -713,7 +713,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2023-06-13T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080011109551",
@@ -722,7 +722,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2024-08-25T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080011127302",
@@ -731,7 +731,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2024-02-11T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080011149069",
@@ -740,7 +740,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-08-31T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7080011183377",
@@ -749,7 +749,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2023-03-30T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7300009035250",
@@ -758,7 +758,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     },
     {
       "brpCode": "7609999384202",
@@ -767,7 +767,7 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-05-04T22:00:00",
-      "validityEnd": "2026-12-31T23:00:00"
+      "validityEnd": "2029-12-31T23:00:00"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-01T03:06:26.128Z",
-  "runId": "20260901-030626",
+  "fetchedAt": "2026-09-03T02:38:22.228Z",
+  "runId": "20260903-023822",
   "source": "/EXP01/Retailers",
-  "count": 260,
+  "count": 259,
   "rows": [
     {
       "reCode": "10000",
@@ -1267,12 +1267,6 @@
     {
       "reCode": "65400",
       "reName": "Svekraft AB",
-      "codingScheme": "NSE",
-      "country": "SE"
-    },
-    {
-      "reCode": "65500",
-      "reName": "Södra Medlemsel AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
