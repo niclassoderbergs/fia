@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-26T02:52:36.254Z",
-  "runId": "20260826-025236",
+  "fetchedAt": "2026-09-17T02:54:10.571Z",
+  "runId": "20260917-025410",
   "source": "/EXP01/BalanceServiceProviders",
   "count": 34,
   "rows": [
@@ -153,7 +153,7 @@
     },
     {
       "bspCode": "62350",
-      "bspName": "Centrica Energy A/S (SE)",
+      "bspName": "Centrica Energy Trading A/S (SE)",
       "businessId": "502067-7505",
       "codingScheme": "NSE",
       "country": "SE"

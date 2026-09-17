@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-03T02:38:22.228Z",
-  "runId": "20260903-023822",
+  "fetchedAt": "2026-09-17T02:54:10.571Z",
+  "runId": "20260917-025410",
   "source": "/EXP01/Retailers",
   "count": 259,
   "rows": [
@@ -1200,7 +1200,7 @@
     },
     {
       "reCode": "62350",
-      "reName": "Centrica Energy A/S (SE)",
+      "reName": "Centrica Energy Trading A/S (SE)",
       "codingScheme": "NSE",
       "country": "SE"
     },

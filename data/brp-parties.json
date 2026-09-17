@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-03T02:38:22.228Z",
-  "runId": "20260903-023822",
+  "fetchedAt": "2026-09-17T02:54:10.571Z",
+  "runId": "20260917-025410",
   "source": "/EXP01/BalanceResponsibleParties",
   "count": 85,
   "rows": [
@@ -295,7 +295,7 @@
     {
       "brpCode": "46X000000000039N",
       "brpName": "AxD Power Trading AB",
-      "businessId": "559471-0625",
+      "businessId": "5594710625/937107617",
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-08-08T22:00:00",
@@ -438,7 +438,7 @@
     },
     {
       "brpCode": "62350",
-      "brpName": "Centrica Energy A/S (SE)",
+      "brpName": "Centrica Energy Trading A/S (SE)",
       "businessId": "502067-7505",
       "codingScheme": "NSE",
       "country": "SE",
