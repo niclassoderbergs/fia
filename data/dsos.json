@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T07:34:47.903Z",
-  "runId": "20260817-073447",
+  "fetchedAt": "2026-09-23T02:59:05.241Z",
+  "runId": "20260923-025905",
   "source": "/EXP01/DistributionSystemOperators",
-  "count": 174,
+  "count": 176,
   "rows": [
     {
       "dsoCode": "10000",
@@ -991,6 +991,18 @@
     {
       "dsoCode": "52900",
       "name": "Markbygden Net Väst AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "53100",
+      "name": "Vindlänken Elnät AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "dsoCode": "53200",
+      "name": "Coala AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
