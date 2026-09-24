@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-09-17T02:54:10.571Z",
-  "runId": "20260917-025410",
+  "fetchedAt": "2026-09-24T03:12:30.690Z",
+  "runId": "20260924-031230",
   "source": "/EXP01/Retailers",
   "count": 259,
   "rows": [
@@ -1031,12 +1031,6 @@
       "country": "SE"
     },
     {
-      "reCode": "46X000000000039N",
-      "reName": "AxD Power Trading AB",
-      "codingScheme": "EIC",
-      "country": "SE"
-    },
-    {
       "reCode": "46X000000000365A",
       "reName": "Ingrid Capacity AB",
       "codingScheme": "EIC",
@@ -1477,6 +1471,12 @@
     {
       "reCode": "7080010024619",
       "reName": "Atlas Energy DAC",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "7080010024794",
+      "reName": "AxD Power Trading AB",
       "codingScheme": "GS1",
       "country": "SE"
     },
