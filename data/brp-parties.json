@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-24T03:12:30.690Z",
-  "runId": "20260924-031230",
+  "fetchedAt": "2026-09-30T02:55:39.644Z",
+  "runId": "20260930-025539",
   "source": "/EXP01/BalanceResponsibleParties",
-  "count": 85,
+  "count": 87,
   "rows": [
     {
       "brpCode": "10000",
@@ -293,6 +293,15 @@
       "validityEnd": "2029-12-31T23:00:00"
     },
     {
+      "brpCode": "46X0000000000312",
+      "brpName": "Smart el i Sverige AB",
+      "businessId": "559358-9780",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-09-30T22:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
       "brpCode": "46X000000000365A",
       "brpName": "Ingrid Capacity AB",
       "businessId": "559369-0802",
@@ -416,6 +425,15 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2025-04-05T22:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
+      "brpCode": "5790002845369",
+      "brpName": "Mars Trading A/S",
+      "businessId": "45702901",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-10-05T22:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {

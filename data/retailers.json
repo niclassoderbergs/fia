@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-24T03:12:30.690Z",
-  "runId": "20260924-031230",
+  "fetchedAt": "2026-09-30T02:55:39.644Z",
+  "runId": "20260930-025539",
   "source": "/EXP01/Retailers",
-  "count": 259,
+  "count": 261,
   "rows": [
     {
       "reCode": "10000",
@@ -475,6 +475,12 @@
     {
       "reCode": "21470",
       "reName": "Motala Energi AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21520",
+      "reName": "Eken Energi AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -1147,6 +1153,12 @@
     {
       "reCode": "5790002834028",
       "reName": "In Commodities Asset Management A/S",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "reCode": "5790002845369",
+      "reName": "Mars Trading A/S",
       "codingScheme": "GS1",
       "country": "SE"
     },
