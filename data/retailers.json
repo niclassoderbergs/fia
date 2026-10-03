@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-30T02:55:39.644Z",
-  "runId": "20260930-025539",
+  "fetchedAt": "2026-10-03T02:31:06.539Z",
+  "runId": "20261003-023106",
   "source": "/EXP01/Retailers",
-  "count": 261,
+  "count": 262,
   "rows": [
     {
       "reCode": "10000",
@@ -469,6 +469,12 @@
     {
       "reCode": "21440",
       "reName": "Kärnfull Future AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21450",
+      "reName": "Thoryr AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -1224,7 +1230,7 @@
     },
     {
       "reCode": "62730",
-      "reName": "Fjordkraft Företag AB",
+      "reName": "Telinet Energi Konsument AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
