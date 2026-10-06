@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-03T02:31:06.539Z",
-  "runId": "20261003-023106",
+  "fetchedAt": "2026-10-06T02:38:38.586Z",
+  "runId": "20261006-023838",
   "source": "/EXP04/RetailerBalanceResponsibility",
   "count": 1835,
   "rows": [
@@ -3559,7 +3559,7 @@
     },
     {
       "biddingZone": "SE1",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "consumption",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -3594,7 +3594,7 @@
     },
     {
       "biddingZone": "SE1",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "production",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -21986,7 +21986,7 @@
     },
     {
       "biddingZone": "SE2",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "consumption",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -22038,7 +22038,6 @@
         "Ockelbo",
         "Sidensjö",
         "Solberg region",
-        "Staberget",
         "Stamnät Snittområde 2",
         "Stensjöfallet region",
         "Stugun region",
@@ -22065,7 +22064,7 @@
     },
     {
       "biddingZone": "SE2",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "production",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -22117,7 +22116,6 @@
         "Ockelbo",
         "Sidensjö",
         "Solberg region",
-        "Staberget",
         "Stamnät Snittområde 2",
         "Stensjöfallet region",
         "Stugun region",
@@ -39529,6 +39527,7 @@
         "Ockelbo",
         "Sidensjö",
         "Solberg region",
+        "Staberget",
         "Stamnät Snittområde 2",
         "Stensjöfallet region",
         "Stugun region",
@@ -39607,6 +39606,7 @@
         "Ockelbo",
         "Sidensjö",
         "Solberg region",
+        "Staberget",
         "Stamnät Snittområde 2",
         "Stensjöfallet region",
         "Stugun region",
@@ -67440,7 +67440,7 @@
     },
     {
       "biddingZone": "SE3",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "consumption",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -67660,7 +67660,7 @@
     },
     {
       "biddingZone": "SE3",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "production",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -143117,7 +143117,7 @@
     },
     {
       "biddingZone": "SE4",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "consumption",
       "brpName": "Elmera Energy AS",
       "mgaNames": [
@@ -143191,7 +143191,7 @@
     },
     {
       "biddingZone": "SE4",
-      "retailerName": "Fjordkraft Konsument AB",
+      "retailerName": "Fjordkraft Företag AB",
       "direction": "production",
       "brpName": "Elmera Energy AS",
       "mgaNames": [

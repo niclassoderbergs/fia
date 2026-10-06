@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-03T02:31:06.539Z",
-  "runId": "20261003-023106",
+  "fetchedAt": "2026-10-06T02:38:38.586Z",
+  "runId": "20261006-023838",
   "source": "/EXP01/Retailers",
   "count": 262,
   "rows": [
@@ -678,7 +678,7 @@
     },
     {
       "reCode": "28710",
-      "reName": "Fjordkraft Konsument AB",
+      "reName": "Telinet Energi Konsument AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -1230,7 +1230,7 @@
     },
     {
       "reCode": "62730",
-      "reName": "Telinet Energi Konsument AB",
+      "reName": "Fjordkraft Företag AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
