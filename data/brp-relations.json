@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-10-06T02:38:38.586Z",
-  "runId": "20261006-023838",
+  "fetchedAt": "2026-10-08T02:30:13.289Z",
+  "runId": "20261008-023013",
   "source": "/EXP04/RetailerBalanceResponsibility",
-  "count": 1835,
+  "count": 1836,
   "rows": [
     {
       "biddingZone": "SE1",
@@ -118052,6 +118052,16 @@
         "Östhammar",
         "Östra Götaland",
         "Östsverige region"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE3",
+      "retailerName": "Thoryr AB",
+      "direction": "production",
+      "brpName": "Thoryr AB",
+      "mgaNames": [
+        "Gullspångsbygden"
       ],
       "conflicts": []
     },
