@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-10-11T02:58:15.904Z",
+  "updatedAt": "2026-10-12T02:54:48.655Z",
   "runs": [
+    {
+      "id": "20261012-024717",
+      "startedAt": "2026-10-12T02:47:17.921Z",
+      "finishedAt": "2026-10-12T02:54:48.655Z",
+      "durationMs": 450734,
+      "status": "success",
+      "triggeredBy": "cron",
+      "dryRun": false,
+      "totals": {
+        "dsos": 176,
+        "gridAreas": 278,
+        "brpRelations": 1836,
+        "retailers": 262,
+        "brpParties": 87,
+        "bsps": 35,
+        "banks": 33
+      },
+      "changeCount": 0,
+      "error": null
+    },
     {
       "id": "20261011-025045",
       "startedAt": "2026-10-11T02:50:45.092Z",
