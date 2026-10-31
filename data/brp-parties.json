@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-30T02:55:39.644Z",
-  "runId": "20260930-025539",
+  "fetchedAt": "2026-10-31T04:03:09.532Z",
+  "runId": "20261031-040309",
   "source": "/EXP01/BalanceResponsibleParties",
-  "count": 87,
+  "count": 89,
   "rows": [
     {
       "brpCode": "10000",
@@ -158,12 +158,30 @@
       "validityEnd": "2029-12-31T23:00:00"
     },
     {
+      "brpCode": "22X20121009",
+      "brpName": "Yuso BV",
+      "businessId": "0848.296.771",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-10-31T23:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
       "brpCode": "28350",
       "brpName": "Borr Holding Aktiebolag",
       "businessId": "559210-7329",
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2026-07-31T22:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
+      "brpCode": "30XROOPTIMIZEPW1",
+      "brpName": "Optimize Power S.R.L.",
+      "businessId": "J2025016473004",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-01-31T23:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {

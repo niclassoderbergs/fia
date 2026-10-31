@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-10-06T02:38:38.586Z",
-  "runId": "20261006-023838",
+  "fetchedAt": "2026-10-31T04:03:09.532Z",
+  "runId": "20261031-040309",
   "source": "/EXP01/Retailers",
-  "count": 262,
+  "count": 264,
   "rows": [
     {
       "reCode": "10000",
@@ -545,6 +545,12 @@
       "country": "SE"
     },
     {
+      "reCode": "22X20121009",
+      "reName": "Yuso BV",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
       "reCode": "23310",
       "reName": "Jukkasjärvi Energi AB",
       "codingScheme": "NSE",
@@ -728,6 +734,12 @@
       "reCode": "30810",
       "reName": "PiteEnergi Handel AB",
       "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "30XROOPTIMIZEPW1",
+      "reName": "Optimize Power S.R.L.",
+      "codingScheme": "EIC",
       "country": "SE"
     },
     {
