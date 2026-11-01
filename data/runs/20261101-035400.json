@@ -1,0 +1,381 @@
+{
+  "id": "20261101-035400",
+  "startedAt": "2026-11-01T03:54:00.290Z",
+  "finishedAt": "2026-11-01T04:01:31.072Z",
+  "durationMs": 450782,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "totals": {
+    "dsos": 176,
+    "gridAreas": 278,
+    "brpRelations": 1863,
+    "retailers": 264,
+    "brpParties": 89,
+    "bsps": 36,
+    "banks": 32
+  },
+  "changeCount": 21,
+  "error": null,
+  "requestCount": 11,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 176,
+      "durationMs": 197
+    },
+    {
+      "name": "Elhandlare (Retailers)",
+      "endpoint": "/EXP01/Retailers?country=SE",
+      "fetched": 264,
+      "durationMs": 44991
+    },
+    {
+      "name": "Balansansvariga (BRP)",
+      "endpoint": "/EXP01/BalanceResponsibleParties?country=SE",
+      "fetched": 89,
+      "durationMs": 44975
+    },
+    {
+      "name": "Balanstjänsteleverantörer (BSP)",
+      "endpoint": "/EXP01/BalanceServiceProviders?country=SE",
+      "fetched": 36,
+      "durationMs": 44986
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 486,
+      "durationMs": 45051
+    },
+    {
+      "name": "Settlementbanker",
+      "endpoint": "/EXP06/Banks",
+      "fetched": 32,
+      "durationMs": 44973
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 45039
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 10555,
+      "durationMs": 45170
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 28148,
+      "durationMs": 45345
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 88349,
+      "durationMs": 45415
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 26816,
+      "durationMs": 44509
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "176 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "278 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1863 poster"
+    },
+    {
+      "name": "Elhandlare: icke-tomt svar",
+      "ok": true,
+      "detail": "264 poster"
+    },
+    {
+      "name": "Balansansvariga: icke-tomt svar",
+      "ok": true,
+      "detail": "89 poster"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: icke-tomt svar",
+      "ok": true,
+      "detail": "36 poster"
+    },
+    {
+      "name": "Settlementbanker: icke-tomt svar",
+      "ok": true,
+      "detail": "32 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Elhandlare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvariga: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Settlementbanker: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 176
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 278
+    },
+    "brp": {
+      "newRetailers": 2,
+      "newRelations": 11,
+      "brpSwitches": 8,
+      "ended": 0,
+      "unchanged": 1842
+    },
+    "retailers": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 264
+    },
+    "brpParties": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 89
+    },
+    "bsps": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 36
+    },
+    "banks": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 32
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": [],
+    "retailers": [],
+    "brpParties": [],
+    "bsps": [],
+    "banks": []
+  },
+  "changes": {
+    "records": [],
+    "brp": [
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "Optimize Power S.R.L.",
+        "direction": "consumption",
+        "toBrp": "Optimize Power S.R.L."
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "Second Foundation Trading AG",
+        "direction": "production",
+        "toBrp": "Second Foundation Trading AG"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE1",
+        "retailer": "Telinet Energi AB",
+        "direction": "consumption",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE1",
+        "retailer": "Telinet Energi AB",
+        "direction": "production",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "Optimize Power S.R.L.",
+        "direction": "consumption",
+        "toBrp": "Optimize Power S.R.L."
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE2",
+        "retailer": "Telinet Energi AB",
+        "direction": "consumption",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE2",
+        "retailer": "Telinet Energi AB",
+        "direction": "production",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "Optimize Power S.R.L.",
+        "direction": "consumption",
+        "toBrp": "Optimize Power S.R.L."
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE3",
+        "retailer": "Telinet Energi AB",
+        "direction": "consumption",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE3",
+        "retailer": "Telinet Energi AB",
+        "direction": "production",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "consumption",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "Nätkraft Borås AB",
+        "direction": "production",
+        "toBrp": "Axpo Sverige AB"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "Optimize Power S.R.L.",
+        "direction": "consumption",
+        "toBrp": "Optimize Power S.R.L."
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE4",
+        "retailer": "Telinet Energi AB",
+        "direction": "consumption",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      },
+      {
+        "action": "brp_switch",
+        "biddingZone": "SE4",
+        "retailer": "Telinet Energi AB",
+        "direction": "production",
+        "fromBrp": "Mind Energy AB",
+        "toBrp": "Elmera Energy AS"
+      }
+    ]
+  },
+  "changesTruncated": false
+}
