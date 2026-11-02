@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-08-17T07:34:47.903Z",
-  "runId": "20260817-073447",
+  "fetchedAt": "2026-11-02T03:51:18.949Z",
+  "runId": "20261102-035118",
   "source": "/EXP03/MeteringGridAreas",
-  "count": 278,
+  "count": 276,
   "rows": [
     {
       "mgaCode": "ABB",
@@ -621,14 +621,6 @@
       "dsoNameAmbiguous": false
     },
     {
-      "mgaCode": "HDV",
-      "name": "Hudiksvall",
-      "biddingZone": "SE2",
-      "dsoName": "Ellevio AB",
-      "dsoCode": "14900",
-      "dsoNameAmbiguous": false
-    },
-    {
       "mgaCode": "HJM",
       "name": "Hjärtum",
       "biddingZone": "SE3",
@@ -696,14 +688,6 @@
       "mgaCode": "HMM",
       "name": "Hammarö",
       "biddingZone": "SE3",
-      "dsoName": "Ellevio AB",
-      "dsoCode": "14900",
-      "dsoNameAmbiguous": false
-    },
-    {
-      "mgaCode": "HMR",
-      "name": "Hamra",
-      "biddingZone": "SE2",
       "dsoName": "Ellevio AB",
       "dsoCode": "14900",
       "dsoNameAmbiguous": false
