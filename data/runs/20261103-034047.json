@@ -1,0 +1,282 @@
+{
+  "id": "20261103-034047",
+  "startedAt": "2026-11-03T03:40:47.490Z",
+  "finishedAt": "2026-11-03T03:48:18.356Z",
+  "durationMs": 450866,
+  "status": "success",
+  "triggeredBy": "cron",
+  "dryRun": false,
+  "totals": {
+    "dsos": 176,
+    "gridAreas": 276,
+    "brpRelations": 1871,
+    "retailers": 264,
+    "brpParties": 89,
+    "bsps": 36,
+    "banks": 32
+  },
+  "changeCount": 8,
+  "error": null,
+  "requestCount": 11,
+  "steps": [
+    {
+      "name": "Nätägare (DSO)",
+      "endpoint": "/EXP01/DistributionSystemOperators?country=SE",
+      "fetched": 176,
+      "durationMs": 189
+    },
+    {
+      "name": "Elhandlare (Retailers)",
+      "endpoint": "/EXP01/Retailers?country=SE",
+      "fetched": 264,
+      "durationMs": 44985
+    },
+    {
+      "name": "Balansansvariga (BRP)",
+      "endpoint": "/EXP01/BalanceResponsibleParties?country=SE",
+      "fetched": 89,
+      "durationMs": 45022
+    },
+    {
+      "name": "Balanstjänsteleverantörer (BSP)",
+      "endpoint": "/EXP01/BalanceServiceProviders?country=SE",
+      "fetched": 36,
+      "durationMs": 44977
+    },
+    {
+      "name": "Nätområden (MGA)",
+      "endpoint": "/EXP03/MeteringGridAreas?mgaType=DISTRIBUTION",
+      "fetched": 484,
+      "durationMs": 45057
+    },
+    {
+      "name": "Settlementbanker",
+      "endpoint": "/EXP06/Banks",
+      "fetched": 32,
+      "durationMs": 44957
+    },
+    {
+      "name": "Prisområden (MBA)",
+      "endpoint": "/EXP04/MBAOptions",
+      "fetched": 4,
+      "durationMs": 45064
+    },
+    {
+      "name": "Balansansvar SE1",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A44P",
+      "fetched": 10557,
+      "durationMs": 45166
+    },
+    {
+      "name": "Balansansvar SE2",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A45N",
+      "fetched": 27312,
+      "durationMs": 45262
+    },
+    {
+      "name": "Balansansvar SE3",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A46L",
+      "fetched": 88355,
+      "durationMs": 46031
+    },
+    {
+      "name": "Balansansvar SE4",
+      "endpoint": "/EXP04/RetailerBalanceResponsibility?mba=10Y1001A1001A47J",
+      "fetched": 26816,
+      "durationMs": 43976
+    }
+  ],
+  "guards": [
+    {
+      "name": "Nätägare: icke-tomt svar",
+      "ok": true,
+      "detail": "176 poster"
+    },
+    {
+      "name": "Nätområden: icke-tomt svar",
+      "ok": true,
+      "detail": "276 poster"
+    },
+    {
+      "name": "Balansansvar: icke-tomt svar",
+      "ok": true,
+      "detail": "1871 poster"
+    },
+    {
+      "name": "Elhandlare: icke-tomt svar",
+      "ok": true,
+      "detail": "264 poster"
+    },
+    {
+      "name": "Balansansvariga: icke-tomt svar",
+      "ok": true,
+      "detail": "89 poster"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: icke-tomt svar",
+      "ok": true,
+      "detail": "36 poster"
+    },
+    {
+      "name": "Settlementbanker: icke-tomt svar",
+      "ok": true,
+      "detail": "32 poster"
+    },
+    {
+      "name": "Prisområden: SE1–SE4 kompletta",
+      "ok": true,
+      "detail": "alla fyra hämtade (SE1, SE2, SE3, SE4)"
+    },
+    {
+      "name": "Nätägare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Nätområden: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvar: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Elhandlare: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balansansvariga: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Balanstjänsteleverantörer: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    },
+    {
+      "name": "Settlementbanker: massförändringsspärr",
+      "ok": true,
+      "detail": "inga poster försvann"
+    }
+  ],
+  "counts": {
+    "dsos": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 176
+    },
+    "gridAreas": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 276
+    },
+    "brp": {
+      "newRetailers": 1,
+      "newRelations": 7,
+      "brpSwitches": 0,
+      "ended": 0,
+      "unchanged": 1863
+    },
+    "retailers": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 264
+    },
+    "brpParties": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 89
+    },
+    "bsps": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 36
+    },
+    "banks": {
+      "added": 0,
+      "changed": 0,
+      "removed": 0,
+      "unchanged": 32
+    }
+  },
+  "skipped": {
+    "dsos": [],
+    "gridAreas": [],
+    "brp": [],
+    "retailers": [],
+    "brpParties": [],
+    "bsps": [],
+    "banks": []
+  },
+  "changes": {
+    "records": [],
+    "brp": [
+      {
+        "action": "new_retailer",
+        "biddingZone": "SE1",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "consumption",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE1",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "production",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "consumption",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE2",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "production",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "consumption",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE3",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "production",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "consumption",
+        "toBrp": "In Commodities Asset Management A/S"
+      },
+      {
+        "action": "new_relation",
+        "biddingZone": "SE4",
+        "retailer": "In Commodities Asset Management A/S",
+        "direction": "production",
+        "toBrp": "In Commodities Asset Management A/S"
+      }
+    ]
+  },
+  "changesTruncated": false
+}
