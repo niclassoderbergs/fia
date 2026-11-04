@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-15T02:34:30.280Z",
-  "runId": "20261015-023430",
+  "fetchedAt": "2026-11-04T03:39:59.843Z",
+  "runId": "20261104-033959",
   "source": "/EXP01/BalanceServiceProviders",
   "count": 36,
   "rows": [
@@ -57,13 +57,6 @@
       "bspCode": "17150",
       "bspName": "VIM Energy Systems AB",
       "businessId": "556760-0175",
-      "codingScheme": "NSE",
-      "country": "SE"
-    },
-    {
-      "bspCode": "18450",
-      "bspName": "Green Voltis Sweden AB",
-      "businessId": "559070-0786",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -253,6 +246,13 @@
       "bspCode": "7300009035250",
       "bspName": "E.ON Sverige AB",
       "businessId": "556006-8420",
+      "codingScheme": "GS1",
+      "country": "SE"
+    },
+    {
+      "bspCode": "7309861031431",
+      "bspName": "Green Voltis Sweden AB",
+      "businessId": "559070-0786",
       "codingScheme": "GS1",
       "country": "SE"
     }

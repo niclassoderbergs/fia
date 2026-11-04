@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-31T04:03:09.532Z",
-  "runId": "20261031-040309",
+  "fetchedAt": "2026-11-04T03:39:59.843Z",
+  "runId": "20261104-033959",
   "source": "/EXP01/BalanceResponsibleParties",
   "count": 89,
   "rows": [
@@ -110,15 +110,6 @@
       "codingScheme": "NSE",
       "country": "SE",
       "validityStart": "2024-01-31T23:00:00",
-      "validityEnd": "2029-12-31T23:00:00"
-    },
-    {
-      "brpCode": "18450",
-      "brpName": "Green Voltis Sweden AB",
-      "businessId": "559070-0786",
-      "codingScheme": "NSE",
-      "country": "SE",
-      "validityStart": "2025-07-31T22:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {
@@ -794,6 +785,15 @@
       "codingScheme": "GS1",
       "country": "SE",
       "validityStart": "2016-12-31T23:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
+      "brpCode": "7309861031431",
+      "brpName": "Green Voltis Sweden AB",
+      "businessId": "559070-0786",
+      "codingScheme": "GS1",
+      "country": "SE",
+      "validityStart": "2025-07-31T22:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {

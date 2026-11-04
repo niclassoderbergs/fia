@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-31T04:03:09.532Z",
-  "runId": "20261031-040309",
+  "fetchedAt": "2026-11-04T03:39:59.843Z",
+  "runId": "20261104-033959",
   "source": "/EXP01/Retailers",
   "count": 264,
   "rows": [
@@ -337,12 +337,6 @@
     {
       "reCode": "18440",
       "reName": "Bergen Synergy AB",
-      "codingScheme": "NSE",
-      "country": "SE"
-    },
-    {
-      "reCode": "18450",
-      "reName": "Green Voltis Sweden AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
@@ -1544,6 +1538,12 @@
       "reCode": "71900",
       "reName": "Stockholms Elbolag AB",
       "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "7309861031431",
+      "reName": "Green Voltis Sweden AB",
+      "codingScheme": "GS1",
       "country": "SE"
     },
     {
