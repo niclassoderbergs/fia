@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-04T03:39:59.843Z",
-  "runId": "20261104-033959",
+  "fetchedAt": "2026-11-18T03:43:35.774Z",
+  "runId": "20261118-034335",
   "source": "/EXP01/BalanceResponsibleParties",
   "count": 89,
   "rows": [
@@ -155,15 +155,6 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-10-31T23:00:00",
-      "validityEnd": "2029-12-31T23:00:00"
-    },
-    {
-      "brpCode": "28350",
-      "brpName": "Borr Holding Aktiebolag",
-      "businessId": "559210-7329",
-      "codingScheme": "NSE",
-      "country": "SE",
-      "validityStart": "2026-07-31T22:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {
@@ -335,6 +326,15 @@
       "codingScheme": "EIC",
       "country": "SE",
       "validityStart": "2026-06-29T22:00:00",
+      "validityEnd": "2029-12-31T23:00:00"
+    },
+    {
+      "brpCode": "46X000000000437B",
+      "brpName": "Borr Holding Aktiebolag",
+      "businessId": "559210-7329",
+      "codingScheme": "EIC",
+      "country": "SE",
+      "validityStart": "2026-07-31T22:00:00",
       "validityEnd": "2029-12-31T23:00:00"
     },
     {

@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-04T03:39:59.843Z",
-  "runId": "20261104-033959",
+  "fetchedAt": "2026-11-18T03:43:35.774Z",
+  "runId": "20261118-034335",
   "source": "/EXP01/Retailers",
   "count": 264,
   "rows": [
@@ -671,12 +671,6 @@
       "country": "SE"
     },
     {
-      "reCode": "28350",
-      "reName": "Borr Holding Aktiebolag",
-      "codingScheme": "NSE",
-      "country": "SE"
-    },
-    {
       "reCode": "28710",
       "reName": "Telinet Energi Konsument AB",
       "codingScheme": "NSE",
@@ -1063,6 +1057,12 @@
     {
       "reCode": "46X000000000429A",
       "reName": "Ntricity Market Services AB",
+      "codingScheme": "EIC",
+      "country": "SE"
+    },
+    {
+      "reCode": "46X000000000437B",
+      "reName": "Borr Holding Aktiebolag",
       "codingScheme": "EIC",
       "country": "SE"
     },

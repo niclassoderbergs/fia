@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-11-03T03:40:47.490Z",
-  "runId": "20261103-034047",
+  "fetchedAt": "2026-11-18T03:43:35.774Z",
+  "runId": "20261118-034335",
   "source": "/EXP04/RetailerBalanceResponsibility",
-  "count": 1871,
+  "count": 1875,
   "rows": [
     {
       "biddingZone": "SE1",
@@ -1463,6 +1463,16 @@
         "Tornedalen Övre",
         "Töre",
         "Älvsbybygden"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE1",
+      "retailerName": "Borr Holding Aktiebolag",
+      "direction": "consumption",
+      "brpName": "Borr Holding Aktiebolag",
+      "mgaNames": [
+        "Stamnät Snittområde 1"
       ],
       "conflicts": []
     },
@@ -17790,6 +17800,16 @@
         "Ångermanälven region",
         "Åsele",
         "Örnsköldsvik"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE2",
+      "retailerName": "Borr Holding Aktiebolag",
+      "direction": "consumption",
+      "brpName": "Borr Holding Aktiebolag",
+      "mgaNames": [
+        "Stamnät Snittområde 2"
       ],
       "conflicts": []
     },
@@ -55057,6 +55077,16 @@
         "Östhammar",
         "Östra Götaland",
         "Östsverige region"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE3",
+      "retailerName": "Borr Holding Aktiebolag",
+      "direction": "consumption",
+      "brpName": "Borr Holding Aktiebolag",
+      "mgaNames": [
+        "Stamnät Snittområde 3"
       ],
       "conflicts": []
     },
@@ -141871,6 +141901,16 @@
         "Ålem",
         "Öland",
         "Österlen"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE4",
+      "retailerName": "Borr Holding Aktiebolag",
+      "direction": "consumption",
+      "brpName": "Borr Holding Aktiebolag",
+      "mgaNames": [
+        "Stamnät Snittområde 4"
       ],
       "conflicts": []
     },
