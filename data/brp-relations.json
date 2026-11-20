@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-11-18T03:43:35.774Z",
-  "runId": "20261118-034335",
+  "fetchedAt": "2026-11-20T04:04:08.067Z",
+  "runId": "20261120-040408",
   "source": "/EXP04/RetailerBalanceResponsibility",
-  "count": 1875,
+  "count": 1877,
   "rows": [
     {
       "biddingZone": "SE1",
@@ -8981,6 +8981,16 @@
         "Tornedalen Övre",
         "Töre",
         "Älvsbybygden"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE1",
+      "retailerName": "Odigo Energy ApS",
+      "direction": "consumption",
+      "brpName": "Odigo Energy ApS",
+      "mgaNames": [
+        "Stamnät Snittområde 1"
       ],
       "conflicts": []
     },
@@ -157748,6 +157758,16 @@
         "Ålem",
         "Öland",
         "Österlen"
+      ],
+      "conflicts": []
+    },
+    {
+      "biddingZone": "SE4",
+      "retailerName": "Odigo Energy ApS",
+      "direction": "consumption",
+      "brpName": "Odigo Energy ApS",
+      "mgaNames": [
+        "Stamnät Snittområde 4"
       ],
       "conflicts": []
     },
