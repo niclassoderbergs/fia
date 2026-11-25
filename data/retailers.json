@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-11-18T03:43:35.774Z",
-  "runId": "20261118-034335",
+  "fetchedAt": "2026-11-25T04:09:58.094Z",
+  "runId": "20261125-040958",
   "source": "/EXP01/Retailers",
-  "count": 264,
+  "count": 265,
   "rows": [
     {
       "reCode": "10000",
@@ -499,6 +499,12 @@
     {
       "reCode": "21660",
       "reName": "Gridex EL AB",
+      "codingScheme": "NSE",
+      "country": "SE"
+    },
+    {
+      "reCode": "21670",
+      "reName": "Ascend Group AB",
       "codingScheme": "NSE",
       "country": "SE"
     },
